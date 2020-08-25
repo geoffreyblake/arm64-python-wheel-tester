@@ -14,10 +14,41 @@ jobs:
           - PIP_NAME: numpy
             PKG_NAME: numpy
 
-    name: "Centos8 for ${{ matrix.WHEEL }}"
+    name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "import ${{ matrix.WHEEL.PKG_NAME }}" | python3
+
+  al2_test:
+    runs-on: [self-hosted, linux, ARM64, al2]
+    container: amazonlinux:2
+    strategy:
+      matrix:
+        WHEEL:
+          - PIP_NAME: numpy
+            PKG_NAME: numpy
+    name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
+    steps:
+      - run: yum install -y python3-pip
+      - run: python3 -m pip install --upgrade pip
+      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: echo "import ${{ matrix.WHEEL.PKG_NAME }}" | python3
+
+  ubuntu_test:
+    runs-on: [self-hosted, linux, ARM64, focal]
+    container: ubuntu:focal
+    strategy:
+      matrix:
+        WHEEL:
+          - PIP_NAME: numpy
+            PKG_NAME: numpy
+    name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
+    steps:
+      - run: apt-get install -y python3-pip
+      - run: python3 -m pip install --upgrade pip
+      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: echo "import ${{ matrix.WHEEL.PKG_NAME }}" | python3
+
 
