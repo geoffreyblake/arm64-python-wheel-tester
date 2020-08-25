@@ -1,0 +1,23 @@
+name: Wheel Tester
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  centos8_test:
+    runs-on: [self-hosted, linux, ARM64, centos8]
+    container: centos:8
+    strategy:
+      matrix:
+        WHEEL:
+          - PIP_NAME: numpy
+            PKG_NAME: numpy
+
+    name: "Centos8 for ${{ matrix.WHEEL }}"
+    steps:
+      - run: yum install -y python3-pip
+      - run: python3 -m pip install --upgrade pip
+      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: echo "import ${{ matrix.WHEEL.PKG_NAME }}" | python3
+

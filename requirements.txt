@@ -1,0 +1,5 @@
+-e .
+boto3
+requests
+aws_cdk.aws_ec2
+aws_cdk.aws_iam
