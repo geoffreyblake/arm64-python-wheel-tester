@@ -1,3 +1,5 @@
+![Wheel Tester](https://github.com/geoffreyblake/graviton2-python-wheel-tester/workflows/Wheel%20Tester/badge.svg?branch=master)
+
 # Graviton2 python wheels tester
 This is a simple project to run wheels in a docker environment on 4k and 64k page-size systems to detect possible incompatibilities
 in upstream wheels.  It uses github actions and self-hosted runners to guarantee the system configurations we need.
