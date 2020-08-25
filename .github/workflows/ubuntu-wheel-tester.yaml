@@ -1,0 +1,40 @@
+name: Ubuntu Wheel Tester
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Run nightly
+    - cron: '0 0 * * *'
+
+jobs:
+  ubuntu_test:
+    runs-on: [self-hosted, linux, ARM64, focal]
+    container: ubuntu:focal
+    strategy:
+      fail-fast: false
+      matrix:
+        WHEEL:
+          - PIP_NAME: numpy
+            PKG_NAME: numpy
+          - PIP_NAME: bcrypt
+            PKG_NAME: bcrypt
+          - PIP_NAME: pymongo
+            PKG_NAME: pymongo
+          - PIP_NAME: lxml
+            PKG_NAME: lxml
+          - PIP_NAME: lazy-object-proxy
+            PKG_NAME: lazy_object_proxy
+          - PIP_NAME: simplejson
+            PKG_NAME: simplejson
+          - PIP_NAME: Pillow
+            PKG_NAME: PIL
+          - PIP_NAME: kiwisolver
+            PKG_NAME: kiwisolver
+    name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
+    steps:
+      - run: apt-get update -y
+      - run: apt-get install -y python3-pip
+      - run: python3 -m pip install --upgrade pip
+      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: echo "import ${{ matrix.WHEEL.PKG_NAME }}" | python3
