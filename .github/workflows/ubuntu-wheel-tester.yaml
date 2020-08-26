@@ -53,4 +53,4 @@ jobs:
       - run: apt-get install -y python3-pip
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
-      - run: echo "import ${{ matrix.WHEEL.PKG_TEST }}" | python3
+      - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
