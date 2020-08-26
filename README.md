@@ -1,5 +1,5 @@
 
-[![Centos8 Wheel Tester](https://github.com/geoffreyblake/arm64-python-wheel-tester/workflows/Centos8%20Wheel%20Tester/badge.svg?branch=master)](https://github.com/geoffreyblake/arm64-python-wheel-tester/actions?query=workflow%3A%22Centos8+Wheel+Tester%22)
+- [![Centos8 Wheel Tester](https://github.com/geoffreyblake/arm64-python-wheel-tester/workflows/Centos8%20Wheel%20Tester/badge.svg?branch=master)](https://github.com/geoffreyblake/arm64-python-wheel-tester/actions?query=workflow%3A%22Centos8+Wheel+Tester%22)
 - [![AmazonLinux2 Wheel Tester](https://github.com/geoffreyblake/arm64-python-wheel-tester/workflows/AmazonLinux2%20Wheel%20Tester/badge.svg?branch=master)](https://github.com/geoffreyblake/arm64-python-wheel-tester/actions?query=workflow%3A%22AmazonLinux2+Wheel+Tester%22)
 - [![Ubuntu Wheel Tester](https://github.com/geoffreyblake/arm64-python-wheel-tester/workflows/Ubuntu%20Wheel%20Tester/badge.svg?branch=master)](https://github.com/geoffreyblake/arm64-python-wheel-tester/actions?query=workflow%3A%22Ubuntu+Wheel+Tester%22)
 
