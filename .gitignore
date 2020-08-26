@@ -5,10 +5,10 @@
 cdk.out/
 
 # Python caching
-graviton2_wheel_tester_stack/__pycache__/
+arm64_wheel_tester_stack/__pycache__/
 
 # Python egg-info
-graviton2_wheel_tester_stack/gravtion2_wheel_tester_stack.egg-info/
+arm64_wheel_tester_stack/gravtion2_wheel_tester_stack.egg-info/
 
 # Environment variables
 .aws_creds

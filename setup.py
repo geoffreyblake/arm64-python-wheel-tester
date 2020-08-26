@@ -6,7 +6,7 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="graviton2_wheel_tester_stack",
+    name="arm64_wheel_tester_stack",
     version="0.0.1",
 
     description="An empty CDK Python app",
@@ -15,8 +15,8 @@ setuptools.setup(
 
     author="author",
 
-    package_dir={"": "graviton2_wheel_tester_stack"},
-    packages=setuptools.find_packages(where="graviton2_wheel_tester_stack"),
+    package_dir={"": "arm64_wheel_tester_stack"},
+    packages=setuptools.find_packages(where="arm64_wheel_tester_stack"),
 
     install_requires=[
         "aws-cdk.core==1.60.0",

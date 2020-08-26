@@ -71,7 +71,7 @@ def getLatestCentosAmi():
     return getLatestAmi('arm64', AMI_FILTERS[CENTOS]['name'], AMI_FILTERS[CENTOS]['Owner'])
 
 
-class Graviton2WheelTesterStack(core.Stack):
+class Arm64WheelTesterStack(core.Stack):
 
     def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
