@@ -47,6 +47,13 @@ jobs:
               import PIL._imagingtk
           - PIP_NAME: kiwisolver
             PKG_TEST: import kiwisolver
+          - PIP_NAME: cffi
+            PKG_TEST: import cffi
+          - PIP_NAME: cryptography
+            PKG_TEST: |
+              from cryptography.hazmat.backends.openssl.backend import backend
+              print('Loaded: ' + backend.openssl_version_text())
+              print('Linked Against: ' + backend._ffi.string(backend._lib.OPENSSL_VERSION_TEXT).decode('ascii'))
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
