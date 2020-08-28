@@ -44,7 +44,6 @@ jobs:
               import PIL._imagingft
               import PIL._imagingmath
               import PIL._imagingmorph
-              import PIL._imagingtk
           - PIP_NAME: kiwisolver
             PKG_TEST: import kiwisolver
           - PIP_NAME: cffi
