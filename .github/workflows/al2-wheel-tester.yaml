@@ -53,6 +53,8 @@ jobs:
               from cryptography.hazmat.backends.openssl.backend import backend
               print('Loaded: ' + backend.openssl_version_text())
               print('Linked Against: ' + backend._ffi.string(backend._lib.OPENSSL_VERSION_TEXT).decode('ascii'))
+          - PIP_NAME: sqlalchemy
+            PKG_TEST: import sqlalchemy
 
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:

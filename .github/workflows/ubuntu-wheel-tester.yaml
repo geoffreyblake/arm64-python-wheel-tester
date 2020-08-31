@@ -53,6 +53,9 @@ jobs:
               from cryptography.hazmat.backends.openssl.backend import backend
               print('Loaded: ' + backend.openssl_version_text())
               print('Linked Against: ' + backend._ffi.string(backend._lib.OPENSSL_VERSION_TEXT).decode('ascii'))
+          - PIP_NAME: sqlalchemy
+            PKG_TEST: import sqlalchemy
+
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: apt-get update -y
