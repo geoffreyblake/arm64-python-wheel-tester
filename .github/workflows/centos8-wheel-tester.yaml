@@ -57,6 +57,10 @@ jobs:
             PKG_TEST: import sqlalchemy
           - PIP_NAME: ujson
             PKG_TEST: import ujson
+          - PIP_NAME: scikit-build cmake
+            PKG_TEST: |
+              import skbuild
+              skbuild.cmaker.get_cmake_version()
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
