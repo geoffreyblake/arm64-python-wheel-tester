@@ -47,7 +47,17 @@ jobs:
           - PIP_NAME: kiwisolver
             PKG_TEST: import kiwisolver
           - PIP_NAME: cffi
-            PKG_TEST: import cffi
+            PKG_TEST: |
+              import cffi
+              ffi = cffi.FFI()
+              a = ffi.new("int[4]")
+              print(a)
+          - PIP_NAME: cffi==1.14.3
+            PKG_TEST: |
+              import cffi
+              ffi = cffi.FFI()
+              a = ffi.new("int[4]")
+              print(a)
           - PIP_NAME: cryptography
             PKG_TEST: |
               from cryptography.hazmat.backends.openssl.backend import backend
