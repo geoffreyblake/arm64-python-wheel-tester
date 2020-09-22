@@ -71,6 +71,10 @@ jobs:
             PKG_TEST: |
               import skbuild
               skbuild.cmaker.get_cmake_version()
+          - PIP_NAME: pycryptodome
+            PKG_TEST: import Crypto
+          - PIP_NAME: pycryptodomex
+            PKG_TEST: import Cryptodome
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: apt-get update -y
