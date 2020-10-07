@@ -75,6 +75,8 @@ jobs:
             PKG_TEST: import Crypto
           - PIP_NAME: pycryptodomex
             PKG_TEST: import Cryptodome
+          - PIP_NAME: pandas
+            PKG_TEST: import pandas
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
