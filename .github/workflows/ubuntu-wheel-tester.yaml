@@ -77,6 +77,8 @@ jobs:
             PKG_TEST: import Cryptodome
           - PIP_NAME: pandas
             PKG_TEST: import pandas
+          - PIP_NAME: pywavelets
+            PKG_TEST: import pywt
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: apt-get update -y

@@ -77,6 +77,8 @@ jobs:
             PKG_TEST: import Cryptodome
           - PIP_NAME: pandas
             PKG_TEST: import pandas
+          - PIP_NAME: pywavelets
+            PKG_TEST: import pywt
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
