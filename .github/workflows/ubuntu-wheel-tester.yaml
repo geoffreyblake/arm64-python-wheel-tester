@@ -79,6 +79,12 @@ jobs:
             PKG_TEST: import pandas
           - PIP_NAME: pywavelets
             PKG_TEST: import pywt
+          - PIP_NAME: multidict
+            PKG_TEST: import multidict
+          - PIP_NAME: yarl
+            PKG_TEST: import yarl
+          - PIP_NAME: scipy
+            PKG_TEST: import scipy
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: apt-get update -y
