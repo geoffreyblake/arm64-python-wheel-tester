@@ -85,6 +85,12 @@ jobs:
             PKG_TEST: import yarl
           - PIP_NAME: scipy
             PKG_TEST: import scipy
+          - PIP_NAME: xgboost
+            PKG_TEST: import xgboost
+          - PIP_NAME: typed_ast
+            PKG_TEST: import typed_ast
+          - PIP_NAME: aiohttp
+            PKG_TEST: import aiohttp
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
