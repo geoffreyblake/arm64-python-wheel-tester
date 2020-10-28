@@ -91,6 +91,119 @@ jobs:
             PKG_TEST: import typed_ast
           - PIP_NAME: aiohttp
             PKG_TEST: import aiohttp
+          # - PIP_NAME: markupsafe
+          #   PKG_TEST: import markupsafe
+          - PIP_NAME: fastavro
+            PKG_TEST: import fastavro
+          - PIP_NAME: scikit-image
+            PKG_TEST: import skimage
+          - PIP_NAME: scikit-learn
+            PKG_TEST: import sktest
+          - PIP_NAME: statsmodels
+            PKG_TEST: import statsmodels
+          - PIP_NAME: gensim
+            PKG_TEST: import gensim
+          - PIP_NAME: cmake
+            PKG_TEST: import cmake
+          - PIP_NAME: protobuf
+            PKG_TEST: import google.protobuf
+          - PIP_NAME: Cython
+            PKG_TEST: from Cython.Build import cythonize
+          - PIP_NAME: pyspark
+            PKG_TEST: import pyspark
+          - PIP_NAME: opencv-python
+            PKG_TEST: import cv2
+          - PIP_NAME: gevent
+            PKG_TEST: import gevent
+          - PIP_NAME: pywavelets
+            PKG_TEST: import pywt
+          - PIP_NAME: pytorch
+            PKG_TEST: import torch
+          - PIP_NAME: torchvision
+            PKG_TEST: import torchvision
+          - PIP_NAME: grpcio
+            PKG_TEST: import grpc
+          - PIP_NAME: ninja
+            PKG_TEST: import ninja
+          - PIP_NAME: tensorflow
+            PKG_TEST: import tensorflow
+          - PIP_NAME: sentencepiece
+            PKG_TEST: import sentencepiece
+          - PIP_NAME: msgpack
+            PKG_TEST: import msgpack
+          - PIP_NAME: mypy
+            PKG_TEST: from typing import Dict
+          - PIP_NAME: Shapely
+            PKG_TEST: from shapely.geometry import Point
+          - PIP_NAME: ijson
+            PKG_TEST: import ijson
+          - PIP_NAME: snowflake-connector-python
+            PKG_TEST: import snowflake.connector
+          - PIP_NAME: lightgbm
+            PKG_TEST: import lightgbm
+          - PIP_NAME: twisted
+            PKG_TEST: import twisted
+          - PIP_NAME: tfx-bsl
+            PKG_TEST: import tfx
+          - PIP_NAME: pyarrow
+            PKG_TEST: import pyarrow
+          - PIP_NAME: h5py
+            PKG_TEST: import h5py
+          - PIP_NAME: tornado
+            PKG_TEST: import tornado
+          - PIP_NAME: pyzmq
+            PKG_TEST: from pyzmq import zmq
+          - PIP_NAME: psutil
+            PKG_TEST: import psutil
+          - PIP_NAME: matplotlib
+            PKG_TEST: import matplotlib
+          - PIP_NAME: psycopg2-binary
+            PKG_TEST: import psycopg2
+          - PIP_NAME: greenlet
+            PKG_TEST: from greenlet import greenlet
+          - PIP_NAME: regex
+            PKG_TEST: import regex
+          - PIP_NAME: websockets
+            PKG_TEST: import websockets
+          - PIP_NAME: docopt
+            PKG_TEST: from docopt import docopt
+          - PIP_NAME: absl-py
+            PKG_TEST: |
+              from absl import app
+              from absl import flags
+              from absl import logging
+          - PIP_NAME: retrying
+            PKG_TEST: from retrying import retry
+          - PIP_NAME: pandocfilters
+            PKG_TEST: from pandocfilters import toJSONFilter, Str
+          - PIP_NAME: zope.interface
+            PKG_TEST: import zip.interface
+          - PIP_NAME: grpc-google-iam-v1
+            PKG_TEST: import google
+          - PIP_NAME: ansible
+            PKG_TEST: from ansible import context
+          - PIP_NAME: thrift
+            PKG_TEST: from thrift import Thrift
+          - PIP_NAME: mysqlclient
+            PKG_TEST: import MySQLdb
+          - PIP_NAME: apache-beam
+            PKG_TEST: import apache_beam
+          - PIP_NAME: tensorflow-data-validation
+            PKG_TEST: import tensorflow_data_validation
+          - PIP_NAME: pyyaml
+            PKG_TEST: import yaml
+          - PIP_NAME: future
+            PKG_TEST: from __future__ import (division)
+          - PIP_NAME: coverage
+            PKG_TEST: import coverage
+          - PIP_NAME: wrapt
+            PKG_TEST: import wrapt
+          - PIP_NAME: pyrsistent
+            PKG_TEST: from pyrsistent import v, pvector
+          - PIP_NAME: pynacl
+            PKG_TEST: import pynacl
+          - PIP_NAME: dill
+            PKG_TEST: import dill
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
