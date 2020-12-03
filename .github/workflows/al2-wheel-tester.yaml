@@ -52,12 +52,12 @@ jobs:
               ffi = cffi.FFI()
               a = ffi.new('int[4]')
               print(a)
-          - PIP_NAME: cffi==1.14.3
-            PKG_TEST: |
-              import cffi
-              ffi = cffi.FFI()
-              a = ffi.new('int[4]')
-              print(a)
+          #- PIP_NAME: cffi==1.14.3
+          #  PKG_TEST: |
+          #    import cffi
+          #    ffi = cffi.FFI()
+          #    a = ffi.new('int[4]')
+          #    print(a)
           - PIP_NAME: cryptography
             PKG_TEST: |
               from cryptography.hazmat.backends.openssl.backend import backend
@@ -208,5 +208,5 @@ jobs:
     steps:
       - run: yum install -y python3-pip
       - run: python3 -m pip install --upgrade pip
-      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3

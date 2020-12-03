@@ -203,5 +203,5 @@ jobs:
       - run: apt-get update -y
       - run: apt-get install -y python3-pip
       - run: python3 -m pip install --upgrade pip
-      - run: python3 -m pip install ${{ matrix.WHEEL.PIP_NAME }}
+      - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
