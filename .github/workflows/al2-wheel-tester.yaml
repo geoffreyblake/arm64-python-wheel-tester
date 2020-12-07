@@ -161,6 +161,8 @@ jobs:
             PKG_TEST: import psycopg2
           - PIP_NAME: greenlet
             PKG_TEST: from greenlet import greenlet
+          - PIP_NAME: greenlet==1.0a1
+            PKG_TEST: from greenlet import greenlet
           - PIP_NAME: regex
             PKG_TEST: import regex
           - PIP_NAME: websockets
