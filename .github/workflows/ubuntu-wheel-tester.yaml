@@ -197,7 +197,7 @@ jobs:
           - PIP_NAME: pyrsistent
             PKG_TEST: from pyrsistent import v, pvector
           - PIP_NAME: pynacl
-            PKG_TEST: import pynacl
+            PKG_TEST: import nacl._sodium
           - PIP_NAME: dill
             PKG_TEST: import dill
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
