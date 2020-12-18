@@ -1,4 +1,4 @@
-name: Centos8 Wheel Tester
+name: Centos8 A1 Wheel Tester
 on:
   push:
     branches:
