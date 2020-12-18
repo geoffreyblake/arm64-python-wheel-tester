@@ -2,7 +2,7 @@
 
 from aws_cdk import core
 
-from arm64_wheel_tester_stack.graviton2_wheel_tester_stack import Arm64WheelTesterStack
+from arm64_wheel_tester_stack.arm64_wheel_tester_stack import Arm64WheelTesterStack
 
 app = core.App()
 

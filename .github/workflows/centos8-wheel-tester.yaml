@@ -9,7 +9,7 @@ on:
 
 jobs:
   centos8_test:
-    runs-on: [self-hosted, linux, ARM64, centos8]
+    runs-on: [self-hosted, linux, ARM64, c6g]
     container: centos:8
     strategy:
       fail-fast: false

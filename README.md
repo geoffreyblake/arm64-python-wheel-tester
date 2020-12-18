@@ -26,7 +26,7 @@ $ pip install -r requirements.txt
 # Create a file with your AWS credentials and github tokens called .aws_creds
 $ source ./.aws_creds
 $ cdk synth --profile=<profile>
-$ cdk deploy --profile=<profile>
+$ cdk deploy
 ```
 
 Then go to:

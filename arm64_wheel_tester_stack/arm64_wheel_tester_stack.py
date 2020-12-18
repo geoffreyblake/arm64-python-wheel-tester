@@ -86,50 +86,60 @@ class Arm64WheelTesterStack(core.Stack):
                       )
 
         # AMI
-        al2 = getLatestAL2Ami()
-        centos = getLatestCentosAmi()
+        # al2 = getLatestAL2Ami()
+        # centos = getLatestCentosAmi()
         ubuntu = getLatestUbuntuAmi()
 
         instances = []
 
         # Instance creation.
         # Stands up an instance, then installs the github runner on the first boot.
-        user_data_al2 = ec2.UserData.for_linux()
-        user_data_al2.add_commands("yum update -y",
-                                   "amazon-linux-extras enable docker",
-                                   "yum install -y curl docker",
-                                   "systemctl start docker",
-                                   "(su ec2-user && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                   "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                   "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --unattended --url {} --token {} --labels al2 "
-                                   "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_al2 = ec2.Instance(self, "al2-tester",
+        # This can be made into a loop. TODO
+        user_data_focal = ec2.UserData.for_linux()
+        user_data_focal.add_commands("apt-get update -y",
+                                     "apt-get upgrade -y",
+                                     "apt-get install -y curl software-properties-common",
+                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
+                                     "add-apt-repository "
+                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
+                                     "apt-get update -y",
+                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
+                                     "systemctl start docker",
+                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
+                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
+                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
+                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
+        instance_focal1 = ec2.Instance(self, "focal1-tester",
             instance_type=ec2.InstanceType("c6g.medium"),
-            machine_image=al2,
-            vpc=vpc,
-            key_name=KEY_NAME,
-            block_devices=[ec2.BlockDevice(device_name='/dev/xvda', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_al2)
-        instances.append(instance_al2)
-        
-        user_data_centos = ec2.UserData.for_linux()
-        user_data_centos.add_commands("yum update -y",
-                                      "yum install -y curl",
-                                      "dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo",
-                                      "dnf -y install docker-ce --nobest",
-                                      "systemctl start docker",
-                                      "(su centos && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                      "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                      "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --unattended --url {} --token {} --labels centos8 "
-                                      "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_centos = ec2.Instance(self, "centos8-tester",
-            instance_type=ec2.InstanceType("c6g.medium"),
-            machine_image=centos,
+            machine_image=ubuntu,
             vpc=vpc,
             key_name=KEY_NAME,
             block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_centos)
-        instances.append(instance_centos)
+            user_data=user_data_focal)
+        instances.append(instance_focal1)
+        
+        user_data_focal = ec2.UserData.for_linux()
+        user_data_focal.add_commands("apt-get update -y",
+                                     "apt-get upgrade -y",
+                                     "apt-get install -y curl software-properties-common",
+                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
+                                     "add-apt-repository "
+                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
+                                     "apt-get update -y",
+                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
+                                     "systemctl start docker",
+                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
+                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
+                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
+                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
+        instance_focal2 = ec2.Instance(self, "focal2-tester",
+            instance_type=ec2.InstanceType("c6g.medium"),
+            machine_image=ubuntu,
+            vpc=vpc,
+            key_name=KEY_NAME,
+            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
+            user_data=user_data_focal)
+        instances.append(instance_focal2)
 
         user_data_focal = ec2.UserData.for_linux()
         user_data_focal.add_commands("apt-get update -y",
@@ -145,14 +155,37 @@ class Arm64WheelTesterStack(core.Stack):
                                      "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
                                      "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
                                      "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_focal = ec2.Instance(self, "focal-tester",
+        instance_focal3 = ec2.Instance(self, "focal3-tester",
             instance_type=ec2.InstanceType("c6g.medium"),
             machine_image=ubuntu,
             vpc=vpc,
             key_name=KEY_NAME,
             block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
             user_data=user_data_focal)
-        instances.append(instance_focal)
+        instances.append(instance_focal3)
+
+        user_data_focal_a1 = ec2.UserData.for_linux()
+        user_data_focal_a1.add_commands("apt-get update -y",
+                                     "apt-get upgrade -y",
+                                     "apt-get install -y curl software-properties-common",
+                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
+                                     "add-apt-repository "
+                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
+                                     "apt-get update -y",
+                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
+                                     "systemctl start docker",
+                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
+                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
+                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
+                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
+        instance_focal_a1 = ec2.Instance(self, "focal-a1-tester",
+            instance_type=ec2.InstanceType("a1.large"),
+            machine_image=ubuntu,
+            vpc=vpc,
+            key_name=KEY_NAME,
+            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
+            user_data=user_data_focal_a1)
+        instances.append(instance_focal_a1)
 
         # Allow inbound HTTPS connections
         for instance in instances:

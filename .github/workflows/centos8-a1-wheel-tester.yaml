@@ -1,4 +1,4 @@
-name: AmazonLinux2 Wheel Tester
+name: Centos8 Wheel Tester
 on:
   push:
     branches:
@@ -8,9 +8,9 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  al2_test:
-    runs-on: [self-hosted, linux, ARM64, c6g]
-    container: amazonlinux:2
+  centos8_test:
+    runs-on: [self-hosted, linux, ARM64, centos8, a1]
+    container: centos:8
     strategy:
       fail-fast: false
       matrix:
@@ -52,12 +52,6 @@ jobs:
               ffi = cffi.FFI()
               a = ffi.new('int[4]')
               print(a)
-          #- PIP_NAME: cffi==1.14.3
-          #  PKG_TEST: |
-          #    import cffi
-          #    ffi = cffi.FFI()
-          #    a = ffi.new('int[4]')
-          #    print(a)
           - PIP_NAME: cryptography
             PKG_TEST: |
               from cryptography.hazmat.backends.openssl.backend import backend
@@ -206,7 +200,7 @@ jobs:
             PKG_TEST: import nacl._sodium
           - PIP_NAME: dill
             PKG_TEST: import dill
-    name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
+    name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
       - run: python3 -m pip install --upgrade pip

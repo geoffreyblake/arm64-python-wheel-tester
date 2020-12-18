@@ -9,7 +9,7 @@ on:
 
 jobs:
   ubuntu_test:
-    runs-on: [self-hosted, linux, ARM64, focal]
+    runs-on: [self-hosted, linux, ARM64, c6g]
     container: ubuntu:focal
     strategy:
       fail-fast: false
