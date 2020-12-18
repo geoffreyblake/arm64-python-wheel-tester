@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  centos8_test:
+  centos8_a1_test:
     runs-on: [self-hosted, linux, ARM64, a1]
     container: centos:8
     strategy:
