@@ -52,12 +52,6 @@ jobs:
               ffi = cffi.FFI()
               a = ffi.new('int[4]')
               print(a)
-          #- PIP_NAME: cffi==1.14.3
-          #  PKG_TEST: |
-          #    import cffi
-          #    ffi = cffi.FFI()
-          #    a = ffi.new('int[4]')
-          #    print(a)
           - PIP_NAME: cryptography
             PKG_TEST: |
               from cryptography.hazmat.backends.openssl.backend import backend
@@ -153,8 +147,8 @@ jobs:
             PKG_TEST: import tornado
           - PIP_NAME: pyzmq
             PKG_TEST: import zmq.backend
-          - PIP_NAME: psutil
-            PKG_TEST: import psutil
+          #- PIP_NAME: psutil
+          #  PKG_TEST: import psutil
           - PIP_NAME: matplotlib
             PKG_TEST: import matplotlib
           - PIP_NAME: psycopg2-binary
@@ -178,14 +172,14 @@ jobs:
             PKG_TEST: from pandocfilters import toJSONFilter, Str
           - PIP_NAME: zope.interface
             PKG_TEST: from zope.interface import _zope_interface_coptimizations as c_opt
-          - PIP_NAME: grpc-google-iam-v1
-            PKG_TEST: import google
+          #- PIP_NAME: grpc-google-iam-v1
+          #  PKG_TEST: import google
           - PIP_NAME: ansible
             PKG_TEST: from ansible import context
           - PIP_NAME: thrift
             PKG_TEST: from thrift import Thrift
-          - PIP_NAME: mysqlclient
-            PKG_TEST: import MySQLdb
+          #- PIP_NAME: mysqlclient
+          #  PKG_TEST: import MySQLdb
           - PIP_NAME: apache-beam
             PKG_TEST: import apache_beam
           - PIP_NAME: tensorflow-data-validation
