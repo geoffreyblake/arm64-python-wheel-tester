@@ -206,6 +206,8 @@ jobs:
             PKG_TEST: import nacl._sodium
           - PIP_NAME: dill
             PKG_TEST: import dill
+          - PIP_NAME: nmslib
+            PKG_TEST: import nmslib
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
