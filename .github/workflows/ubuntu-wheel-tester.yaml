@@ -200,6 +200,8 @@ jobs:
             PKG_TEST: import nacl._sodium
           - PIP_NAME: dill
             PKG_TEST: import dill
+          - PIP_NAME: nmslib
+            PKG_TEST: import nmslib
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: apt-get update -y
