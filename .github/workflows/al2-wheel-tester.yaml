@@ -152,7 +152,7 @@ jobs:
           - PIP_NAME: tornado
             PKG_TEST: import tornado
           - PIP_NAME: pyzmq
-            PKG_TEST: from pyzmq import zmq
+            PKG_TEST: import zmq.backend
           - PIP_NAME: psutil
             PKG_TEST: import psutil
           - PIP_NAME: matplotlib
