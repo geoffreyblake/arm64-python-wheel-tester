@@ -161,8 +161,6 @@ jobs:
             PKG_TEST: import psycopg2
           - PIP_NAME: greenlet
             PKG_TEST: from greenlet import greenlet
-          - PIP_NAME: greenlet==1.0a1
-            PKG_TEST: from greenlet import greenlet
           - PIP_NAME: regex
             PKG_TEST: import regex
           - PIP_NAME: websockets
@@ -179,7 +177,7 @@ jobs:
           - PIP_NAME: pandocfilters
             PKG_TEST: from pandocfilters import toJSONFilter, Str
           - PIP_NAME: zope.interface
-            PKG_TEST: import zip.interface
+            PKG_TEST: from zope.interface import _zope_interface_coptimizations as c_opt
           - PIP_NAME: grpc-google-iam-v1
             PKG_TEST: import google
           - PIP_NAME: ansible
