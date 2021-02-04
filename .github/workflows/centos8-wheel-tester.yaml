@@ -85,8 +85,8 @@ jobs:
             PKG_TEST: import typed_ast
           - PIP_NAME: aiohttp
             PKG_TEST: import aiohttp
-          # - PIP_NAME: markupsafe
-          #   PKG_TEST: import markupsafe
+          - PIP_NAME: markupsafe
+            PKG_TEST: import markupsafe
           - PIP_NAME: fastavro
             PKG_TEST: import fastavro
           - PIP_NAME: scikit-image
