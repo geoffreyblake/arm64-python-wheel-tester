@@ -202,6 +202,20 @@ jobs:
             PKG_TEST: import dill
           - PIP_NAME: nmslib
             PKG_TEST: import nmslib
+          - PIP_NAME: pyproj
+            PKG_TEST: import pyproj
+          - PIP_NAME: lz4
+            PKG_TEST: import lz4
+          - PIP_NAME: setproctitle
+            PKG_TEST: import setproctitle
+          - PIP_NAME: google-crc32c
+            PKG_TEST: import google_crc32c
+          - PIP_NAME: jpype1
+            PKG_TEST: import jpype
+          - PIP_NAME: uvloop
+            PKG_TEST: import uvloop
+          - PIP_NAME: ddtrace
+            PKG_TEST: import ddtrace
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
