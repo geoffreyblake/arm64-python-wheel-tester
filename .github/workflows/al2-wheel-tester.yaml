@@ -113,7 +113,7 @@ jobs:
             PKG_TEST: import gevent
           - PIP_NAME: pywavelets
             PKG_TEST: import pywt
-          - PIP_NAME: pytorch
+          - PIP_NAME: torch
             PKG_TEST: import torch
           - PIP_NAME: torchvision
             PKG_TEST: import torchvision

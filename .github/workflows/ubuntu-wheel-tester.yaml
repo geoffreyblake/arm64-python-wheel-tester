@@ -93,8 +93,6 @@ jobs:
             PKG_TEST: import skimage
           - PIP_NAME: scikit-learn
             PKG_TEST: import sklearn
-          - PIP_NAME: scikit-learn==0.24.0
-            PKG_TEST: import sklearn
           - PIP_NAME: statsmodels
             PKG_TEST: import statsmodels
           - PIP_NAME: gensim
@@ -113,7 +111,7 @@ jobs:
             PKG_TEST: import gevent
           - PIP_NAME: pywavelets
             PKG_TEST: import pywt
-          - PIP_NAME: pytorch
+          - PIP_NAME: torch
             PKG_TEST: import torch
           - PIP_NAME: torchvision
             PKG_TEST: import torchvision
