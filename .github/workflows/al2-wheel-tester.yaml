@@ -216,6 +216,26 @@ jobs:
             PKG_TEST: import uvloop
           - PIP_NAME: ddtrace
             PKG_TEST: import ddtrace
+          - PIP_NAME: ruamel.yaml
+            PKG_TEST: import ruamel.yaml
+          - PIP_NAME: pyproj
+            PKG_TEST: import pyproj
+          - PIP_NAME: numexpr
+            PKG_TEST: import numexpr
+          - PIP_NAME: python-snappy
+            PKG_TEST: import snappy
+          - PIP_NAME: maturin
+            PKG_TEST: import maturin
+          - PIP_NAME: clickhouse-driver
+            PKG_TEST: import clickhouse_driver
+          - PIP_NAME: cmarkgfm
+            PKG_TEST: import cmarkgfm
+          - PIP_NAME: rapidfuzz
+            PKG_TEST: import rapidfuzz
+          - PIP_NAME: hiredis
+            PKG_TEST: import hiredis
+          - PIP_NAME: brotlicffi
+            PKG_TEST: import brotlicffi
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python3-pip
