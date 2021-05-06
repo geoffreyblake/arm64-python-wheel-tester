@@ -238,7 +238,7 @@ jobs:
             PKG_TEST: import brotlicffi
     name: "Amazon Linux 2 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
-      - run: yum install -y python3-pip
+      - run: yum install -y python3-pip mesa-libGL
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3

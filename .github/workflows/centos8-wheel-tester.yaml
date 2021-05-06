@@ -234,7 +234,7 @@ jobs:
             PKG_TEST: import brotlicff
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
-      - run: yum install -y python3-pip
+      - run: yum install -y python3-pip mesa-libGL
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
