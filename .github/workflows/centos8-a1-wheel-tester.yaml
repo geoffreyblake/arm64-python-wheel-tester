@@ -236,11 +236,11 @@ jobs:
             PKG_TEST: import MeCab
           - PIP_NAME: cassandra-driver
             PKG_TEST: import cassandra
-          - PKG_NAME: confluent-kafka
+          - PIP_NAME: confluent-kafka
             PKG_TEST: import confluent_kafka
-          - PKG_NAME: coverage
+          - PIP_NAME: coverage
             PKG_TEST: import coverage
-          - PKG_NAME: netifaces
+          - PIP_NAME: netifaces
             PKG_TEST: import netifaces
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:

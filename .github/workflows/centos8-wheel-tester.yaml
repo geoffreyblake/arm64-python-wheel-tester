@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  centos8_test:
+  centos8_wheel_test:
     runs-on: [self-hosted, linux, ARM64, c6g]
     container: centos:8
     strategy:
@@ -236,11 +236,11 @@ jobs:
             PKG_TEST: import MeCab
           - PIP_NAME: cassandra-driver
             PKG_TEST: import cassandra
-          - PKG_NAME: confluent-kafka
+          - PIP_NAME: confluent-kafka
             PKG_TEST: import confluent_kafka
-          - PKG_NAME: coverage
+          - PIP_NAME: coverage
             PKG_TEST: import coverage
-          - PKG_NAME: netifaces
+          - PIP_NAME: netifaces
             PKG_TEST: import netifaces
     name: "Centos8 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
@@ -248,3 +248,33 @@ jobs:
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
+
+  # Test the package repositories for the python packages instead of pip
+  centos8_pkg_test:
+    runs-on: [self-hosted, linux, ARM64, c6g]
+    container: centos:8
+    strategy:
+      fail-fast: false
+      matrix:
+        PKG:
+          - YUM_NAME: python3-numpy
+            PKG_TEST: import numpy
+          - YUM_NAME: python3-matplotlib
+            PKG_TEST: import matplotlib
+          - YUM_NAME: python3-h5py
+            PKG_TEST: import h5py
+          - YUM_NAME: python3-lz4
+            PKG_TEST: import lz4
+          - YUM_NAME: python3-psycopg2
+            PKG_TEST: import psycopg2
+          - YUM_NAME: python3-pynacl
+            PKG_TEST: import nacl._sodium
+          - YUM_NAME: python3-shapely
+            PKG_TEST: from shapely.geometry import Point
+          
+    name: "Centos8 for ${{ matrix.PKG.YUM_NAME }}"
+    steps:
+      - run: dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+      - run: yum install -y python3-pip mesa-libGL
+      - run: yum install -y ${{ matrix.PKG.YUM_NAME}}
+      - run: echo "${{ matrix.PKG.PKG_TEST }}" | python3
