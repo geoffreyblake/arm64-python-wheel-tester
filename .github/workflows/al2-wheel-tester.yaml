@@ -93,8 +93,6 @@ jobs:
             PKG_TEST: import skimage
           - PIP_NAME: scikit-learn
             PKG_TEST: import sklearn
-          - PIP_NAME: scikit-learn==0.24.0
-            PKG_TEST: import sklearn
           - PIP_NAME: statsmodels
             PKG_TEST: import statsmodels
           - PIP_NAME: gensim

@@ -244,9 +244,8 @@ jobs:
             PKG_TEST: import netifaces
     name: "Ubuntu 20.04LTS Focal for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
-      - run: export DEBIAN_FRONTEND=noninteractive
       - run: apt-get update -y
-      - run: apt-get install -y python3-pip libgl1 libglib2.0-0
+      - run: DEBIAN_FRONTEND=noninteractive apt-get install -y python3-pip libgl1 libglib2.0-0
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
