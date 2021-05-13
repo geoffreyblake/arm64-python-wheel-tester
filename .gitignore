@@ -8,7 +8,7 @@ cdk.out/
 arm64_wheel_tester_stack/__pycache__/
 
 # Python egg-info
-arm64_wheel_tester_stack/gravtion2_wheel_tester_stack.egg-info/
+arm64_wheel_tester_stack/arm64_wheel_tester_stack.egg-info/
 
 # Environment variables
 .aws_creds
