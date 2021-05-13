@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  ubuntu_test:
+  ubuntu_wheel_test:
     runs-on: [self-hosted, linux, ARM64, c6g]
     container: ubuntu:focal
     strategy:
@@ -231,7 +231,7 @@ jobs:
           - PIP_NAME: hiredis
             PKG_TEST: import hiredis
           - PIP_NAME: brotlicffi
-            PKG_TEST: import brotlicff
+            PKG_TEST: import brotlicffi
           - PIP_NAME: mecab-python3
             PKG_TEST: import MeCab
           - PIP_NAME: cassandra-driver
@@ -249,3 +249,49 @@ jobs:
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
+
+  # Test the package repositories for the python packages instead of pip
+  ubuntu_pkg_test:
+    runs-on: [self-hosted, linux, ARM64, c6g]
+    container: ubuntu:focal
+    strategy:
+      fail-fast: false
+      matrix:
+        PKG:
+          - APT_NAME: python3-confluent-kafka
+            PKG_TEST: import confluent_kafka
+          - APT_NAME: python3-numpy
+            PKG_TEST: import numpy
+          - APT_NAME: python3-matplotlib
+            PKG_TEST: import matplotlib
+          - APT_NAME: python3-h5py
+            PKG_TEST: import h5py
+          - APT_NAME: python3-lz4
+            PKG_TEST: import lz4
+          - APT_NAME: python3-psycopg2
+            PKG_TEST: import psycopg2
+          - APT_NAME: python3-nacl
+            PKG_TEST: import nacl._sodium
+          - APT_NAME: python3-shapely
+            PKG_TEST: from shapely.geometry import Point
+          - APT_NAME: python3-pil
+            PKG_TEST: |
+              import PIL
+              import PIL._imagingcms
+              import PIL._imaging
+              import PIL._imagingft
+              import PIL._imagingmath
+              import PIL._imagingmorph
+          - APT_NAME: python3-cassandra
+            PKG_TEST: import cassandra
+          - APT_NAME: python3-coverage
+            PKG_TEST: import coverage
+          - APT_NAME: python3-shapely
+            PKG_TEST: from shapely.geometry import Point
+    name: "Ubuntu 20.04LTS Focal for ${{ matrix.PKG.APT_NAME }}"
+    steps:
+      - run: apt-get update -y
+      - run: DEBIAN_FRONTEND=noninteractive apt-get install -y python3-pip libgl1 libglib2.0-0
+      - run: python3 -m pip install --upgrade pip
+      - run: python3 -m pip install --no-cache-dir ${{ matrix.PKG.APT_NAME }}
+      - run: echo "${{ matrix.PKG.PKG_TEST }}" | python3

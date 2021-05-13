@@ -231,7 +231,7 @@ jobs:
           - PIP_NAME: hiredis
             PKG_TEST: import hiredis
           - PIP_NAME: brotlicffi
-            PKG_TEST: import brotlicff
+            PKG_TEST: import brotlicffi
           - PIP_NAME: mecab-python3
             PKG_TEST: import MeCab
           - PIP_NAME: cassandra-driver

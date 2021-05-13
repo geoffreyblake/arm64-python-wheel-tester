@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  al2_test:
+  al2_wheel_test:
     runs-on: [self-hosted, linux, ARM64, c6g]
     container: amazonlinux:2
     strategy:
@@ -250,3 +250,38 @@ jobs:
       - run: python3 -m pip install --upgrade pip
       - run: python3 -m pip install --no-cache-dir ${{ matrix.WHEEL.PIP_NAME }}
       - run: echo "${{ matrix.WHEEL.PKG_TEST }}" | python3
+
+
+# Test the package repositories for the python packages instead of pip
+  al2_pkg_test:
+    runs-on: [self-hosted, linux, ARM64, c6g]
+    container: amazonlinux:2
+    strategy:
+      fail-fast: false
+      matrix:
+        PKG:
+          - YUM_NAME: python36-numpy
+            PKG_TEST: import numpy
+          - YUM_NAME: python36-lz4
+            PKG_TEST: import lz4
+          - YUM_NAME: python36-psycopg2
+            PKG_TEST: import psycopg2
+          - YUM_NAME: python36-pillow
+            PKG_TEST: |
+              import PIL
+              import PIL._imagingcms
+              import PIL._imaging
+              import PIL._imagingft
+              import PIL._imagingmath
+              import PIL._imagingmorph
+          - YUM_NAME: python36-coverage
+            PKG_TEST: import coverage
+          
+    name: "Centos8 for ${{ matrix.PKG.YUM_NAME }}"
+    steps:
+      - run: amazon-linux-extras enable epel
+      - run: yum clean -y metadata
+      - run: yum install -y epel-release
+      - run: yum install -y python3-pip mesa-libGL
+      - run: yum install -y ${{ matrix.PKG.YUM_NAME}}
+      - run: echo "${{ matrix.PKG.PKG_TEST }}" | python3
