@@ -293,5 +293,5 @@ jobs:
       - run: apt-get update -y
       - run: DEBIAN_FRONTEND=noninteractive apt-get install -y python3-pip libgl1 libglib2.0-0
       - run: python3 -m pip install --upgrade pip
-      - run: python3 -m pip install --no-cache-dir ${{ matrix.PKG.APT_NAME }}
+      - run: apt-get install -y ${{ matrix.PKG.APT_NAME }}
       - run: echo "${{ matrix.PKG.PKG_TEST }}" | python3
