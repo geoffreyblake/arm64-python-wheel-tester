@@ -242,6 +242,20 @@ jobs:
             PKG_TEST: import coverage
           - PIP_NAME: netifaces
             PKG_TEST: import netifaces
+          - PIP_NAME: scrypt
+            PKG_TEST: import scrypt
+          - PIP_NAME: grpcio-tools
+            PKG_TEST: import grpc.tools
+          - PIP_NAME: btrees
+            PKG_TEST: from BTrees.OOBTree import OOBTree
+          - PIP_NAME: pycares
+            PKG_TEST: import pycares
+          - PIP_NAME: advent-of-code
+            PKG_TEST: import advent_of_code
+          - PIP_NAME: biopython
+            PKG_TEST: from Bio import SeqIO
+          - PIP_NAME: pymupdf
+            PKG_TEST: import fitz
     name: "Centos8 py38 for ${{ matrix.WHEEL.PIP_NAME }}"
     steps:
       - run: yum install -y python38-pip mesa-libGL
