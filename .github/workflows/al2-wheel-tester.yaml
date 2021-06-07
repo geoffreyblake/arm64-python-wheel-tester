@@ -92,7 +92,7 @@ jobs:
           - PIP_NAME: scikit-image
             PKG_TEST: import skimage
           # Test scikit image wheel for AL2 as it has 3.7 wheels, but not 3.8 for ubuntu
-          - PIP_NAME: scikit-image==0.18.2rc1
+          - PIP_NAME: scikit-image==0.18.2rc2
             PKG_TEST: |
               from skimage import data, filters
               import numpy as np
