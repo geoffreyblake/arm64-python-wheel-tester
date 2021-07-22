@@ -1,0 +1,6 @@
+FROM amazonlinux
+
+RUN yum install -y \
+        python3-pip \
+        mesa-libGL
+RUN python3 -m pip install --upgrade pip

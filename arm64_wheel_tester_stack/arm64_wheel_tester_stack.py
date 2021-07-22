@@ -110,82 +110,13 @@ class Arm64WheelTesterStack(core.Stack):
                                      "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
                                      "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
         instance_focal1 = ec2.Instance(self, "focal1-tester",
-            instance_type=ec2.InstanceType("c6g.medium"),
+            instance_type=ec2.InstanceType("m6g.large"),
             machine_image=ubuntu,
             vpc=vpc,
             key_name=KEY_NAME,
             block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
             user_data=user_data_focal)
         instances.append(instance_focal1)
-        
-        user_data_focal = ec2.UserData.for_linux()
-        user_data_focal.add_commands("apt-get update -y",
-                                     "apt-get upgrade -y",
-                                     "apt-get install -y curl software-properties-common",
-                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
-                                     "add-apt-repository "
-                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
-                                     "apt-get update -y",
-                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
-                                     "systemctl start docker",
-                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
-                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_focal2 = ec2.Instance(self, "focal2-tester",
-            instance_type=ec2.InstanceType("c6g.medium"),
-            machine_image=ubuntu,
-            vpc=vpc,
-            key_name=KEY_NAME,
-            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_focal)
-        instances.append(instance_focal2)
-
-        user_data_focal = ec2.UserData.for_linux()
-        user_data_focal.add_commands("apt-get update -y",
-                                     "apt-get upgrade -y",
-                                     "apt-get install -y curl software-properties-common",
-                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
-                                     "add-apt-repository "
-                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
-                                     "apt-get update -y",
-                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
-                                     "systemctl start docker",
-                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
-                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_focal3 = ec2.Instance(self, "focal3-tester",
-            instance_type=ec2.InstanceType("c6g.medium"),
-            machine_image=ubuntu,
-            vpc=vpc,
-            key_name=KEY_NAME,
-            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_focal)
-        instances.append(instance_focal3)
-
-        user_data_focal_a1 = ec2.UserData.for_linux()
-        user_data_focal_a1.add_commands("apt-get update -y",
-                                     "apt-get upgrade -y",
-                                     "apt-get install -y curl software-properties-common",
-                                     "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
-                                     "add-apt-repository "
-                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
-                                     "apt-get update -y",
-                                     "apt-get install -y docker-ce docker-ce-cli containerd.io",
-                                     "systemctl start docker",
-                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
-                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
-        instance_focal_a1 = ec2.Instance(self, "focal-a1-tester",
-            instance_type=ec2.InstanceType("a1.large"),
-            machine_image=ubuntu,
-            vpc=vpc,
-            key_name=KEY_NAME,
-            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_focal_a1)
-        instances.append(instance_focal_a1)
 
         # Allow inbound HTTPS connections
         for instance in instances:
