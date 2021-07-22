@@ -19,8 +19,6 @@ except:
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_SESSION_TOKEN = os.environ['AWS_SESSION_TOKEN']
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
-GITHUB_REPO = os.environ['GITHUB_REPO']
 
 REGIONS = ['us-east-1']
 UBUNTU = 'ubuntu'
@@ -104,11 +102,7 @@ class Arm64WheelTesterStack(core.Stack):
                                      "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
                                      "apt-get update -y",
                                      "apt-get install -y docker-ce docker-ce-cli containerd.io",
-                                     "systemctl start docker",
-                                     "(su ubuntu && cd ~ && mkdir actions-runner && cd actions-runner && "
-                                     "curl -O -L https://github.com/actions/runner/releases/download/v2.273.0/actions-runner-linux-arm64-2.273.0.tar.gz "
-                                     "&& tar xzf ./actions-runner-linux-arm64-2.273.0.tar.gz && ./config.sh --url {} --token {} --unattended --labels focal "
-                                     "&& sudo ./svc.sh install && sudo ./svc.sh start)".format(GITHUB_REPO, GITHUB_TOKEN))
+                                     "systemctl start docker")
         instance_focal1 = ec2.Instance(self, "focal1-tester",
             instance_type=ec2.InstanceType("m6g.large"),
             machine_image=ubuntu,

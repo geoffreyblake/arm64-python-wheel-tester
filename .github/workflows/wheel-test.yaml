@@ -9,7 +9,7 @@ on:
 
 jobs:
   ubuntu_wheel_test:
-    runs-on: [self-hosted, linux, ARM64, c6g]
+    runs-on: [self-hosted, linux, ARM64, m6g]
     name: "Test Python Wheels"
     steps:
       - name: Checkout repository
