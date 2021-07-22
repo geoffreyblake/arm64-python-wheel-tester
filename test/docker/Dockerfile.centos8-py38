@@ -1,0 +1,6 @@
+FROM centos:8
+
+RUN dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+RUN sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/CentOS-Linux-PowerTools.repo
+RUN yum install -y python38-pip mesa-libGL
+RUN python3 -m pip install --upgrade pip

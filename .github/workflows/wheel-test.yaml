@@ -1,0 +1,25 @@
+name: Wheel Tester
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Run nightly
+    - cron: '0 0 * * *'
+
+jobs:
+  ubuntu_wheel_test:
+    runs-on: [self-hosted, linux, ARM64, c6g]
+    name: "Test Python Wheels"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - run: test/setup-containers.sh
+      - run: docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/test:/io --env WORK_PATH=$(realpath test) testhost python3 /io/test-packages.py
+      - name: "Upload results file"
+        uses: actions/upload-artifact@v2
+        with:
+          name: results
+          path: |
+            test/results*.json.xz
+            test/report*.html

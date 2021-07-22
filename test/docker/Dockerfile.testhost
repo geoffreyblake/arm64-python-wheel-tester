@@ -1,0 +1,8 @@
+FROM ubuntu:focal
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+    python3-pip \
+    docker.io
+RUN python3 -m pip install --upgrade pip
+RUN pip3 install pyyaml
