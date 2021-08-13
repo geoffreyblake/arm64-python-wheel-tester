@@ -272,3 +272,29 @@ packages:
     PKG_TEST: import psutil
   - PIP_NAME: gevent
     PKG_TEST: import gevent
+  - PIP_NAME: dulwich
+    PKG_TEST: import dulwich
+  - PIP_NAME: deap
+    PKG_TEST: import deap
+  - PIP_NAME: imageio-ffmpeg
+    PKG_TEST: import imageio_ffmpeg
+  - PIP_NAME: fastcluster
+    PKG_TEST: import fastcluster
+  - PIP_NAME: cftime
+    PKG_TEST: import cftime
+  - PIP_NAME: line-profiler
+    PKG_TEST: import line_profiler
+  - PIP_NAME: h3
+    PKG_TEST: import h3
+  - PIP_NAME: pygit2
+    PKG_TEST: import pygit2
+  - PIP_NAME: python-rapidjson
+    PKG_TEST: import rapidjson
+  - PIP_NAME: ephem
+    PKG_TEST: import ephem
+  - PIP_NAME: crc32c
+    PKG_TEST: import crc32c
+  - PIP_NAME: mecab_python3
+    PKG_TEST: import MeCab
+  - PIP_NAME: guppy3
+    PKG_TEST: import guppy
