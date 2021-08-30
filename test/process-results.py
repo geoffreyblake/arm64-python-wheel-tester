@@ -213,9 +213,10 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
                 break
 
         odd_even = 'even' if (i+1) % 2 == 0 else 'odd'
+        different_class = 'different' if different else ''
         for test_results in test_results_list:
             html.append(f'<tr class="wheel-line {odd_even}">')
-            html.append(f'<td class="wheel-name">{wheel}</td>')
+            html.append(f'<td class="wheel-name {different_class}">{wheel}</td>')
             for test_name in all_test_names:
                 html.append('<td class="">')
                 if wheel in test_results and test_name in test_results[wheel]:
