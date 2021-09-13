@@ -298,3 +298,37 @@ packages:
     PKG_TEST: import MeCab
   - PIP_NAME: guppy3
     PKG_TEST: import guppy
+  - PIP_NAME: persistent
+    PKG_TEST: import persistent
+  - PIP_NAME: zope.hookable
+    PKG_TEST: import zope.hookable
+  - PIP_NAME: zope.proxy
+    PKG_TEST: import zope.proxy
+  - PIP_NAME: Levenshtein-search
+    PKG_TEST: import Levenshtein_search
+  - PIP_NAME: numpy-quaternion
+    PKG_TEST: import quaternion
+  - PIP_NAME: spglib
+    PKG_TEST: import spglib
+  - PIP_NAME: httptools
+    PKG_TEST: import httptools
+  - PIP_NAME: onnx
+    PKG_TEST: import onnx
+  - PIP_NAME: jellyfish
+    PKG_TEST: import jellyfish
+  - PIP_NAME: Brotli
+    PKG_TEST: import brotli
+  - PIP_NAME: pyreadstat
+    PKG_TEST: import pyreadstat
+  - PIP_NAME: psd-tools
+    PKG_TEST: import psd_tools
+  - PIP_NAME: numba
+    PKG_TEST: import numba
+  - PIP_NAME: awkward
+    PKG_TEST: import awkward
+  - PIP_NAME: clevercsv
+    PKG_TEST: import clevercsv
+  - PIP_NAME: Mosek
+    PKG_TEST: import mosek
+  - PIP_NAME: apache-beam
+    PKG_TEST: import apache_beam
