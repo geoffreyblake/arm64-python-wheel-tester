@@ -214,9 +214,13 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
 
         odd_even = 'even' if (i+1) % 2 == 0 else 'odd'
         different_class = 'different' if different else ''
-        for test_results in test_results_list:
+        for test_result_index, test_results in enumerate(test_results_list):
+            if different:
+                file_indicator = f'<br /><span class="file-indicator">{test_results_fname_list[test_result_index]}</span>'
+            else:
+                file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
-            html.append(f'<td class="wheel-name {different_class}">{wheel}</td>')
+            html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
             for test_name in all_test_names:
                 html.append('<td class="">')
                 if wheel in test_results and test_name in test_results[wheel]:
@@ -229,6 +233,8 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
                         html.append(make_badge(classes=['warning'], text='build required'))
                     if result['slow-install']:
                         html.append(make_badge(classes=['warning'], text='slow install'))
+                    if 'timeout' in result and result['timeout']:
+                        html.append(make_badge(classes=['failed'], text='timed out'))
 
                 html.append('</td>')
 
@@ -302,6 +308,9 @@ table.python-wheel-report span.badge {
     margin: 3px;
     padding: 2px;
     white-space: nowrap;
+}
+table.python-wheel-report span.file-indicator {
+    font-size: 0.5em;
 }
 
 
