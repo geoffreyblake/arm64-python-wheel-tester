@@ -10,6 +10,9 @@ import multiprocessing
 from datetime import datetime
 from collections import defaultdict
 
+SLOW_INSTALL_TIME = 60
+TIMEOUT = 180
+
 def main():
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
     with open('packages.yaml') as f:
@@ -66,6 +69,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
         'build-required': False,
         'binary-wheel': False,
         'slow-install': False,
+        'timeout': False,
         'wheel': package_main_name,
         'test-name': test_name,
     }
@@ -74,28 +78,52 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
     wd = os.environ['WORK_PATH']
     start = time.time()
     proc = subprocess.run(['docker', 'run',
-            '--interactive', '--rm', '-v', f'{wd}/{process_work_dir}:/io',
+            '-d', '-v', f'{wd}/{process_work_dir}:/io',
             '--env', f'PACKAGE_LIST={package_list}',
             container,
             'bash', f'/io/{test_sh_script}'],
             encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    container_id = proc.stdout.strip()
 
-    if time.time() - start > 60:
+    # wait until the timeout for the container to complete
+    while True:
+        proc = subprocess.run(['docker', 'container', 'inspect', '-f', '{{ .State.Running }}', container_id],
+                encoding='utf-8', stdout=subprocess.PIPE)
+        if proc.stdout.strip() != "true":
+            break
+        elif time.time() - start > TIMEOUT:
+            result['timeout'] = True
+            subprocess.run(['docker', 'stop', container_id])
+            print(f"Package {package_main_name} on {test_name} TIMED OUT!!")
+            break
+        time.sleep(1)
+
+    proc = subprocess.run(['docker', 'container', 'inspect', '-f', '{{ .State.ExitCode }}', container_id],
+            encoding='utf-8', stdout=subprocess.PIPE)
+    return_code = int(proc.stdout.strip())
+    proc = subprocess.run(['docker', 'logs', container_id],
+            encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output = proc.stdout
+
+    if time.time() - start > SLOW_INSTALL_TIME:
         result['slow-install'] = True
 
-    if proc.returncode == 0:
+    if return_code == 0:
         result['test-passed'] = True
 
-    if re.search(r'Building wheel for', proc.stdout) is not None:
+    if re.search(r'Building wheel for', output) is not None:
         result['build-required'] = True
 
-    if re.search(f'Downloading {package_main_name}[^\n]*aarch64[^\n]*whl', proc.stdout) is not None:
+    if re.search(f'Downloading {package_main_name}[^\n]*aarch64[^\n]*whl', output) is not None:
         result['binary-wheel'] = True
 
-    result['output'] = proc.stdout
+    result['output'] = output
 
     outcome = "passed" if result['test-passed'] else "failed"
     print(f"Package {package_main_name} on {test_name} {outcome}.")
+
+    subprocess.run(['docker', 'container', 'rm', container_id],
+            encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     return result
 
