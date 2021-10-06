@@ -332,3 +332,5 @@ packages:
     PKG_TEST: import mosek
   - PIP_NAME: apache-beam
     PKG_TEST: import apache_beam
+  - PIP_NAME: osqp
+    PKG_TEST: import osqp
