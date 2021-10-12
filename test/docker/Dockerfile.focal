@@ -6,3 +6,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libgl1 \
     libglib2.0-0
 RUN python3 -m pip install --upgrade pip
+ADD https://repo.anaconda.com/archive/Anaconda3-2021.04-Linux-aarch64.sh /root/anaconda.sh
+RUN bash ~/anaconda.sh -b -p $HOME/anaconda
+RUN $HOME/anaconda/bin/conda update --all --yes
