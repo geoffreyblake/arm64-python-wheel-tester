@@ -5,15 +5,24 @@ import os
 import json
 import time
 import yaml
+import argparse
+import importlib
 import subprocess
 import multiprocessing
 from datetime import datetime
 from collections import defaultdict
 
+process_results = importlib.import_module("process-results")
+generate_website = importlib.import_module("generate-website")
+
 SLOW_INSTALL_TIME = 60
 TIMEOUT = 180
 
 def main():
+    parser = argparse.ArgumentParser(description="Run wheel tests")
+    parser.add_argument('--token', type=str, help="Github API token")
+    args = parser.parse_args()
+
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
     with open('packages.yaml') as f:
         packages = yaml.safe_load(f.read())
@@ -58,10 +67,21 @@ def main():
         json.dump(results, f, indent=2)
     subprocess.run(['xz', 'results.json'], check=True)
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    os.rename('results.json.xz', f'results-{now}.json.xz')
+    new_results_file = f'results-{now}.json.xz'
+    os.rename('results.json.xz', new_results_file)
 
+    print("process results...")
     # Also generate an html report of the results
-    subprocess.run(f'python3 process-results.py -o report-{now}.html --by-test results-{now}.json.xz', shell=True)
+    html = process_results.print_table_by_distro_report([new_results_file])
+    with open(f'report-{now}.html', 'w') as f:
+        f.write(html)
+
+    # Run the GitHub pages generator
+    print("generate the website...")
+    generate_website.generate_website(output_dir='build',
+            new_results=new_results_file,
+            github_token=args.token,
+            days_ago_list=[7, 14, 28])
 
     # chmod the results so that the host can remove the file when cleaning up
     subprocess.run('chmod ugo+rw results* report*', shell=True, check=True)

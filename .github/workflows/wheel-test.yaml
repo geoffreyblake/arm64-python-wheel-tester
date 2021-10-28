@@ -14,8 +14,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - run: test/setup-containers.sh
-      - run: docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/test:/io --env WORK_PATH=$(realpath test) testhost python3 /io/test-packages.py
+
+      - name: Setup or update test containers
+        run: test/setup-containers.sh
+
+      - name: Execute tests and generate report
+        run: |
+          docker run -i --rm \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          -v $(pwd)/test:/io \
+          -v $(pwd):/repo \
+          --env WORK_PATH=$(realpath test) \
+          --env GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
+          --env GITHUB_API_URL="$GITHUB_API_URL" \
+          testhost python3 /io/test-packages.py --token ${{ secrets.GITHUB_TOKEN }}
+
       - name: "Upload results file"
         uses: actions/upload-artifact@v2
         with:
@@ -23,3 +36,9 @@ jobs:
           path: |
             test/results*.json.xz
             test/report*.html
+
+      - name: Upload report to github pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: test/build
