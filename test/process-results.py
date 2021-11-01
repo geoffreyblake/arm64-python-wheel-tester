@@ -6,6 +6,7 @@ import json
 import lzma
 import argparse
 from functools import reduce
+from datetime import datetime
 from collections import OrderedDict
 
 def main():
@@ -184,9 +185,18 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
     wheel_name_set = sorted(list(wheel_name_set), key=str.lower)
     all_test_names = sorted(list(all_test_names))
 
+    # build a list of "pretty" names for each file
+    test_results_fname_pretty = []
+    for fname in test_results_fname_list:
+        mo = re.search('[^/]-([0-9\-_]+).json.xz', fname)
+        if mo is None:
+            test_results_fname_pretty.append(fname)
+        else:
+            test_results_fname_pretty.append(datetime.strptime(mo.group(1), "%Y-%m-%d_%H-%M-%S").strftime('%B %d, %Y'))
+
     html = []
     html.append(HTML_HEADER)
-    html.append(f'<h1>{test_results_fname_list[0]}</h1>')
+    html.append(f'<h1>Test results from {test_results_fname_pretty[0]}</h1>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
@@ -216,7 +226,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
         different_class = 'different' if different else ''
         for test_result_index, test_results in enumerate(test_results_list):
             if different:
-                file_indicator = f'<br /><span class="file-indicator">{test_results_fname_list[test_result_index]}</span>'
+                file_indicator = f'<br /><span class="file-indicator">{test_results_fname_pretty[test_result_index]}</span>'
             else:
                 file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
