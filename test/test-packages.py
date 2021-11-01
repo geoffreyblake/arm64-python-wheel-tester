@@ -83,8 +83,6 @@ def main():
             github_token=args.token,
             days_ago_list=[7, 14, 28])
 
-    # chmod the results so that the host can remove the file when cleaning up
-    subprocess.run('chmod ugo+rw results* report*', shell=True, check=True)
 
 process_work_dir = ''
 def do_test_initializer():

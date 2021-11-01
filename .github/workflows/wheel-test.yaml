@@ -21,6 +21,7 @@ jobs:
       - name: Execute tests and generate report
         run: |
           docker run -i --rm \
+          -u $(id -u) \
           -v /var/run/docker.sock:/var/run/docker.sock \
           -v $(pwd)/test:/io \
           -v $(pwd):/repo \
