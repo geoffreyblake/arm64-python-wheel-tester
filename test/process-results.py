@@ -163,78 +163,101 @@ def make_badge(classes=[], text=""):
     return f'<span class="{classes}">{text}</span>'
 
 def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
-    # TODO: add support for multipile result files displayed in tabs
+    class TestResultFile():
+        def __init__(self, fname):
+            self.fname = fname
+            self.content = None
+            self.date = None
+
     test_results_list = []
     for fname in test_results_fname_list:
+        test_result_file = TestResultFile(fname)
         if re.search(r'\.xz$', fname) is not None:
             with lzma.open(fname) as f:
-                test_results_list.append(json.load(f))
+                test_result_file.content = json.load(f)
         else:
             with open(fname) as f:
-                test_results_list.append(json.load(f))
+                test_result_file.content = json.load(f)
+
+        mo = re.search('[^/]-([0-9\-_]+).json.xz', fname)
+        if mo is not None:
+            test_result_file.date = datetime.strptime(mo.group(1), "%Y-%m-%d_%H-%M-%S")
+        test_results_list.append(test_result_file)
+
+    # Sort the test result files by date because code that follows assumes this order.
+    test_results_list = sorted(test_results_list, key=lambda x: x.date, reverse=True)
 
     # get a sorted list of all the wheel names
     wheel_name_set = set()
     # get a sorted list of all the test_names (distros, plus extra, e.g. centos-python38)
     all_test_names = set()
     for test_result in test_results_list:
-        wheel_name_set.update(test_result.keys())
-        for wheel, wheel_dict in test_result.items():
+        wheel_name_set.update(test_result.content.keys())
+        for wheel, wheel_dict in test_result.content.items():
             for test_name, test_name_results in wheel_dict.items():
                 all_test_names.add(test_name)
     wheel_name_set = sorted(list(wheel_name_set), key=str.lower)
     all_test_names = sorted(list(all_test_names))
 
-    # build a list of "pretty" names for each file
-    test_results_fname_pretty = []
-    for fname in test_results_fname_list:
-        mo = re.search('[^/]-([0-9\-_]+).json.xz', fname)
-        if mo is None:
-            test_results_fname_pretty.append(fname)
-        else:
-            test_results_fname_pretty.append(datetime.strptime(mo.group(1), "%Y-%m-%d_%H-%M-%S").strftime('%B %d, %Y'))
-
     html = []
     html.append(HTML_HEADER)
-    html.append(f'<h1>Test results from {test_results_fname_pretty[0]}</h1>')
+    pretty_date = test_results_list[0].date.strftime("%B %d, %Y")
+    html.append(f'<h1>Test results from {pretty_date}</h1>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
     for test_name in all_test_names:
         html.append(f'<th>{test_name}</th>')
     html.append('</tr>')
+    # Iterate over the sorted list of wheel names
     for i, wheel in enumerate(wheel_name_set):
-        # determine if any of the test files have different results
-        different = False
-        for test_name in all_test_names:
-            b = None
-            for a in test_results_list:
-                try:
-                    a = a[wheel][test_name]
-                except KeyError:
-                    continue
-                t = (a['test-passed'], a['build-required'], a['slow-install'])
-                if b is None:
-                    b = t
-                elif b != t:
-                    different = True
-                    break
-            if different:
-                break
 
+        # Make a list of test files to display by finding changes. Cap the total number of
+        # rows for each wheel to a specified number.
+        previous_wheel_test_results = None
+        displayed_test_rows = []
+        # Iterating over each input file
+        for test_result_file in test_results_list[::-1]:
+            wheel_test_results = {}
+            # Iterating over each test (centos, focal, ...)
+            for test_name in all_test_names:
+                try:
+                    test_result = test_result_file.content[wheel][test_name]
+                except KeyError:
+                    # This file does not have a result for this wheel and test name. Skip it.
+                    continue
+
+                wheel_test_results[test_name] = (test_result['test-passed'], test_result['build-required'])
+
+            if previous_wheel_test_results is None:
+                displayed_test_rows.append(test_result_file)
+            elif wheel_test_results != previous_wheel_test_results:
+                displayed_test_rows.append(test_result_file)
+
+            previous_wheel_test_results = wheel_test_results
+
+        # If there are no changes to the results, only show the last result
+        if len(displayed_test_rows) == 1:
+            displayed_test_rows = [test_results_list[0]]
+        # Always display results from the most recent run.
+        elif test_results_list[0] not in displayed_test_rows:
+            displayed_test_rows.append(test_results_list[0])
+
+        different = len(displayed_test_rows) > 1
         odd_even = 'even' if (i+1) % 2 == 0 else 'odd'
         different_class = 'different' if different else ''
-        for test_result_index, test_results in enumerate(test_results_list):
+        for test_result_file in displayed_test_rows:
             if different:
-                file_indicator = f'<br /><span class="file-indicator">{test_results_fname_pretty[test_result_index]}</span>'
+                pretty_date = test_result_file.date.strftime("%B %d, %Y")
+                file_indicator = f'<br /><span class="file-indicator">{pretty_date}</span>'
             else:
                 file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
             html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
             for test_name in all_test_names:
                 html.append('<td class="">')
-                if wheel in test_results and test_name in test_results[wheel]:
-                    result = test_results[wheel][test_name]
+                if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
+                    result = test_result_file.content[wheel][test_name]
                     if result['test-passed']:
                         html.append(make_badge(classes=['passed'], text='passed'))
                     else:
