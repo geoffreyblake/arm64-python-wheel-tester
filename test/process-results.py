@@ -6,8 +6,8 @@ import json
 import lzma
 import argparse
 from functools import reduce
-from datetime import datetime
 from collections import OrderedDict
+from datetime import datetime, timedelta
 
 def main():
     parser = argparse.ArgumentParser(description="Parse result files and render an HTML page with a status summary")
@@ -15,10 +15,11 @@ def main():
     parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.')
     parser.add_argument('--by-test', action='store_true', help="print results by test (distro)")
     parser.add_argument('-o', '--output-file', type=str, help="file name to write report")
+    parser.add_argument('--compare-weekday-num', type=int, help="integer weekday number to hinge the summary report on", default=None)
 
     args = parser.parse_args()
     if args.by_test:
-        html = print_table_by_distro_report(args.resultfiles, args.ignore)
+        html = print_table_by_distro_report(args.resultfiles, args.ignore, args.compare_weekday_num)
     else:
         html = print_table_report(args.resultfiles, args.ignore)
     if args.output_file:
@@ -27,17 +28,18 @@ def main():
     else:
         print(html)
 
-def get_tests_with_result(wheel_dict, key='test-passed', result=False, ignore_tests=[]):
-    tests = []
-    for test_name, test_results in wheel_dict.items():
-        if test_name in ignore_tests:
+def get_wheels_with_result(wheel_dict, key='test-passed', result=False, ignore_tests=[]):
+    wheels = set()
+    for wheel_name, wheel_results in wheel_dict.items():
+        if wheel_name in ignore_tests:
             continue
-        if test_results[key] == result:
-            tests.append(test_name)
-    return tests
+        for test_name, test_results in wheel_results.items():
+            if test_results[key] == result:
+                wheels.add(wheel_name)
+    return list(wheels)
 
 def get_failing_tests(wheel_dict, ignore_tests=[]):
-    return get_tests_with_result(wheel_dict, 'test-passed', False, ignore_tests)
+    return get_wheels_with_result(wheel_dict, 'test-passed', False, ignore_tests)
 
 def get_build_required(wheel_dict, ignore_tests=[]):
     return get_tests_with_result(wheel_dict, 'build-required', True, ignore_tests)
@@ -162,7 +164,7 @@ def make_badge(classes=[], text=""):
     classes = " ".join(classes)
     return f'<span class="{classes}">{text}</span>'
 
-def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
+def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compare_weekday_num=None):
     class TestResultFile():
         def __init__(self, fname):
             self.fname = fname
@@ -202,10 +204,50 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
     html = []
     html.append(HTML_HEADER)
     pretty_date = test_results_list[0].date.strftime("%B %d, %Y")
-    html.append(f'<h1>Test results from {pretty_date}</h1>')
-    html.append('<section class="help"><p>The table shows test results from the current test run and differences, if any, with previous runs.')
+    html.append(f'<h1>Python Wheels on aarch64 test results from {pretty_date}</h1>')
+    html.append('<section class="summary">')
+
+    # Find the result file to compare against for the top-level summary.
+    referene_test_file = None
+    if type(compare_weekday_num) is int:
+        reference_date = test_results_list[0].date
+        reference_date = reference_date.replace(hour=23, minute=59)
+        reference_date = reference_date - timedelta(days=reference_date.weekday()) + timedelta(days=compare_weekday_num)
+        current_weekday = test_results_list[0].date.weekday()
+        if current_weekday <= compare_weekday_num:
+            reference_date -= timedelta(days=7)
+        for test_result_file in test_results_list:
+            if test_result_file.date < reference_date:
+                reference_test_file = test_result_file
+                break
+        summary_table = [['date', 'number of wheels', 'all tests passed', 'some tests failed']]
+        for test_result_file in [reference_test_file, test_results_list[0]]:
+            count = len(test_result_file.content)
+            failures = len(get_failing_tests(test_result_file.content))
+            all_passing = count - failures
+            date = test_result_file.date.strftime("%A, %B %d, %Y")
+            summary_table.append([date, count, all_passing, failures])
+
+        html.append('<table class="summary">')
+        for index in range(len(summary_table[0])):
+            html.append('<tr>')
+            for column_index, column_data in enumerate(summary_table):
+                element = 'th' if column_index == 0 else 'td'
+                html.append(f'<{element}>{column_data[index]}</{element}>')
+            if summary_table[0][index] in ['number of wheels', 'all tests passed', 'some tests failed']:
+                difference = summary_table[2][index] - summary_table[1][index]
+                plus = '+' if difference >= 0 else ''
+                html.append(f'<td>{plus}{difference}</td>')
+            else:
+                html.append('<td></td>')
+            html.append('</tr>')
+        html.append('</table>')
+
+
+    html.append('<p>The table shows test results from the current test run and differences, if any, with previous runs.')
     html.append('When differences exist, the first test report exhibting the difference is shown. The current test result')
-    html.append('is always shown, regardless of whether there is any difference.</p></section>')
+    html.append('is always shown, regardless of whether there is any difference.</p>')
+    html.append('</section>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
@@ -293,10 +335,22 @@ h1 {
     text-align: center;
 }
 
-section.help {
+section.summary {
     margin: 0 auto;
     width: 900px;
     font-family: sans-serif;
+}
+
+section.summary table {
+    margin: 0 auto;
+    width: 700px;
+    border-collapse: collapse;
+}
+
+section.summary th, section.summary td {
+    border: solid 1px;
+    margin: 0px;
+    padding: 3px;
 }
 
 table.python-wheel-report {

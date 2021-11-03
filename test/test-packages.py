@@ -81,7 +81,8 @@ def main():
     generate_website.generate_website(output_dir='build',
             new_results=new_results_file,
             github_token=args.token,
-            days_ago_list=[7, 14, 28])
+            days_ago_list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21],
+            compare_weekday_num=3)
 
 
 process_work_dir = ''
