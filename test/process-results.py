@@ -203,6 +203,9 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
     html.append(HTML_HEADER)
     pretty_date = test_results_list[0].date.strftime("%B %d, %Y")
     html.append(f'<h1>Test results from {pretty_date}</h1>')
+    html.append('<section class="help"><p>The table shows test results from the current test run and differences, if any, with previous runs.')
+    html.append('When differences exist, the first test report exhibting the difference is shown. The current test result')
+    html.append('is always shown, regardless of whether there is any difference.</p></section>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
@@ -216,7 +219,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[]):
         # rows for each wheel to a specified number.
         previous_wheel_test_results = None
         displayed_test_rows = []
-        # Iterating over each input file
+        # Iterating over each input file, in reverse order
         for test_result_file in test_results_list[::-1]:
             wheel_test_results = {}
             # Iterating over each test (centos, focal, ...)
@@ -286,6 +289,16 @@ HTML_HEADER = '''
 <head>
 <style type="text/css">
 
+h1 {
+    text-align: center;
+}
+
+section.help {
+    margin: 0 auto;
+    width: 900px;
+    font-family: sans-serif;
+}
+
 table.python-wheel-report {
     margin: 0 auto;
     width: 960px;
@@ -298,6 +311,12 @@ table.python-wheel-report td, table.python-wheel-report th {
     font-family: monospace;
     line-height: 1.6em;
     width: 14%;
+}
+
+table.python-wheel-report th {
+    position:sticky;
+    top:0px;
+    background-color: white;
 }
 
 table.python-wheel-report span.perfect-score {
