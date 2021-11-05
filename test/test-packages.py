@@ -19,17 +19,27 @@ def main():
         packages = yaml.safe_load(f.read())
 
     def get_test_set():
+        installers = {
+            'CONDA_NAME': 'container-conda-test.sh', 
+            'PIP_NAME': 'container-script.sh', 
+            'APT_NAME': 'container-apt-test.sh', 
+            'YUM_NAME': 'container-yum-test.sh'
+        } 
         for package in packages['packages']:
-            package_main_name = re.findall(r'([\S]+)', package['PIP_NAME'])[0]
-            package_list = package['PIP_NAME']
-            package['main_name'] = package_main_name
-            py_script = package['PKG_TEST']
-            for container in ['amazon-linux2', 'centos8', 'centos8-py38', 'focal']:
-                yield (package_main_name, package_list, container, 'container-script.sh', py_script, container)
-            if 'APT_NAME' in package:
-                yield (package_main_name, package['APT_NAME'], 'focal', 'container-apt-test.sh', py_script, 'focal-apt')
-            if 'YUM_NAME' in package:
-                yield (package_main_name, package['YUM_NAME'], 'centos8', 'container-yum-test.sh', py_script, 'centos8-yum')
+            for install_type in installers.keys():
+                if install_type not in package: 
+                    continue
+                package_main_name = re.findall(r'([\S]+)', package['PKG_NAME'])[0]
+                package_list = package[install_type]
+                package['main_name'] = package_main_name
+                py_script = package['PKG_TEST']
+                if install_type == 'APT_NAME':
+                    yield (package_main_name, package_list, 'focal', installers[install_type], py_script, 'focal-apt', install_type)
+                elif install_type == 'YUM_NAME':
+                    yield (package_main_name, package_list, 'centos8', installers[install_type], py_script, 'centos8-yum', install_type)
+                else:
+                    for container in ['amazon-linux2', 'centos8', 'centos8-py38', 'focal']:
+                        yield (package_main_name, package_list, container, installers[install_type], py_script, container, install_type)
 
     with multiprocessing.Pool(processes=os.cpu_count(), initializer=do_test_initializer) as pool:
         results_list = pool.map(do_test_lambda, get_test_set())
@@ -39,7 +49,6 @@ def main():
         results[result['wheel']][result['test-name']] = result
         del result['wheel']
         del result['test-name']
-
 
     subprocess.run('rm -rf work_pid*', shell=True)
     with open('results.json', 'w') as f:
@@ -63,7 +72,7 @@ def do_test_initializer():
 
 def do_test_lambda(x):
     return do_test(*x)
-def do_test(package_main_name, package_list, container, test_sh_script, test_py_script, test_name):
+def do_test(package_main_name, package_list, container, test_sh_script, test_py_script, test_name, install_type):
     result = {
         'test-passed': False,
         'build-required': False,
@@ -94,7 +103,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
         elif time.time() - start > TIMEOUT:
             result['timeout'] = True
             subprocess.run(['docker', 'stop', container_id])
-            print(f"Package {package_main_name} on {test_name} TIMED OUT!!")
+            print(f"{install_type[:-5]}: Package {package_main_name} on {test_name} TIMED OUT!!")
             break
         time.sleep(1)
 
@@ -120,7 +129,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
     result['output'] = output
 
     outcome = "passed" if result['test-passed'] else "failed"
-    print(f"Package {package_main_name} on {test_name} {outcome}.")
+    print(f"{install_type[:-5]}: Package {package_main_name} on {test_name} {outcome}.")
 
     subprocess.run(['docker', 'container', 'rm', container_id],
             encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
