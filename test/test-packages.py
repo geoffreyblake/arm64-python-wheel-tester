@@ -29,14 +29,14 @@ def main():
 
     def get_test_set():
         installers = {
-            'CONDA_NAME': 'container-conda-test.sh', 
-            'PIP_NAME': 'container-script.sh', 
-            'APT_NAME': 'container-apt-test.sh', 
+            'CONDA_NAME': 'container-conda-test.sh',
+            'PIP_NAME': 'container-script.sh',
+            'APT_NAME': 'container-apt-test.sh',
             'YUM_NAME': 'container-yum-test.sh'
-        } 
+        }
         for package in packages['packages']:
             for install_type in installers.keys():
-                if install_type not in package: 
+                if install_type not in package:
                     continue
                 package_main_name = re.findall(r'([\S]+)', package['PKG_NAME'])[0]
                 package_list = package[install_type]
