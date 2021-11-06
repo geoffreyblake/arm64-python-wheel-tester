@@ -39,7 +39,10 @@ def main():
                     yield (package_main_name, package_list, 'centos8', installers[install_type], py_script, 'centos8-yum', install_type)
                 else:
                     for container in ['amazon-linux2', 'centos8', 'centos8-py38', 'focal']:
-                        yield (package_main_name, package_list, container, installers[install_type], py_script, container, install_type)
+                        test_name = container
+                        if install_type == 'CONDA_NAME':
+                            test_name += '-conda'
+                        yield (package_main_name, package_list, container, installers[install_type], py_script, test_name, install_type)
 
     with multiprocessing.Pool(processes=os.cpu_count(), initializer=do_test_initializer) as pool:
         results_list = pool.map(do_test_lambda, get_test_set())
