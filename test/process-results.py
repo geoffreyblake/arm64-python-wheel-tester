@@ -164,6 +164,16 @@ def make_badge(classes=[], text=""):
     classes = " ".join(classes)
     return f'<span class="{classes}">{text}</span>'
 
+def get_package_name_class(test_name):
+    if 'conda' in test_name:
+        return 'package-conda'
+    elif 'apt' in test_name:
+        return 'package-os'
+    elif 'yum' in test_name:
+        return 'package-os'
+    else:
+        return 'package-pip'
+
 def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compare_weekday_num=None):
     class TestResultFile():
         def __init__(self, fname):
@@ -248,11 +258,15 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     html.append('When differences exist, the first test report exhibting the difference is shown. The current test result')
     html.append('is always shown, regardless of whether there is any difference.</p>')
     html.append('</section>')
+    html.append('<section class="display-controls">')
+    html.append('<input type="checkbox" checked="true" name="PIP" class="package-pip" /><label for="PIP">pip</label>')
+    html.append('<input type="checkbox" name="APT" class="package-os" /><label for="PIP">apt</label>')
+    html.append('<input type="checkbox" name="CONDA" class="package-conda"/><label for="PIP">anaconda</label>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
     for test_name in all_test_names:
-        html.append(f'<th>{test_name}</th>')
+        html.append(f'<th class="test-column {get_package_name_class(test_name)}">{test_name}</th>')
     html.append('</tr>')
     # Iterate over the sorted list of wheel names
     for i, wheel in enumerate(wheel_name_set):
@@ -300,7 +314,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
             html.append(f'<tr class="wheel-line {odd_even}">')
             html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
             for test_name in all_test_names:
-                html.append('<td class="">')
+                html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
                 if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
                     result = test_result_file.content[wheel][test_name]
                     if result['test-passed']:
@@ -321,6 +335,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 break
 
     html.append('</table>')
+    html.append('</section>')
     html.append(HTML_FOOTER)
     html = '\n'.join(html)
     return html
@@ -353,9 +368,20 @@ section.summary th, section.summary td {
     padding: 3px;
 }
 
+table.python-wheel-report .test-column {
+    display: none;
+}
+
+section.display-controls > input.package-pip:checked ~ table.python-wheel-report .test-column.package-pip,
+section.display-controls > input.package-os:checked ~ table.python-wheel-report .test-column.package-os,
+section.display-controls > input.package-conda:checked ~ table.python-wheel-report .test-column.package-conda
+{
+    display: table-cell;
+}
+
 table.python-wheel-report {
     margin: 0 auto;
-    width: 960px;
+    width: 100%;
 }
 
 table.python-wheel-report td, table.python-wheel-report th {
