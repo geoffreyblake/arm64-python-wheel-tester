@@ -157,6 +157,7 @@ packages:
     PIP_NAME: ninja
     PKG_TEST: import ninja
   - PKG_NAME: tensorflow
+    PIP_NAME: tensorflow
     CONDA_NAME: tensorflow
     PKG_TEST: import tensorflow
   - PKG_NAME: sentencepiece

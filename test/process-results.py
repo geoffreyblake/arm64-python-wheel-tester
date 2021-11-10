@@ -6,7 +6,7 @@ import json
 import lzma
 import argparse
 from functools import reduce
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 from datetime import datetime, timedelta
 
 def main():
@@ -174,12 +174,43 @@ def get_package_name_class(test_name):
     else:
         return 'package-pip'
 
+def get_distribution_name(test_name):
+    distros = ["amazon-linux2", "centos8", "focal"]
+    for distro in distros:
+        if distro in test_name:
+            return distro
+    return None
+
+def get_package_manager_name(test_name):
+    names = ['yum', 'apt', 'conda']
+    for name in names:
+        if name in test_name:
+            return name
+    return 'pip'
+
+
+class TestResultFile():
+    def __init__(self, fname):
+        self.fname = fname
+        self.content = None
+        self.date = None
+        self.wheels = {}
+
+    def add_inferred_meta_data(self):
+        for wheel, wheel_dict in self.content.items():
+            passed_by_distro = defaultdict(lambda: False)
+            self.wheels[wheel] = {}
+            self.wheels[wheel]['results'] = wheel_dict
+            for test_name, test_name_results in wheel_dict.items():
+                distribution = get_distribution_name(test_name)
+                test_name_results['distribution'] = distribution
+                test_name_results['package_manager'] = get_package_manager_name(test_name)
+                passed_by_distro[distribution] |= test_name_results['test-passed']
+            self.wheels[wheel]['passed-by-disribution'] = passed_by_distro
+            self.wheels[wheel]['each-distribution-has-passing-option'] = len(list(filter(lambda x: not x, passed_by_distro.values()))) == 0
+
+
 def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compare_weekday_num=None):
-    class TestResultFile():
-        def __init__(self, fname):
-            self.fname = fname
-            self.content = None
-            self.date = None
 
     test_results_list = []
     for fname in test_results_fname_list:
@@ -194,6 +225,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
         mo = re.search('[^/]-([0-9\-_]+).json.xz', fname)
         if mo is not None:
             test_result_file.date = datetime.strptime(mo.group(1), "%Y-%m-%d_%H-%M-%S")
+        test_result_file.add_inferred_meta_data()
         test_results_list.append(test_result_file)
 
     # Sort the test result files by date because code that follows assumes this order.
@@ -230,13 +262,14 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
             if test_result_file.date < reference_date:
                 reference_test_file = test_result_file
                 break
-        summary_table = [['date', 'number of wheels', 'all tests passed', 'some tests failed']]
+        summary_table = [['date', 'number of wheels', 'all tests passed', 'some tests failed', 'each dist has passing option']]
         for test_result_file in [reference_test_file, test_results_list[0]]:
             count = len(test_result_file.content)
             failures = len(get_failing_tests(test_result_file.content))
             all_passing = count - failures
             date = test_result_file.date.strftime("%A, %B %d, %Y")
-            summary_table.append([date, count, all_passing, failures])
+            passing_options = len(list(filter(lambda wheel: wheel['each-distribution-has-passing-option'], test_result_file.wheels.values())))
+            summary_table.append([date, count, all_passing, failures, passing_options])
 
         html.append('<table class="summary">')
         for index in range(len(summary_table[0])):
@@ -244,7 +277,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
             for column_index, column_data in enumerate(summary_table):
                 element = 'th' if column_index == 0 else 'td'
                 html.append(f'<{element}>{column_data[index]}</{element}>')
-            if summary_table[0][index] in ['number of wheels', 'all tests passed', 'some tests failed']:
+            if summary_table[0][index] != 'date':
                 difference = summary_table[2][index] - summary_table[1][index]
                 plus = '+' if difference >= 0 else ''
                 html.append(f'<td>{plus}{difference}</td>')
@@ -259,12 +292,13 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     html.append('is always shown, regardless of whether there is any difference.</p>')
     html.append('</section>')
     html.append('<section class="display-controls">')
-    html.append('<input type="checkbox" checked="true" name="PIP" class="package-pip" /><label for="PIP">pip</label>')
-    html.append('<input type="checkbox" name="APT" class="package-os" /><label for="PIP">apt</label>')
-    html.append('<input type="checkbox" name="CONDA" class="package-conda"/><label for="PIP">anaconda</label>')
+    html.append('<input type="checkbox" checked="true" name="pip" class="package-pip" /><label for="pip">pip</label>')
+    html.append('<input type="checkbox" name="os" class="package-os" /><label for="os">apt/yum</label>')
+    html.append('<input type="checkbox" name="conda" class="package-conda"/><label for="conda">anaconda</label>')
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
+    html.append('<th>at least one passing option per distribution?</th>')
     for test_name in all_test_names:
         html.append(f'<th class="test-column {get_package_name_class(test_name)}">{test_name}</th>')
     html.append('</tr>')
@@ -313,6 +347,13 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
             html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
+            distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
+            html.append('<td class="">')
+            if distro_passing:
+                html.append(make_badge(classes=['passed'], text='yes'))
+            else:
+                html.append(make_badge(classes=['failed'], text='no'))
+            html.append('</td>')
             for test_name in all_test_names:
                 html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
                 if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
