@@ -473,3 +473,78 @@ packages:
   - PIP_NAME: osqp
     PKG_NAME: osqp
     PKG_TEST: import osqp
+  - PKG_NAME: python-sat
+    PIP_NAME: python-sat
+    PKG_TEST: from pysat.solvers import Glucose3
+  - PKG_NAME: glfw
+    PIP_NAME: glfw
+    PKG_TEST: import glfw
+  - PKG_NAME: fastobo
+    PIP_NAME: fastobo
+    PKG_TEST: import fastobo
+  - PIP_NAME: immutables
+    PKG_NAME: immutables
+    PKG_TEST: import immutables
+  - PKG_NAME: zodbpickle
+    PIP_NAME: zodbpickle
+    PKG_TEST: from zodbpickle import fastpickle
+  - PIP_NAME: geventhttpclient
+    PKG_NAME: geventhttpclient
+    PKG_TEST: import geventhttpclient
+  - PKG_NAME: ruptures
+    PIP_NAME: ruptures
+    PKG_TEST: import ruptures
+  - PIP_NAME: pygame
+    PKG_NAME: pygame
+    PKG_TEST: import pygame
+  - PKG_NAME: blosc
+    PIP_NAME: blosc
+    PKG_TEST: import blosc
+  - PIP_NAME: blosc2
+    PKG_NAME: blosc2
+    PKG_TEST: import blosc2
+  - PIP_NAME: mwparserfromhell
+    PKG_NAME: mwparserfromhell
+    PKG_TEST: import mwparserfromhell
+  - PKG_NAME: traits
+    PIP_NAME: traits
+    PKG_TEST: import traits.ctrait
+  - PKG_NAME: editdistance
+    PIP_NAME: editdistance
+    PKG_TEST: import editdistance
+  - PIP_NAME: clickhouse-cityhash
+    PKG_NAME: clickhouse-cityhash
+    PKG_TEST: import clickhouse_cityhash.cityhash
+  - PKG_NAME: zstandard
+    PIP_NAME: zstandard
+    PKG_TEST: import zstandard
+  - PIP_NAME: python-igraph
+    PKG_NAME: python-igraph
+    PKG_TEST: import igraph
+  - PKG_NAME: schema-salad
+    PIP_NAME: schema-salad
+    PKG_TEST: import schema_salad
+  - PIP_NAME: iminuit
+    PKG_NAME: iminuit
+    PKG_TEST: import iminuit
+  - PKG_NAME: hidapi
+    PIP_NAME: hidapi
+    PKG_TEST: import hidapi
+  - PIP_NAME: fastrlock
+    PKG_NAME: fastrlock
+    PKG_TEST: import fastrlock.rlock
+  - PKG_NAME: pyagrum-nightly
+    PIP_NAME: pyagrum-nightly
+    PKG_TEST: import pyAgrum
+  - PIP_NAME: pygeos
+    PKG_NAME: pygeos
+    PKG_TEST: import pygeos
+  - PKG_NAME: pyorc
+    PIP_NAME: pyorc
+    PKG_TEST: import pyorc
+  - PKG_NAME: netcdf4
+    PIP_NAME: netcdf4
+    PKG_TEST: import netCDF4
+  - PKG_NAME: coverage
+    PIP_NAME: coverage
+    PKG_TEST: import coverage
