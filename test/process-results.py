@@ -347,12 +347,13 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
             html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
-            distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
             html.append('<td class="">')
-            if distro_passing:
-                html.append(make_badge(classes=['passed'], text='yes'))
-            else:
-                html.append(make_badge(classes=['failed'], text='no'))
+            if wheel in test_result_file.wheels:
+                distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
+                if distro_passing:
+                    html.append(make_badge(classes=['passed'], text='yes'))
+                else:
+                    html.append(make_badge(classes=['failed'], text='no'))
             html.append('</td>')
             for test_name in all_test_names:
                 html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
