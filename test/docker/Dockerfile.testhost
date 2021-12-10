@@ -2,7 +2,15 @@ FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-    python3-pip \
-    docker.io
+    docker.io \
+    git \
+    python3-pip
 RUN python3 -m pip install --upgrade pip
-RUN pip3 install pyyaml
+RUN pip3 install pyyaml requests
+ARG USER_GID=100
+ARG USER_UID=1000
+ARG USER_NAME=ubuntu
+ARG DOCKER_GID=1001
+RUN grep $USER_GID /etc/group || groupadd -g $USER_GID $USER_NAME
+RUN grep $DOCKER_GID /etc/group || groupadd -g $DOCKER_GID docker_group
+RUN useradd -m --no-log-init -g $USER_GID -u $USER_UID $USER_NAME && usermod -aG docker_group $USER_NAME

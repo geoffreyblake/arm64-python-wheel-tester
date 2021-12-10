@@ -2,7 +2,9 @@
 This is a simple project to run wheels in a docker environment on 4k and 64k page-size systems to detect possible incompatibilities
 in upstream wheels on Arm64 systems.  It uses github actions and self-hosted runners to guarantee the system configurations we need.
 
-This project is can also be repurposed for other interpreted languages that contain native bindings, such as Ruby Gems.
+A report of the test status is generated daily and posted [here](https://geoffreyblake.github.io/arm64-python-wheel-tester/).
+
+This project could also be repurposed for other interpreted languages that contain native bindings, such as Ruby Gems.
 
 # Using the CDK to generate self-hosted Graviton2 runners for testing Wheels!
 

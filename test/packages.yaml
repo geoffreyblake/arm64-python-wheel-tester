@@ -1,28 +1,35 @@
 packages:
   - PIP_NAME: numpy
+    PKG_NAME: numpy
     YUM_NAME: python3-numpy
     APT_NAME: python3-numpy
     PKG_TEST: import numpy
-  - PIP_NAME: bcrypt
+  - PKG_NAME: bcrypt
+    PIP_NAME: bcrypt
     PKG_TEST: import bcrypt
-  - PIP_NAME: pymongo
+  - PKG_NAME: pymongo
+    PIP_NAME: pymongo
     PKG_TEST: |
       import pymongo
       import pymongo.message
-  - PIP_NAME: lxml
+  - PKG_NAME: lxml
+    PIP_NAME: lxml
     PKG_TEST: |
       import lxml._elementpath
       import lxml.builder
       import lxml.objectify
       import lxml.etree
       import lxml.sax
-  - PIP_NAME: lazy-object-proxy
+  - PKG_NAME: lazy-object-proxy
+    PIP_NAME: lazy-object-proxy
     PKG_TEST: import lazy_object_proxy
-  - PIP_NAME: simplejson
+  - PKG_NAME: simplejson
+    PIP_NAME: simplejson
     PKG_TEST: |
       import simplejson
       simplejson._speedups
-  - PIP_NAME: pillow
+  - PKG_NAME: pillow
+    PIP_NAME: pillow
     YUM_NAME: python3-pillow
     APT_NAME: python3-pil
     PKG_TEST: |
@@ -32,298 +39,504 @@ packages:
       import PIL._imagingft
       import PIL._imagingmath
       import PIL._imagingmorph
-  - PIP_NAME: kiwisolver
+  - PKG_NAME: kiwisolver
+    PIP_NAME: kiwisolver
     PKG_TEST: import kiwisolver
-  - PIP_NAME: cffi
+  - PKG_NAME: cffi
+    PIP_NAME: cffi
     PKG_TEST: |
       import cffi
       ffi = cffi.FFI()
       a = ffi.new('int[4]')
       print(a)
-  - PIP_NAME: cryptography
+  - PKG_NAME: cryptography
+    PIP_NAME: cryptography
     PKG_TEST: |
       from cryptography.hazmat.backends.openssl.backend import backend
       print('Loaded: ' + backend.openssl_version_text())
       print('Linked Against: ' + backend._ffi.string(backend._lib.OPENSSL_VERSION_TEXT).decode('ascii'))
-  - PIP_NAME: sqlalchemy
+  - PKG_NAME: sqlalchemy
+    PIP_NAME: sqlalchemy
     PKG_TEST: import sqlalchemy
-  - PIP_NAME: ujson
+  - PKG_NAME: ujson
+    PIP_NAME: ujson
     PKG_TEST: import ujson
-  - PIP_NAME: scikit-build cmake
+  - PKG_NAME: scikit-build cmake
+    PIP_NAME: scikit-build cmake
     PKG_TEST: |
       import skbuild
       skbuild.cmaker.get_cmake_version()
-  - PIP_NAME: pycryptodome
+  - PKG_NAME: pycryptodome
+    PIP_NAME: pycryptodome
     PKG_TEST: import Crypto
-  - PIP_NAME: pycryptodomex
+  - PKG_NAME: pycryptodomex
+    PIP_NAME: pycryptodomex
     PKG_TEST: import Cryptodome
-  - PIP_NAME: pandas
+  - PKG_NAME: pandas
+    PIP_NAME: pandas
     PIP_ARGS: "--only-binary :all:"
     PKG_TEST: import pandas
-  - PIP_NAME: pywavelets
+  - PKG_NAME: pywavelets
+    PIP_NAME: pywavelets
     PKG_TEST: import pywt
-  - PIP_NAME: multidict
+  - PKG_NAME: multidict
+    PIP_NAME: multidict
     PKG_TEST: import multidict
-  - PIP_NAME: yarl
+  - PKG_NAME: yarl
+    PIP_NAME: yarl
     PKG_TEST: import yarl
-  - PIP_NAME: scipy
+  - PKG_NAME: scipy
+    PIP_NAME: scipy
     PKG_TEST: import scipy
-  - PIP_NAME: xgboost
+  - PKG_NAME: xgboost
+    PIP_NAME: xgboost
     PKG_TEST: import xgboost
-  - PIP_NAME: typed_ast
+  - PKG_NAME: typed_ast
+    PIP_NAME: typed_ast
     PKG_TEST: import typed_ast
-  - PIP_NAME: aiohttp
+  - PKG_NAME: aiohttp
+    PIP_NAME: aiohttp
     PKG_TEST: import aiohttp
-  - PIP_NAME: markupsafe
+  - PKG_NAME: markupsafe
+    PIP_NAME: markupsafe
     PKG_TEST: import markupsafe
-  - PIP_NAME: fastavro
+  - PKG_NAME: fastavro
+    PIP_NAME: fastavro
     PKG_TEST: import fastavro
-  - PIP_NAME: scikit-image
+  - PKG_NAME: scikit-image
+    PIP_NAME: scikit-image
     PKG_TEST: import skimage
-  - PIP_NAME: scikit-learn
+  - PKG_NAME: scikit-learn
+    PIP_NAME: scikit-learn
     PKG_TEST: import sklearn
-  - PIP_NAME: statsmodels
+  - PKG_NAME: statsmodels
+    PIP_NAME: statsmodels
     PKG_TEST: import statsmodels
-  - PIP_NAME: gensim
+  - PKG_NAME: gensim
+    PIP_NAME: gensim
     PKG_TEST: import gensim
-  - PIP_NAME: cmake
+  - PKG_NAME: cmake
+    PIP_NAME: cmake
     PKG_TEST: import cmake
-  - PIP_NAME: protobuf
+  - PKG_NAME: protobuf
+    PIP_NAME: protobuf
     PKG_TEST: import google.protobuf
-  - PIP_NAME: Cython
+  - PKG_NAME: Cython
+    PIP_NAME: Cython
     PKG_TEST: from Cython.Build import cythonize
-  - PIP_NAME: pyspark
+  - PKG_NAME: pyspark
+    PIP_NAME: pyspark
     PKG_TEST: import pyspark
-  - PIP_NAME: opencv-python
+  - PKG_NAME: opencv-python
+    PIP_NAME: opencv-python
     PKG_TEST: import cv2
-  - PIP_NAME: gevent
+  - PKG_NAME: gevent
+    PIP_NAME: gevent
     PKG_TEST: import gevent
-  - PIP_NAME: pywavelets
+  - PKG_NAME: pywavelets
+    PIP_NAME: pywavelets
     PKG_TEST: import pywt
-  - PIP_NAME: torch
+  - PKG_NAME: torch
+    PIP_NAME: torch
     PKG_TEST: import torch
-  - PIP_NAME: torchvision
+  - PKG_NAME: torchvision
+    PIP_NAME: torchvision
     PKG_TEST: import torchvision
-  - PIP_NAME: grpcio
+  - PKG_NAME: grpcio
+    PIP_NAME: grpcio
     PKG_TEST: import grpc
-  - PIP_NAME: ninja
+  - PKG_NAME: ninja
+    PIP_NAME: ninja
     PKG_TEST: import ninja
-  - PIP_NAME: tensorflow
+  - PKG_NAME: tensorflow
+    PIP_NAME: tensorflow
+    CONDA_NAME: tensorflow
     PKG_TEST: import tensorflow
-  - PIP_NAME: sentencepiece
+  - PKG_NAME: sentencepiece
+    PIP_NAME: sentencepiece
     PKG_TEST: import sentencepiece
-  - PIP_NAME: msgpack
+  - PKG_NAME: msgpack
+    PIP_NAME: msgpack
     PKG_TEST: import msgpack
   - PIP_NAME: mypy
+    PKG_NAME: mypy
     PKG_TEST: from typing import Dict
-  - PIP_NAME: Shapely
+  - PKG_NAME: Shapely
+    PIP_NAME: Shapely
     PKG_TEST: from shapely.geometry import Point
     YUM_NAME: python3-shapely
     APT_NAME: python3-shapely
-  - PIP_NAME: ijson
+  - PKG_NAME: ijson
+    PIP_NAME: ijson
     PKG_TEST: import ijson
-  - PIP_NAME: snowflake-connector-python
+  - PKG_NAME: snowflake-connector-python
+    PIP_NAME: snowflake-connector-python
     PKG_TEST: import snowflake.connector
-  - PIP_NAME: lightgbm
+  - PKG_NAME: lightgbm
+    PIP_NAME: lightgbm
     PKG_TEST: import lightgbm
-  - PIP_NAME: twisted
+  - PKG_NAME: twisted
+    PIP_NAME: twisted
     PKG_TEST: import twisted
-  - PIP_NAME: tfx-bsl
+  - PKG_NAME: tfx-bsl
+    PIP_NAME: tfx-bsl
     PKG_TEST: import tfx
-  - PIP_NAME: pyarrow
+  - PKG_NAME: pyarrow
+    PIP_NAME: pyarrow
     PKG_TEST: import pyarrow
-  - PIP_NAME: h5py
+  - PKG_NAME: h5py
+    PIP_NAME: h5py
     PKG_TEST: import h5py
     YUM_NAME: python3-h5py
     APT_NAME: python3-h5py
-  - PIP_NAME: tornado
+  - PKG_NAME: tornado
+    PIP_NAME: tornado
     PKG_TEST: import tornado
-  - PIP_NAME: pyzmq
+  - PKG_NAME: pyzmq
+    PIP_NAME: pyzmq
     PKG_TEST: import zmq.backend
   #- PIP_NAME: psutil
   #  PKG_TEST: import psutil
-  - PIP_NAME: matplotlib
+  - PKG_NAME: matplotlib
+    PIP_NAME: matplotlib
     PKG_TEST: import matplotlib
     YUM_NAME: python3-matplotlib
     APT_NAME: python3-matplotlib
-  - PIP_NAME: psycopg2-binary
+  - PKG_NAME: psycopg2-binary
+    PIP_NAME: psycopg2-binary
     PKG_TEST: import psycopg2
     YUM_NAME: python3-psycopg2
     APT_NAME: python3-psycopg2
-  - PIP_NAME: greenlet
+  - PKG_NAME: greenlet
+    PIP_NAME: greenlet
     PKG_TEST: from greenlet import greenlet
   - PIP_NAME: regex
+    PKG_NAME: regex
     PKG_TEST: import regex
-  - PIP_NAME: websockets
+  - PKG_NAME: websockets
+    PIP_NAME: websockets
     PKG_TEST: import websockets
-  - PIP_NAME: docopt
+  - PKG_NAME: docopt
+    PIP_NAME: docopt
     PKG_TEST: from docopt import docopt
-  - PIP_NAME: absl-py
+  - PKG_NAME: absl-py
+    PIP_NAME: absl-py
     PKG_TEST: |
       from absl import app
       from absl import flags
       from absl import logging
-  - PIP_NAME: retrying
+  - PKG_NAME: retrying
+    PIP_NAME: retrying
     PKG_TEST: from retrying import retry
-  - PIP_NAME: pandocfilters
+  - PKG_NAME: pandocfilters
+    PIP_NAME: pandocfilters
     PKG_TEST: from pandocfilters import toJSONFilter, Str
-  - PIP_NAME: zope.interface
+  - PKG_NAME: zope.interface
+    PIP_NAME: zope.interface
     PKG_TEST: from zope.interface import _zope_interface_coptimizations as c_opt
   #- PIP_NAME: grpc-google-iam-v1
   #  PKG_TEST: import google
-  - PIP_NAME: ansible
+  - PKG_NAME: ansible
+    PIP_NAME: ansible
     PKG_TEST: from ansible import context
-  - PIP_NAME: thrift
+  - PKG_NAME: thrift
+    PIP_NAME: thrift
     PKG_TEST: from thrift import Thrift
   #- PIP_NAME: mysqlclient
   #  PKG_TEST: import MySQLdb
-  - PIP_NAME: apache-beam
+  - PKG_NAME: apache-beam
+    PIP_NAME: apache-beam
     PKG_TEST: import apache_beam
-  - PIP_NAME: tensorflow-data-validation
+  - PKG_NAME: tensorflow-data-validation
+    PIP_NAME: tensorflow-data-validation
     PKG_TEST: import tensorflow_data_validation
-  - PIP_NAME: pyyaml
+  - PKG_NAME: pyyaml
+    PIP_NAME: pyyaml
     PKG_TEST: import yaml
-  - PIP_NAME: future
+  - PKG_NAME: future
+    PIP_NAME: future
     PKG_TEST: from __future__ import (division)
-  - PIP_NAME: coverage
+  - PKG_NAME: coverage
+    PIP_NAME: coverage
     PKG_TEST: import coverage
     YUM_NAME: python3-coverage
-  - PIP_NAME: wrapt
+  - PKG_NAME: wrapt
+    PIP_NAME: wrapt
     PKG_TEST: import wrapt
-  - PIP_NAME: pyrsistent
+  - PKG_NAME: pyrsistent
+    PIP_NAME: pyrsistent
     PKG_TEST: from pyrsistent import v, pvector
-  - PIP_NAME: pynacl
+  - PKG_NAME: pynacl
+    PIP_NAME: pynacl
     PKG_TEST: import nacl._sodium
     YUM_NAME: python3-pynacl
     APT_NAME: python3-nacl
-  - PIP_NAME: dill
+  - PKG_NAME: dill
+    PIP_NAME: dill
     PKG_TEST: import dill
-  - PIP_NAME: nmslib
+  - PKG_NAME: nmslib
+    PIP_NAME: nmslib
     PKG_TEST: import nmslib
-  - PIP_NAME: lz4
+  - PKG_NAME: lz4
+    PIP_NAME: lz4
     PKG_TEST: import lz4
     YUM_NAME: python3-lz4
     APT_NAME: python3-lz4
-  - PIP_NAME: setproctitle
+  - PKG_NAME: setproctitle
+    PIP_NAME: setproctitle
     PKG_TEST: import setproctitle
-  - PIP_NAME: google-crc32c
+  - PKG_NAME: google-crc32c
+    PIP_NAME: google-crc32c
     PKG_TEST: import google_crc32c
-  - PIP_NAME: jpype1
+  - PKG_NAME: jpype1
+    PIP_NAME: jpype1
     PKG_TEST: import jpype
-  - PIP_NAME: uvloop
+  - PKG_NAME: uvloop
+    PIP_NAME: uvloop
     PKG_TEST: import uvloop
-  - PIP_NAME: ddtrace
+  - PKG_NAME: ddtrace
+    PIP_NAME: ddtrace
     PKG_TEST: import ddtrace
-  - PIP_NAME: ruamel.yaml
+  - PKG_NAME: ruamel.yaml
+    PIP_NAME: ruamel.yaml
     PKG_TEST: import ruamel.yaml
-  - PIP_NAME: pyproj
+  - PKG_NAME: pyproj
+    PIP_NAME: pyproj
     PKG_TEST: import pyproj
-  - PIP_NAME: numexpr
+  - PKG_NAME: numexpr
+    PIP_NAME: numexpr
     PKG_TEST: import numexpr
-  - PIP_NAME: python-snappy
+  - PKG_NAME: python-snappy
+    PIP_NAME: python-snappy
     PKG_TEST: import snappy
-  - PIP_NAME: maturin
+  - PKG_NAME: maturin
+    PIP_NAME: maturin
     PKG_TEST: import maturin
-  - PIP_NAME: clickhouse-driver
+  - PKG_NAME: clickhouse-driver
+    PIP_NAME: clickhouse-driver
     PKG_TEST: import clickhouse_driver
-  - PIP_NAME: cmarkgfm
+  - PKG_NAME: cmarkgfm
+    PIP_NAME: cmarkgfm
     PKG_TEST: import cmarkgfm
-  - PIP_NAME: rapidfuzz
+  - PKG_NAME: rapidfuzz
+    PIP_NAME: rapidfuzz
     PKG_TEST: import rapidfuzz
-  - PIP_NAME: hiredis
+  - PKG_NAME: hiredis
+    PIP_NAME: hiredis
     PKG_TEST: import hiredis
-  - PIP_NAME: brotlicffi
+  - PKG_NAME: brotlicffi
+    PIP_NAME: brotlicffi
     PKG_TEST: import brotlicffi
-  - PIP_NAME: mecab-python3
+  - PKG_NAME: mecab-python3
+    PIP_NAME: mecab-python3
     PKG_TEST: import MeCab
-  - PIP_NAME: cassandra-driver
+  - PKG_NAME: cassandra-driver
+    PIP_NAME: cassandra-driver
     PKG_TEST: import cassandra
     APT_NAME: python3-cassandra
-  - PIP_NAME: confluent-kafka
+  - PKG_NAME: confluent-kafka
+    PIP_NAME: confluent-kafka
     PKG_TEST: import confluent_kafka
     APT_NAME: python3-confluent-kafka
-  - PIP_NAME: coverage
+  - PKG_NAME: coverage
+    PIP_NAME: coverage
     PKG_TEST: import coverage
     APT_NAME: python3-coverage
-  - PIP_NAME: netifaces
+  - PKG_NAME: netifaces
+    PIP_NAME: netifaces
     PKG_TEST: import netifaces
-  - PIP_NAME: scrypt
+  - PKG_NAME: scrypt
+    PIP_NAME: scrypt
     PKG_TEST: import scrypt
-  - PIP_NAME: grpcio-tools
+  - PKG_NAME: grpcio-tools
+    PIP_NAME: grpcio-tools
     PKG_TEST: import grpc.tools
-  - PIP_NAME: btrees
+  - PKG_NAME: btrees
+    PIP_NAME: btrees
     PKG_TEST: from BTrees.OOBTree import OOBTree
-  - PIP_NAME: pycares
+  - PKG_NAME: pycares
+    PIP_NAME: pycares
     PKG_TEST: import pycares
-  - PIP_NAME: advent-of-code
+  - PKG_NAME: advent-of-code
+    PIP_NAME: advent-of-code
     PKG_TEST: import advent_of_code
-  - PIP_NAME: biopython
+  - PKG_NAME: biopython
+    PIP_NAME: biopython
     PKG_TEST: from Bio import SeqIO
-  - PIP_NAME: pymupdf
+  - PKG_NAME: pymupdf
+    PIP_NAME: pymupdf
     PKG_TEST: import fitz
-  - PIP_NAME: psutil
+  - PKG_NAME: psutil
+    PIP_NAME: psutil
     PKG_TEST: import psutil
-  - PIP_NAME: gevent
+  - PKG_NAME: gevent
+    PIP_NAME: gevent
     PKG_TEST: import gevent
-  - PIP_NAME: dulwich
+  - PKG_NAME: dulwich
+    PIP_NAME: dulwich
     PKG_TEST: import dulwich
-  - PIP_NAME: deap
+  - PKG_NAME: deap
+    PIP_NAME: deap
     PKG_TEST: import deap
-  - PIP_NAME: imageio-ffmpeg
+  - PKG_NAME: imageio-ffmpeg
+    PIP_NAME: imageio-ffmpeg
     PKG_TEST: import imageio_ffmpeg
-  - PIP_NAME: fastcluster
+  - PKG_NAME: fastcluster
+    PIP_NAME: fastcluster
     PKG_TEST: import fastcluster
-  - PIP_NAME: cftime
+  - PKG_NAME: cftime
+    PIP_NAME: cftime
     PKG_TEST: import cftime
-  - PIP_NAME: line-profiler
+  - PKG_NAME: line-profiler
+    PIP_NAME: line-profiler
     PKG_TEST: import line_profiler
-  - PIP_NAME: h3
+  - PKG_NAME: h3
+    PIP_NAME: h3
     PKG_TEST: import h3
-  - PIP_NAME: pygit2
+  - PKG_NAME: pygit2
+    PIP_NAME: pygit2
     PKG_TEST: import pygit2
-  - PIP_NAME: python-rapidjson
+  - PKG_NAME: python-rapidjson
+    PIP_NAME: python-rapidjson
     PKG_TEST: import rapidjson
-  - PIP_NAME: ephem
+  - PKG_NAME: ephem
+    PIP_NAME: ephem
     PKG_TEST: import ephem
-  - PIP_NAME: crc32c
+  - PKG_NAME: crc32c
+    PIP_NAME: crc32c
     PKG_TEST: import crc32c
-  - PIP_NAME: mecab_python3
+  - PKG_NAME: mecab_python3
+    PIP_NAME: mecab_python3
     PKG_TEST: import MeCab
-  - PIP_NAME: guppy3
+  - PKG_NAME: guppy3
+    PIP_NAME: guppy3
     PKG_TEST: import guppy
-  - PIP_NAME: persistent
+  - PKG_NAME: persistent
+    PIP_NAME: persistent
     PKG_TEST: import persistent
-  - PIP_NAME: zope.hookable
+  - PKG_NAME: zope.hookable
+    PIP_NAME: zope.hookable
     PKG_TEST: import zope.hookable
-  - PIP_NAME: zope.proxy
+  - PKG_NAME: zope.proxy
+    PIP_NAME: zope.proxy
     PKG_TEST: import zope.proxy
-  - PIP_NAME: Levenshtein-search
+  - PKG_NAME: Levenshtein-search
+    PIP_NAME: Levenshtein-search
     PKG_TEST: import Levenshtein_search
-  - PIP_NAME: numpy-quaternion
+  - PKG_NAME: numpy-quaternion
+    PIP_NAME: numpy-quaternion
     PKG_TEST: import quaternion
-  - PIP_NAME: spglib
+  - PKG_NAME: spglib
+    PIP_NAME: spglib
     PKG_TEST: import spglib
-  - PIP_NAME: httptools
+  - PKG_NAME: httptools
+    PIP_NAME: httptools
     PKG_TEST: import httptools
-  - PIP_NAME: onnx
+  - PKG_NAME: onnx
+    PIP_NAME: onnx
     PKG_TEST: import onnx
-  - PIP_NAME: jellyfish
+  - PKG_NAME: jellyfish
+    PIP_NAME: jellyfish
     PKG_TEST: import jellyfish
-  - PIP_NAME: Brotli
+  - PKG_NAME: Brotli
+    PIP_NAME: Brotli
     PKG_TEST: import brotli
-  - PIP_NAME: pyreadstat
+  - PKG_NAME: pyreadstat
+    PIP_NAME: pyreadstat
     PKG_TEST: import pyreadstat
-  - PIP_NAME: psd-tools
+  - PKG_NAME: psd-tools
+    PIP_NAME: psd-tools
     PKG_TEST: import psd_tools
-  - PIP_NAME: numba
+  - PKG_NAME: numba
+    PIP_NAME: numba
     PKG_TEST: import numba
-  - PIP_NAME: awkward
+  - PKG_NAME: awkward
+    PIP_NAME: awkward
     PKG_TEST: import awkward
-  - PIP_NAME: clevercsv
+  - PKG_NAME: clevercsv
+    PIP_NAME: clevercsv
     PKG_TEST: import clevercsv
-  - PIP_NAME: Mosek
+  - PKG_NAME: Mosek
+    PIP_NAME: Mosek
     PKG_TEST: import mosek
-  - PIP_NAME: apache-beam
+  - PKG_NAME: apache-beam
+    PIP_NAME: apache-beam
     PKG_TEST: import apache_beam
   - PIP_NAME: osqp
+    PKG_NAME: osqp
     PKG_TEST: import osqp
+  - PKG_NAME: python-sat
+    PIP_NAME: python-sat
+    PKG_TEST: from pysat.solvers import Glucose3
+  - PKG_NAME: glfw
+    PIP_NAME: glfw
+    PKG_TEST: import glfw
+  - PKG_NAME: fastobo
+    PIP_NAME: fastobo
+    PKG_TEST: import fastobo
+  - PIP_NAME: immutables
+    PKG_NAME: immutables
+    PKG_TEST: import immutables
+  - PKG_NAME: zodbpickle
+    PIP_NAME: zodbpickle
+    PKG_TEST: from zodbpickle import fastpickle
+  - PIP_NAME: geventhttpclient
+    PKG_NAME: geventhttpclient
+    PKG_TEST: import geventhttpclient
+  - PKG_NAME: ruptures
+    PIP_NAME: ruptures
+    PKG_TEST: import ruptures
+  - PIP_NAME: pygame
+    PKG_NAME: pygame
+    PKG_TEST: import pygame
+  - PKG_NAME: blosc
+    PIP_NAME: blosc
+    PKG_TEST: import blosc
+  - PIP_NAME: blosc2
+    PKG_NAME: blosc2
+    PKG_TEST: import blosc2
+  - PIP_NAME: mwparserfromhell
+    PKG_NAME: mwparserfromhell
+    PKG_TEST: import mwparserfromhell
+  - PKG_NAME: traits
+    PIP_NAME: traits
+    PKG_TEST: import traits.ctrait
+  - PKG_NAME: editdistance
+    PIP_NAME: editdistance
+    PKG_TEST: import editdistance
+  - PIP_NAME: clickhouse-cityhash
+    PKG_NAME: clickhouse-cityhash
+    PKG_TEST: import clickhouse_cityhash.cityhash
+  - PKG_NAME: zstandard
+    PIP_NAME: zstandard
+    PKG_TEST: import zstandard
+  - PIP_NAME: python-igraph
+    PKG_NAME: python-igraph
+    PKG_TEST: import igraph
+  - PKG_NAME: schema-salad
+    PIP_NAME: schema-salad
+    PKG_TEST: import schema_salad
+  - PIP_NAME: iminuit
+    PKG_NAME: iminuit
+    PKG_TEST: import iminuit
+  - PKG_NAME: hidapi
+    PIP_NAME: hidapi
+    PKG_TEST: import hidapi
+  - PIP_NAME: fastrlock
+    PKG_NAME: fastrlock
+    PKG_TEST: import fastrlock.rlock
+  - PKG_NAME: pyagrum-nightly
+    PIP_NAME: pyagrum-nightly
+    PKG_TEST: import pyAgrum
+  - PIP_NAME: pygeos
+    PKG_NAME: pygeos
+    PKG_TEST: import pygeos
+  - PKG_NAME: pyorc
+    PIP_NAME: pyorc
+    PKG_TEST: import pyorc
+  - PKG_NAME: netcdf4
+    PIP_NAME: netcdf4
+    PKG_TEST: import netCDF4
+  - PKG_NAME: coverage
+    PIP_NAME: coverage
+    PKG_TEST: import coverage

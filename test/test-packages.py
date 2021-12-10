@@ -5,31 +5,58 @@ import os
 import json
 import time
 import yaml
+import argparse
+import importlib
+import itertools
 import subprocess
 import multiprocessing
 from datetime import datetime
 from collections import defaultdict
 
+process_results = importlib.import_module("process-results")
+generate_website = importlib.import_module("generate-website")
+
 SLOW_INSTALL_TIME = 60
 TIMEOUT = 180
 
 def main():
+    parser = argparse.ArgumentParser(description="Run wheel tests")
+    parser.add_argument('--token', type=str, help="Github API token")
+    args = parser.parse_args()
+
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
     with open('packages.yaml') as f:
         packages = yaml.safe_load(f.read())
 
     def get_test_set():
-        for package in packages['packages']:
-            package_main_name = re.findall(r'([\S]+)', package['PIP_NAME'])[0]
-            package_list = package['PIP_NAME']
+        package_managers = {
+            'CONDA': 'container-conda-test.sh',
+            'PIP': 'container-script.sh',
+            'APT': 'container-apt-test.sh',
+            'YUM': 'container-yum-test.sh'
+        }
+        containers = {
+            'amazon-linux2': ['PIP', 'CONDA'],
+            'centos8': ['PIP', 'YUM', 'CONDA'],
+            'centos8-py38': ['PIP'],
+            'focal': ['PIP', 'APT', 'CONDA'],
+        }
+        # this is three nested loops in one
+        for package, package_manager, container in itertools.product(packages['packages'], package_managers.keys(), containers.keys()):
+            package_list_key = f'{package_manager}_NAME'
+            if package_list_key not in package or package_manager not in containers[container]:
+                continue
+            package_main_name = re.findall(r'([\S]+)', package['PKG_NAME'])[0]
+            package_list = package[package_list_key]
             package['main_name'] = package_main_name
             py_script = package['PKG_TEST']
-            for container in ['amazon-linux2', 'centos8', 'centos8-py38', 'focal']:
-                yield (package_main_name, package_list, container, 'container-script.sh', py_script, container)
-            if 'APT_NAME' in package:
-                yield (package_main_name, package['APT_NAME'], 'focal', 'container-apt-test.sh', py_script, 'focal-apt')
-            if 'YUM_NAME' in package:
-                yield (package_main_name, package['YUM_NAME'], 'centos8', 'container-yum-test.sh', py_script, 'centos8-yum')
+            # to preserve compatibility in the result json files, don't label the pip tests in the test name
+            if package_manager == 'PIP':
+                test_name = container
+            else:
+                test_name = f'{container}-{package_manager.lower()}'
+            test_shell_script = package_managers[package_manager]
+            yield (package_main_name, package_list, container, test_shell_script, py_script, test_name, package_manager)
 
     with multiprocessing.Pool(processes=os.cpu_count(), initializer=do_test_initializer) as pool:
         results_list = pool.map(do_test_lambda, get_test_set())
@@ -40,19 +67,28 @@ def main():
         del result['wheel']
         del result['test-name']
 
-
     subprocess.run('rm -rf work_pid*', shell=True)
     with open('results.json', 'w') as f:
         json.dump(results, f, indent=2)
     subprocess.run(['xz', 'results.json'], check=True)
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    os.rename('results.json.xz', f'results-{now}.json.xz')
+    new_results_file = f'results-{now}.json.xz'
+    os.rename('results.json.xz', new_results_file)
 
+    print("process results...")
     # Also generate an html report of the results
-    subprocess.run(f'python3 process-results.py -o report-{now}.html --by-test results-{now}.json.xz', shell=True)
+    html = process_results.print_table_by_distro_report([new_results_file])
+    with open(f'report-{now}.html', 'w') as f:
+        f.write(html)
 
-    # chmod the results so that the host can remove the file when cleaning up
-    subprocess.run('chmod ugo+rw results* report*', shell=True, check=True)
+    # Run the GitHub pages generator
+    print("generate the website...")
+    generate_website.generate_website(output_dir='build',
+            new_results=new_results_file,
+            github_token=args.token,
+            days_ago_list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21],
+            compare_weekday_num=3)
+
 
 process_work_dir = ''
 def do_test_initializer():
@@ -63,7 +99,7 @@ def do_test_initializer():
 
 def do_test_lambda(x):
     return do_test(*x)
-def do_test(package_main_name, package_list, container, test_sh_script, test_py_script, test_name):
+def do_test(package_main_name, package_list, container, test_sh_script, test_py_script, test_name, package_manager):
     result = {
         'test-passed': False,
         'build-required': False,
@@ -94,7 +130,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
         elif time.time() - start > TIMEOUT:
             result['timeout'] = True
             subprocess.run(['docker', 'stop', container_id])
-            print(f"Package {package_main_name} on {test_name} TIMED OUT!!")
+            print(f"{package_manager}: Package {package_main_name} on {test_name} TIMED OUT!!")
             break
         time.sleep(1)
 
@@ -120,7 +156,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
     result['output'] = output
 
     outcome = "passed" if result['test-passed'] else "failed"
-    print(f"Package {package_main_name} on {test_name} {outcome}.")
+    print(f"{package_manager}: Package {package_main_name} on {test_name} {outcome}.")
 
     subprocess.run(['docker', 'container', 'rm', container_id],
             encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
