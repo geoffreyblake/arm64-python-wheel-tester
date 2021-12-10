@@ -80,13 +80,6 @@ packages:
     PKG_TEST: import fastavro
   - PIP_NAME: scikit-image
     PKG_TEST: import skimage
-  - PIP_NAME: scikit-image==0.18.2rc2
-    PKG_TEST: |
-      from skimage import data, filters
-      import numpy as np
-      image = data.camera()
-      thresholds = filters.threshold_multiotsu(image)
-      regions = np.digitize(image, bins=thresholds)
   - PIP_NAME: scikit-learn
     PKG_TEST: import sklearn
   - PIP_NAME: statsmodels
