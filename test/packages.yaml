@@ -106,14 +106,6 @@ packages:
   - PKG_NAME: scikit-image
     PIP_NAME: scikit-image
     PKG_TEST: import skimage
-  - PKG_NAME: scikit-image==0.18.2rc2
-    PIP_NAME: scikit-image==0.18.2rc2
-    PKG_TEST: |
-      from skimage import data, filters
-      import numpy as np
-      image = data.camera()
-      thresholds = filters.threshold_multiotsu(image)
-      regions = np.digitize(image, bins=thresholds)
   - PKG_NAME: scikit-learn
     PIP_NAME: scikit-learn
     PKG_TEST: import sklearn
