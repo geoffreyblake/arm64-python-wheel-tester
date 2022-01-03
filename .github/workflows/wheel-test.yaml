@@ -15,6 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Clean up orphaned containers and images
+        run: |
+          docker container prune -f
+          docker image prune -f
+
       - name: Setup or update test containers
         run: test/setup-containers.sh
 
