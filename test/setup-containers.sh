@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 # change to the directory containing this script
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
