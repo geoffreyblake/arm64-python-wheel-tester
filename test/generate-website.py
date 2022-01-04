@@ -90,7 +90,11 @@ def fetch_previous_results(days_ago_list, github_token):
     for previous_result in results:
         url = previous_result['archive_download_url']
         r = requests.get(url, headers={'Accept': 'application/vnd.github.v3+json', 'Authorization': f'Bearer {github_token}'})
-        zf = zipfile.ZipFile(io.BytesIO(r.content))
+        try:
+            zf = zipfile.ZipFile(io.BytesIO(r.content))
+        except zipfile.BadZipFile:
+            print(f"Bad zip file at {previous_result['archive_download_url']}. Skipping.")
+            continue
 
         # find the first xz file
         for fname in zf.namelist():
