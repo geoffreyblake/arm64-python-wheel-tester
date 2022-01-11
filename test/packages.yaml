@@ -540,3 +540,68 @@ packages:
   - PKG_NAME: coverage
     PIP_NAME: coverage
     PKG_TEST: import coverage
+  - PKG_NAME: llvmlite
+    PIP_NAME: llvmlite
+    PKG_TEST: import llvmlite.binding as llvm
+  - PKG_NAME: lukeparser
+    PIP_NAME: lukeparser
+    PKG_TEST: |
+      from luke.parser.markdown import MarkdownParser
+      parser = MarkdownParser()
+  - PKG_NAME: pyagrum
+    PIP_NAME: pyagrum
+    PKG_TEST: import pyAgrum
+  - PKG_NAME: rjsmin
+    PIP_NAME: rjsmin
+    PKG_TEST: import rjsmin
+  - PKG_NAME: mocpy
+    PIP_NAME: mocpy
+    PKG_TEST: import mocpy
+  - PKG_NAME: pyinstrument
+    PIP_NAME: pyinstrument
+    PKG_TEST: import pyinstrument
+  - PKG_NAME: connected-components-3d
+    PIP_NAME: connected-components-3d
+    PKG_TEST: import cc3d
+  - PKG_NAME: pyglm
+    PIP_NAME: PyGLM
+    PKG_TEST: import glm
+  - PKG_NAME: mojimoji
+    PIP_NAME: mojimoji
+    PKG_TEST: import mojimoji
+  - PKG_NAME: dimod
+    PIP_NAME: dimod
+    PKG_TEST: import dimod
+  - PKG_NAME: pytokenizations
+    PIP_NAME: pytokenizations
+    PKG_TEST: import tokenizations
+  - PKG_NAME: pyreadr
+    PIP_NAME: pyreadr
+    PKG_TEST: import pyreadr
+  - PKG_NAME: fastnumbers
+    PIP_NAME: fastnumbers
+    PKG_TEST: import fastnumbers
+  - PKG_NAME: selectolax
+    PIP_NAME: selectolax
+    PKG_TEST: import selectolax
+  - PKG_NAME: pyonmttok
+    PIP_NAME: pyonmttok
+    PKG_TEST: import pyonmttok
+  - PKG_NAME: ansible-pylibssh
+    PIP_NAME: ansible-pylibssh
+    PKG_TEST: import pylibsshext
+  - PKG_NAME: pysimdjson
+    PIP_NAME: pysimdjson
+    PKG_TEST: import simdjson
+  - PKG_NAME: pyclipper
+    PIP_NAME: pyclipper
+    PKG_TEST: import pyclipper
+  - PKG_NAME: pyhacrf-datamade
+    PIP_NAME: pyhacrf-datamade
+    PKG_TEST: import pyhacrf
+  - PKG_NAME: doublemetaphone
+    PIP_NAME: doublemetaphone
+    PKG_TEST: import doublemetaphone
+  - PKG_NAME: pylbfgs
+    PIP_NAME: PyLBFGS
+    PKG_TEST: import lbfgs
