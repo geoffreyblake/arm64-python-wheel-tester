@@ -37,8 +37,6 @@ def main():
         }
         containers = {
             'amazon-linux2': ['PIP', 'CONDA'],
-            'centos8': ['PIP', 'YUM', 'CONDA'],
-            'centos8-py38': ['PIP'],
             'focal': ['PIP', 'APT', 'CONDA'],
         }
         # this is three nested loops in one
@@ -116,7 +114,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
     proc = subprocess.run(['docker', 'run',
             '-d', '-v', f'{wd}/{process_work_dir}:/io',
             '--env', f'PACKAGE_LIST={package_list}',
-            container,
+            f'wheel-tester/{container}',
             'bash', f'/io/{test_sh_script}'],
             encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     container_id = proc.stdout.strip()
