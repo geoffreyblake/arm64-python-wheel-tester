@@ -24,6 +24,7 @@ def main():
     parser.add_argument('--token', type=str, help="Github API token")
     args = parser.parse_args()
 
+    # change working directory the path of this script
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
     with open('packages.yaml') as f:
         packages = yaml.safe_load(f.read())
@@ -56,8 +57,13 @@ def main():
             test_shell_script = package_managers[package_manager]
             yield (package_main_name, package_list, container, test_shell_script, py_script, test_name, package_manager)
 
+    results_list = []
     with multiprocessing.Pool(processes=os.cpu_count(), initializer=do_test_initializer) as pool:
-        results_list = pool.map(do_test_lambda, get_test_set())
+        for result in pool.imap_unordered(do_test_lambda, get_test_set()):
+            results_list.append(result)
+
+    # cleanup subprocess work directories
+    subprocess.run('rm -rf work_pid*', shell=True)
 
     results = defaultdict(dict)
     for result in results_list:
@@ -65,18 +71,22 @@ def main():
         del result['wheel']
         del result['test-name']
 
-    subprocess.run('rm -rf work_pid*', shell=True)
-    with open('results.json', 'w') as f:
+    output_dir = 'results'
+    try:
+        os.mkdir(output_dir)
+    except FileExistsError:
+        pass
+    with open(f'{output_dir}/results.json', 'w') as f:
         json.dump(results, f, indent=2)
-    subprocess.run(['xz', 'results.json'], check=True)
+    subprocess.run(['xz', 'results.json'], check=True, cwd=output_dir)
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    new_results_file = f'results-{now}.json.xz'
-    os.rename('results.json.xz', new_results_file)
+    new_results_file = f'{output_dir}/results-{now}.json.xz'
+    os.rename(f'{output_dir}/results.json.xz', new_results_file)
 
     print("process results...")
     # Also generate an html report of the results
     html = process_results.print_table_by_distro_report([new_results_file])
-    with open(f'report-{now}.html', 'w') as f:
+    with open(f'{output_dir}/report-{now}.html', 'w') as f:
         f.write(html)
 
     # Run the GitHub pages generator
