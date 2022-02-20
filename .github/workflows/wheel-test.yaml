@@ -33,7 +33,9 @@ jobs:
           --env WORK_PATH=$(realpath test) \
           --env GITHUB_REPOSITORY="$GITHUB_REPOSITORY" \
           --env GITHUB_API_URL="$GITHUB_API_URL" \
-          testhost python3 /io/test-packages.py --token ${{ secrets.GITHUB_TOKEN }}
+          testhost python3 /io/test-packages.py \
+                     --ignore centos8 --ignore centos8-py38 --ignore centos8-yum \
+                     --token ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Upload results file"
         uses: actions/upload-artifact@v2

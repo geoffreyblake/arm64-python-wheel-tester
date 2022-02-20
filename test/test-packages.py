@@ -22,6 +22,7 @@ TIMEOUT = 180
 def main():
     parser = argparse.ArgumentParser(description="Run wheel tests")
     parser.add_argument('--token', type=str, help="Github API token")
+    parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.', default=[])
     args = parser.parse_args()
 
     # change working directory the path of this script
@@ -85,7 +86,7 @@ def main():
 
     print("process results...")
     # Also generate an html report of the results
-    html = process_results.print_table_by_distro_report([new_results_file])
+    html = process_results.print_table_by_distro_report([new_results_file], ignore_tests=args.ignore)
     with open(f'{output_dir}/report-{now}.html', 'w') as f:
         f.write(html)
 
@@ -95,7 +96,8 @@ def main():
             new_results=new_results_file,
             github_token=args.token,
             days_ago_list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21],
-            compare_weekday_num=3)
+            compare_weekday_num=3,
+            ignore_tests=args.ignore)
 
 
 process_work_dir = ''
