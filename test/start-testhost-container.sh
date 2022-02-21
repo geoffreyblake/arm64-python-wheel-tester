@@ -10,4 +10,5 @@ docker run -it --rm \
     --env WORK_PATH=$(realpath test) \
     --env GITHUB_REPOSITORY="geoffreyblake/arm64-python-wheel-tester" \
     --env GITHUB_API_URL="https://api.github.com" \
-    testhost
+    --network host \
+    wheel-tester/testhost

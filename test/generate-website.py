@@ -22,14 +22,16 @@ def main():
     parser.add_argument('--compare-n-days-ago', type=int, help="number of days in the past to compare against", nargs='+')
     parser.add_argument('--github-token', type=str, help="github api token", required=True)
     parser.add_argument('--compare-weekday-num', type=int, help="integer weekday number to hinge the summary report on", default=None)
+    parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.', default=[])
 
     args = parser.parse_args()
 
     generate_website(args.output_dir, args.new_results, args.github_token, args.compare_n_days_ago,
-            repo_path=args.repo, website_branch=args.website_branch, compare_weekday_num=args.compare_weekday_num)
+            repo_path=args.repo, website_branch=args.website_branch, compare_weekday_num=args.compare_weekday_num,
+            ignore_tests=args.ignore)
 
 def generate_website(output_dir, new_results, github_token, days_ago_list=[], repo_path="/repo", website_branch="gh-pages",
-        compare_weekday_num=None):
+        compare_weekday_num=None, ignore_tests=[]):
     # TODO: checkout the existing gh-pages and update it with a new report rather than replacing it completely
     # clone the repo to a temporary directory and checkout the website branch
     #webrepo = tempfile.mkdtemp()
@@ -40,7 +42,7 @@ def generate_website(output_dir, new_results, github_token, days_ago_list=[], re
 
     results = [new_results]
     results.extend(previous_results)
-    html = process_results.print_table_by_distro_report(results, compare_weekday_num=compare_weekday_num)
+    html = process_results.print_table_by_distro_report(results, compare_weekday_num=compare_weekday_num, ignore_tests=ignore_tests)
 
     try:
         os.mkdir(output_dir)

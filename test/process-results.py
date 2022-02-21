@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 def main():
     parser = argparse.ArgumentParser(description="Parse result files and render an HTML page with a status summary")
     parser.add_argument('resultfiles', type=str, nargs='+', metavar='results.json', help='path to a result file')
-    parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.')
+    parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.', default=[])
     parser.add_argument('--by-test', action='store_true', help="print results by test (distro)")
     parser.add_argument('-o', '--output-file', type=str, help="file name to write report")
     parser.add_argument('--compare-weekday-num', type=int, help="integer weekday number to hinge the summary report on", default=None)
@@ -239,7 +239,8 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
         wheel_name_set.update(test_result.content.keys())
         for wheel, wheel_dict in test_result.content.items():
             for test_name, test_name_results in wheel_dict.items():
-                all_test_names.add(test_name)
+                if test_name not in ignore_tests:
+                    all_test_names.add(test_name)
     wheel_name_set = sorted(list(wheel_name_set), key=str.lower)
     all_test_names = sorted(list(all_test_names))
 

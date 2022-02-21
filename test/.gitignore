@@ -1,0 +1,4 @@
+build/
+results/
+work_pid*/
+__pycache__/
