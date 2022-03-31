@@ -1,6 +1,8 @@
 FROM amazonlinux
 
 RUN yum install -y \
+        "@Development tools" \
+        python3-devel \
         python3-pip \
         libgomp \
         mesa-libGL
