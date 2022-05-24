@@ -605,3 +605,89 @@ packages:
   - PKG_NAME: pylbfgs
     PIP_NAME: PyLBFGS
     PKG_TEST: import lbfgs
+  - PKG_NAME: pyfftw
+    PIP_NAME: pyFFTW
+    PKG_TEST: import pyfftw
+  - PKG_NAME: pglast
+    PIP_NAME: pglast
+    PKG_TEST: import pglast
+  - PKG_NAME: tokenizers
+    PIP_NAME: tokenizers
+    PKG_TEST: import tokenizers
+  - PKG_NAME: unicodedata2
+    PIP_NAME: unicodedata2
+    PKG_TEST: import unicodedata2
+  - PKG_NAME: lmdb
+    PIP_NAME: lmdb
+    PKG_TEST: import lmdb
+  - PKG_NAME: affinegap
+    PIP_NAME: affinegap
+    PKG_TEST: import affinegap
+  - PKG_NAME: cpprb
+    PIP_NAME: cpprb
+    PKG_TEST: import cpprb
+  - PKG_NAME: ezdxf
+    PIP_NAME: ezdxf
+    PKG_TEST: import ezdxf
+  - PKG_NAME: dwave-neal
+    PIP_NAME: dwave-neal
+    PKG_TEST: import neal
+  - PKG_NAME: minorminer
+    PIP_NAME: minorminer
+    PKG_TEST: import minorminer
+  - PKG_NAME: pyuwsgi
+    PIP_NAME: pyuwsgi
+    PKG_TEST: import pyuwsgi
+  - PKG_NAME: aggdraw
+    PIP_NAME: aggdraw
+    PKG_TEST: import aggdraw
+  - PKG_NAME: vowpalwabbit
+    PIP_NAME: vowpalwabbit
+    PKG_TEST: import vowpalwabbit
+  - PKG_NAME: arch
+    PIP_NAME: arch
+    PKG_TEST: import arch
+  - PKG_NAME: jq
+    PIP_NAME: jq
+    PKG_TEST: import jq
+  - PKG_NAME: tables
+    PIP_NAME: tables
+    PKG_TEST: import tables
+  - PKG_NAME: torchaudio
+    PIP_NAME: torchaudio
+    PKG_TEST: import torchaudio
+  - PKG_NAME: torchtext
+    PIP_NAME: torchtext
+    PKG_TEST: import torchtext
+  - PKG_NAME: ssh2-python
+    PIP_NAME: ssh2-python
+    PKG_TEST: |
+      from ssh2.session import Session
+      Session()
+  - PKG_NAME: vpython
+    PIP_NAME: vpython
+    PKG_TEST: import vpython
+  - PKG_NAME: rawpy
+    PIP_NAME: rawpy
+    PKG_TEST: import rawpy
+  - PKG_NAME: aiortc
+    PIP_NAME: aiortc
+    PKG_TEST: import aiortc
+  - PKG_NAME: av
+    PIP_NAME: av
+    PKG_TEST: import av
+  - PKG_NAME: pysam
+    PIP_NAME: pysam
+    PKG_TEST: import pysam
+  - PKG_NAME: wrapt
+    PIP_NAME: wrapt
+    PKG_TEST: import wrapt
+  - PKG_NAME: zope-security
+    PIP_NAME: zope.security
+    PKG_TEST: import zope.security
+  - PKG_NAME: moderngl
+    PIP_NAME: moderngl
+    PKG_TEST: import moderngl
+  - PKG_NAME: fugashi
+    PIP_NAME: fugashi
+    PKG_TEST: import fugashi
