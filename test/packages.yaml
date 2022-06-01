@@ -691,3 +691,87 @@ packages:
   - PKG_NAME: fugashi
     PIP_NAME: fugashi
     PKG_TEST: import fugashi
+  - PKG_NAME: pytype
+    PIP_NAME: pytype
+    PKG_TEST: from pytype import file_utils
+  - PKG_NAME: zope-container
+    PIP_NAME: zope.container
+    PKG_TEST: from zope.container.interfaces import IContainer
+  - PKG_NAME: bx-python
+    PIP_NAME: bx-python
+    PKG_TEST: import bx.align.maf
+  - PKG_NAME: faiss-cpu
+    PIP_NAME: faiss-cpu
+    PKG_TEST: import faiss
+  - PKG_NAME: persistence
+    PIP_NAME: Persistence
+    PKG_TEST: from Persistence import Persistent
+  - PKG_NAME: dedupe-hcluster
+    PIP_NAME: dedupe-hcluster
+    PKG_TEST: import hcluster.hierarchy
+  - PKG_NAME: divik
+    PIP_NAME: divik
+    PKG_TEST: import divik.cluster
+  - PKG_NAME: argon2-cffi
+    PIP_NAME: argon2-cffi
+    PKG_TEST: from argon2 import PasswordHasher
+  - PKG_NAME: mceq
+    PIP_NAME: MCEq
+    PKG_TEST: from MCEq.core import config, MCEqRun
+  - PKG_NAME: pynacl
+    PIP_NAME: PyNaCl
+    PKG_TEST: import nacl.signing
+  - PKG_NAME: reportlab
+    PIP_NAME: reportlab
+    PKG_TEST: from reportlab.pdfgen import canvas
+  - PKG_NAME: cassandra-driver
+    PIP_NAME: cassandra-driver
+    PKG_TEST: from cassandra.util import Date
+  - PKG_NAME: open3d
+    PIP_NAME: open3d
+    PKG_TEST: import open3d
+  - PKG_NAME: panda3d
+    PIP_NAME: Panda3D
+    PKG_TEST: from panda3d import core
+  - PKG_NAME: landlab
+    PIP_NAME: landlab
+    PKG_TEST: import landlab
+  - PKG_NAME: segyio
+    PIP_NAME: segyio
+    PKG_TEST: import segyio
+  - PKG_NAME: neuron-nightly
+    PIP_NAME: NEURON-nightly
+    PKG_TEST: from neuron import h
+  - PKG_NAME: glcontext
+    PIP_NAME: glcontext
+    PKG_TEST: from glcontext import x11
+  - PKG_NAME: ssh-python
+    PIP_NAME: ssh-python
+    PKG_TEST: from ssh.session import Session
+  - PKG_NAME: kivy
+    PIP_NAME: kivy
+    PKG_TEST: import kivy
+  - PKG_NAME: dartsclone
+    PIP_NAME: dartsclone
+    PKG_TEST: import dartsclone
+  - PKG_NAME: rtree
+    PIP_NAME: Rtree
+    PKG_TEST: import rtree
+  - PKG_NAME: pulsar-client
+    PIP_NAME: pulsar-client
+    PKG_TEST: from pulsar import Function
+  - PKG_NAME: manifest-tool
+    PIP_NAME: manifest-tool
+    PKG_TEST: from manifesttool.package_tool import package_tool
+  - PKG_NAME: cryptg
+    PIP_NAME: cryptg
+    PKG_TEST: import cryptg
+  - PKG_NAME: pyodps
+    PIP_NAME: pyodps
+    PKG_TEST: from odps import ODPS
+  - PKG_NAME: pymars
+    PIP_NAME: pymars
+    PKG_TEST: import mars
+  - PKG_NAME: pycapnp
+    PIP_NAME: pycapnp
+    PKG_TEST: import capnp
