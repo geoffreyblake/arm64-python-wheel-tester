@@ -148,7 +148,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
             encoding='utf-8', stdout=subprocess.PIPE)
     return_code = int(proc.stdout.strip())
     proc = subprocess.run(['docker', 'logs', container_id],
-            encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     output = proc.stdout
 
     if time.time() - start > SLOW_INSTALL_TIME:
