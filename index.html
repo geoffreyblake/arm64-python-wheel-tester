@@ -49,6 +49,7 @@ table.python-wheel-report td, table.python-wheel-report th {
     font-family: monospace;
     line-height: 1.6em;
     width: 14%;
+    vertical-align: baseline;
 }
 
 table.python-wheel-report th {
@@ -114,6 +115,19 @@ table.python-wheel-report td.wheel-name.different {
 }
 
 
+/* Styles for "Toggle Output" accordions */
+input.output-toggle {
+    display: none;
+}
+label.output-toggle {
+    cursor: pointer;
+}
+input.output-toggle + label.output-toggle + pre.output-content {
+    display: none;
+}
+input.output-toggle:checked + label.output-toggle + pre.output-content {
+    display: block;
+}
 
 </style>
 </head>
@@ -124,7 +138,7 @@ table.python-wheel-report td.wheel-name.different {
 <table class="summary">
 <tr>
 <th>date</th>
-<td>Wednesday, June 15, 2022</td>
+<td>Thursday, June 16, 2022</td>
 <td>Monday, June 20, 2022</td>
 <td></td>
 </tr>
@@ -320,7 +334,7 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line odd">
-<td class="wheel-name different">apache-beam<br /><span class="file-indicator">May 29, 2022</span></td>
+<td class="wheel-name different">apache-beam<br /><span class="file-indicator">May 30, 2022</span></td>
 <td class="">
 <span class="passed badge">yes</span>
 </td>
@@ -345,6 +359,21 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-08 01:13:57_apache-beam_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-08 01:13:57_apache-beam_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting apache-beam
+  Downloading apache_beam-2.39.0-cp37-cp37m-manylinux2014_aarch64.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 63.9 MB/s eta 0:00:00
+Collecting orjson&lt;4.0
+  Downloading orjson-3.7.2.tar.gz (639 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 639.7/639.7 KB 54.7 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;done&#x27;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#x27;done&#x27;
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status &#x27;error&#x27;
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -365,6 +394,90 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_apache-beam_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_apache-beam_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting apache-beam
+  Downloading apache_beam-2.39.0-cp37-cp37m-manylinux2014_aarch64.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 69.2 MB/s eta 0:00:00
+Collecting cloudpickle&lt;3,&gt;=2.0.0
+  Downloading cloudpickle-2.1.0-py3-none-any.whl (25 kB)
+Collecting dill&lt;0.3.2,&gt;=0.3.1.1
+  Downloading dill-0.3.1.1.tar.gz (151 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.0/152.0 KB 24.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+Collecting numpy&lt;1.23.0,&gt;=1.14.3
+  Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 53.2 MB/s eta 0:00:00
+Collecting hdfs&lt;3.0.0,&gt;=2.1.0
+  Downloading hdfs-2.7.0-py3-none-any.whl (34 kB)
+Collecting proto-plus&lt;2,&gt;=1.7.1
+  Downloading proto_plus-1.20.6-py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 KB 7.5 MB/s eta 0:00:00
+Collecting pyarrow&lt;8.0.0,&gt;=0.15.1
+  Downloading pyarrow-7.0.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (24.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.9/24.9 MB 51.5 MB/s eta 0:00:00
+Collecting pytz&gt;=2018.3
+  Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 KB 50.9 MB/s eta 0:00:00
+Collecting protobuf&lt;4,&gt;=3.12.2
+  Downloading protobuf-3.20.1-cp37-cp37m-manylinux2014_aarch64.whl (917 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 917.3/917.3 KB 65.1 MB/s eta 0:00:00
+Collecting pymongo&lt;4.0.0,&gt;=3.8.0
+  Downloading pymongo-3.12.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (507 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 507.9/507.9 KB 51.9 MB/s eta 0:00:00
+Collecting httplib2&lt;0.20.0,&gt;=0.8
+  Downloading httplib2-0.19.1-py3-none-any.whl (95 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.4/95.4 KB 10.7 MB/s eta 0:00:00
+Collecting python-dateutil&lt;3,&gt;=2.8.0
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 29.5 MB/s eta 0:00:00
+Collecting requests&lt;3.0.0,&gt;=2.24.0
+  Downloading requests-2.28.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 KB 10.8 MB/s eta 0:00:00
+Collecting typing-extensions&gt;=3.7.0
+  Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+Collecting crcmod&lt;2.0,&gt;=1.7
+  Downloading crcmod-1.7.tar.gz (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.7/89.7 KB 14.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+Collecting grpcio&lt;2,&gt;=1.29.0
+  Downloading grpcio-1.46.3-cp37-cp37m-manylinux_2_17_aarch64.whl (60.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.2/60.2 MB 33.6 MB/s eta 0:00:00
+Collecting orjson&lt;4.0
+  Downloading orjson-3.7.2.tar.gz (639 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 639.7/639.7 KB 35.4 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;done&#x27;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#x27;done&#x27;
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [6 lines of output]
+      
+      Cargo, the Rust package manager, is not installed or is not on PATH.
+      This package requires Rust and Cargo to compile extensions. Install it through
+      the system&#x27;s package manager or via https://rustup.rs/
+      
+      Checking for Rust toolchain....
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─&gt; See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -712,12 +825,240 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_confluent-kafka_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting confluent-kafka
+  Downloading confluent-kafka-1.9.0.tar.gz (110 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 KB 15.6 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+Using legacy &#x27;setup.py install&#x27; for confluent-kafka, since package &#x27;wheel&#x27; is not installed.
+Installing collected packages: confluent-kafka
+  Running setup.py install for confluent-kafka: started
+  Running setup.py install for confluent-kafka: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × Running setup.py install for confluent-kafka did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [53 lines of output]
+      running install
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-aarch64-3.7
+      creating build/lib.linux-aarch64-3.7/confluent_kafka
+      copying src/confluent_kafka/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka
+      copying src/confluent_kafka/serializing_producer.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka
+      copying src/confluent_kafka/error.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka
+      copying src/confluent_kafka/deserializing_consumer.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/serialization
+      copying src/confluent_kafka/serialization/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/serialization
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/error.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/protobuf.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/json_schema.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/schema_registry_client.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/avro.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/schema_registry
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/avro
+      copying src/confluent_kafka/avro/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro
+      copying src/confluent_kafka/avro/error.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro
+      copying src/confluent_kafka/avro/cached_schema_registry_client.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro
+      copying src/confluent_kafka/avro/load.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_acl.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/admin
+      copying src/confluent_kafka/admin/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_config.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_resource.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/admin
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_consumer.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_producer.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_client.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/kafkatest
+      creating build/lib.linux-aarch64-3.7/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/__init__.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/message_serializer.py -&gt; build/lib.linux-aarch64-3.7/confluent_kafka/avro/serializer
+      running build_ext
+      building &#x27;confluent_kafka.cimpl&#x27; extension
+      creating build/temp.linux-aarch64-3.7
+      creating build/temp.linux-aarch64-3.7/tmp
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python3.7m -c /tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.7/tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka/src/confluent_kafka.c:17:0:
+      /tmp/pip-install-7cy2uhj3/confluent-kafka_6e272fbcc2b34a0fa3eefd3e0f8cd296/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+       #include &lt;librdkafka/rdkafka.h&gt;
+                ^~~~~~~~~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command &#x27;gcc&#x27; failed with exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: legacy-install-failure
+
+× Encountered error while trying to install package.
+╰─&gt; confluent-kafka
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for output from the failure.
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_confluent-kafka_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_confluent-kafka_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting confluent-kafka
+  Downloading confluent-kafka-1.9.0.tar.gz (110 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 kB 9.9 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+Building wheels for collected packages: confluent-kafka
+  Building wheel for confluent-kafka (setup.py): started
+  Building wheel for confluent-kafka (setup.py): finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [53 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-aarch64-3.8
+      creating build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/serializing_producer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/deserializing_consumer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/serialization
+      copying src/confluent_kafka/serialization/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/serialization
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/protobuf.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/json_schema.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/schema_registry_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/avro.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/cached_schema_registry_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/load.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_acl.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_config.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_resource.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_consumer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_producer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/message_serializer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      running build_ext
+      building &#x27;confluent_kafka.cimpl&#x27; extension
+      creating build/temp.linux-aarch64-3.8
+      creating build/temp.linux-aarch64-3.8/tmp
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src
+      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.c:17:
+      /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+         23 | #include &lt;librdkafka/rdkafka.h&gt;
+            |          ^~~~~~~~~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command &#x27;aarch64-linux-gnu-gcc&#x27; failed with exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for confluent-kafka
+  Running setup.py clean for confluent-kafka
+Failed to build confluent-kafka
+Installing collected packages: confluent-kafka
+  Running setup.py install for confluent-kafka: started
+  Running setup.py install for confluent-kafka: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × Running setup.py install for confluent-kafka did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [53 lines of output]
+      running install
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-aarch64-3.8
+      creating build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/serializing_producer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      copying src/confluent_kafka/deserializing_consumer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/serialization
+      copying src/confluent_kafka/serialization/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/serialization
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/protobuf.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/json_schema.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/schema_registry_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      copying src/confluent_kafka/schema_registry/avro.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/schema_registry
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/error.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/cached_schema_registry_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      copying src/confluent_kafka/avro/load.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_acl.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_config.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      copying src/confluent_kafka/admin/_resource.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/admin
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_consumer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_producer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      copying src/confluent_kafka/kafkatest/verifiable_client.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/kafkatest
+      creating build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/__init__.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      copying src/confluent_kafka/avro/serializer/message_serializer.py -&gt; build/lib.linux-aarch64-3.8/confluent_kafka/avro/serializer
+      running build_ext
+      building &#x27;confluent_kafka.cimpl&#x27; extension
+      creating build/temp.linux-aarch64-3.8
+      creating build/temp.linux-aarch64-3.8/tmp
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src
+      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.c:17:
+      /tmp/pip-install-l_kenc76/confluent-kafka_cd29ffdb9b2b4d97a5367f89209fd8db/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+         23 | #include &lt;librdkafka/rdkafka.h&gt;
+            |          ^~~~~~~~~~~~~~~~~~~~~~
+      compilation terminated.
+      error: command &#x27;aarch64-linux-gnu-gcc&#x27; failed with exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: legacy-install-failure
+
+× Encountered error while trying to install package.
+╰─&gt; confluent-kafka
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for output from the failure.
+</pre>
 </td>
 <td class="test-column package-os">
 <span class="passed badge">passed</span>
@@ -1034,7 +1375,7 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">fastavro<br /><span class="file-indicator">May 29, 2022</span></td>
+<td class="wheel-name different">fastavro<br /><span class="file-indicator">May 30, 2022</span></td>
 <td class="">
 <span class="passed badge">yes</span>
 </td>
@@ -1406,11 +1747,41 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_hidapi_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting hidapi
+  Downloading hidapi-0.12.0.post2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (889 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 889.2/889.2 KB 46.5 MB/s eta 0:00:00
+Requirement already satisfied: setuptools&gt;=19.0 in /usr/lib/python3.7/site-packages (from hidapi) (49.1.3)
+Installing collected packages: hidapi
+Successfully installed hidapi-0.12.0.post2
+WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+Traceback (most recent call last):
+  File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
+    import hidapi
+ModuleNotFoundError: No module named &#x27;hidapi&#x27;
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_hidapi_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_hidapi_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting hidapi
+  Downloading hidapi-0.12.0.post2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (926 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 926.7/926.7 kB 52.1 MB/s eta 0:00:00
+Requirement already satisfied: setuptools&gt;=19.0 in /usr/lib/python3/dist-packages (from hidapi) (45.2.0)
+Installing collected packages: hidapi
+Successfully installed hidapi-0.12.0.post2
+WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Traceback (most recent call last):
+  File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
+    import hidapi
+ModuleNotFoundError: No module named &#x27;hidapi&#x27;
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -1880,6 +2251,64 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_mocpy_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting mocpy
+  Downloading MOCPy-0.11.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (615 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 615.6/615.6 KB 37.2 MB/s eta 0:00:00
+Collecting astropy
+  Downloading astropy-4.3.1.tar.gz (7.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 69.5 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;done&#x27;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [28 lines of output]
+      Traceback (most recent call last):
+        File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py&quot;, line 363, in &lt;module&gt;
+          main()
+        File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py&quot;, line 345, in main
+          json_out[&#x27;return_val&#x27;] = hook(**hook_input[&#x27;kwargs&#x27;])
+        File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py&quot;, line 130, in get_requires_for_build_wheel
+          return hook(config_settings)
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 178, in get_requires_for_build_wheel
+          config_settings, requirements=[&#x27;wheel&#x27;])
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 159, in _get_build_requires
+          self.run_setup()
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 174, in run_setup
+          exec(compile(code, __file__, &#x27;exec&#x27;), locals())
+        File &quot;setup.py&quot;, line 70, in &lt;module&gt;
+          ext_modules=get_extensions())
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/extension_helpers/_setup_helpers.py&quot;, line 67, in get_extensions
+          ext_modules.extend(setuppkg.get_extensions())
+        File &quot;./astropy/modeling/setup_package.py&quot;, line 59, in get_extensions
+          from jinja2 import Environment, FileSystemLoader
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/jinja2/__init__.py&quot;, line 33, in &lt;module&gt;
+          from jinja2.environment import Environment, Template
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/jinja2/environment.py&quot;, line 15, in &lt;module&gt;
+          from jinja2 import nodes
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/jinja2/nodes.py&quot;, line 19, in &lt;module&gt;
+          from jinja2.utils import Markup
+        File &quot;/tmp/pip-build-env-ofkgp_b1/overlay/lib/python3.7/site-packages/jinja2/utils.py&quot;, line 642, in &lt;module&gt;
+          from markupsafe import Markup, escape, soft_unicode
+      ImportError: cannot import name &#x27;soft_unicode&#x27; from &#x27;markupsafe&#x27; (/tmp/pip-build-env-ofkgp_b1/overlay/lib64/python3.7/site-packages/markupsafe/__init__.py)
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -1936,6 +2365,26 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_Mosek_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting Mosek
+  Downloading Mosek-9.3.20-cp37-cp37m-manylinux2014_aarch64.whl (4.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 78.9 MB/s eta 0:00:00
+Collecting numpy
+  Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 56.7 MB/s eta 0:00:00
+Installing collected packages: numpy, Mosek
+Successfully installed Mosek-9.3.20 numpy-1.21.6
+WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+Traceback (most recent call last):
+  File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
+    import mosek
+  File &quot;/usr/local/lib64/python3.7/site-packages/mosek/__init__.py&quot;, line 1, in &lt;module&gt;
+    from . import _msk
+ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by /usr/local/lib64/python3.7/site-packages/mosek/libmosek64.so.9.3)
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -2171,17 +2620,67 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">onnx<br /><span class="file-indicator">May 29, 2022</span></td>
+<td class="wheel-name different">onnx<br /><span class="file-indicator">May 30, 2022</span></td>
 <td class="">
 <span class="failed badge">no</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-05-30 01:14:36_onnx_amazon-linux2" class="output-toggle" />
+<label for="output_2022-05-30 01:14:36_onnx_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting onnx
+  Downloading onnx-1.11.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (12.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 66.9 MB/s eta 0:00:00
+Collecting typing-extensions&gt;=3.6.2.1
+  Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+Collecting numpy&gt;=1.16.6
+  Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 71.5 MB/s eta 0:00:00
+Collecting protobuf&gt;=3.12.2
+  Downloading protobuf-4.21.1-cp37-abi3-manylinux2014_aarch64.whl (403 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 403.3/403.3 KB 49.0 MB/s eta 0:00:00
+Installing collected packages: typing-extensions, protobuf, numpy, onnx
+Successfully installed numpy-1.21.6 onnx-1.11.0 protobuf-4.21.1 typing-extensions-4.2.0
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-05-30 01:14:36_onnx_focal" class="output-toggle" />
+<label for="output_2022-05-30 01:14:36_onnx_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting onnx
+  Downloading onnx-1.11.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (12.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 91.2 MB/s eta 0:00:00
+Collecting protobuf&gt;=3.12.2
+  Downloading protobuf-4.21.1-cp37-abi3-manylinux2014_aarch64.whl (403 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 403.3/403.3 KB 43.5 MB/s eta 0:00:00
+Collecting numpy&gt;=1.16.6
+  Downloading numpy-1.22.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 86.0 MB/s eta 0:00:00
+Collecting typing-extensions&gt;=3.6.2.1
+  Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+Installing collected packages: typing-extensions, protobuf, numpy, onnx
+Successfully installed numpy-1.22.4 onnx-1.11.0 protobuf-4.21.1 typing-extensions-4.2.0
+</pre>
+</td>
+<td class="test-column package-os">
+</td>
+<td class="test-column package-conda">
+</td>
+</tr>
+<tr class="wheel-line even">
+<td class="wheel-name different">onnx<br /><span class="file-indicator">June 19, 2022</span></td>
+<td class="">
+<span class="passed badge">yes</span>
+</td>
+<td class="test-column package-pip">
+<span class="passed badge">passed</span>
+</td>
+<td class="test-column package-conda">
+</td>
+<td class="test-column package-pip">
+<span class="passed badge">passed</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -2225,17 +2724,33 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">osqp<br /><span class="file-indicator">May 29, 2022</span></td>
+<td class="wheel-name different">osqp<br /><span class="file-indicator">May 30, 2022</span></td>
 <td class="">
 <span class="failed badge">no</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-05-30 01:14:36_osqp_amazon-linux2" class="output-toggle" />
+<label for="output_2022-05-30 01:14:36_osqp_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 KB 26.6 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-05-30 01:14:36_osqp_focal" class="output-toggle" />
+<label for="output_2022-05-30 01:14:36_osqp_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 KB 22.1 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -2243,18 +2758,329 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">osqp<br /><span class="file-indicator">June 17, 2022</span></td>
+<td class="wheel-name different">osqp<br /><span class="file-indicator">June 18, 2022</span></td>
 <td class="">
 <span class="failed badge">no</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-18 01:12:21_osqp_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-18 01:12:21_osqp_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 KB 25.2 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × pip subprocess to install build dependencies did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [101 lines of output]
+      Collecting oldest-supported-numpy
+        Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
+      Collecting setuptools&gt;=40.8.0
+        Downloading setuptools-62.5.0-py3-none-any.whl (1.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 60.6 MB/s eta 0:00:00
+      Collecting wheel
+        Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+      Collecting setuptools_scm&gt;=6.2
+        Downloading setuptools_scm-6.4.2-py3-none-any.whl (37 kB)
+      Collecting qdldl
+        Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 KB 9.6 MB/s eta 0:00:00
+        Preparing metadata (setup.py): started
+        Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+      Collecting numpy==1.19.2
+        Downloading numpy-1.19.2-cp37-cp37m-manylinux2014_aarch64.whl (12.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 69.2 MB/s eta 0:00:00
+      Collecting packaging&gt;=20.0
+        Downloading packaging-21.3-py3-none-any.whl (40 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 KB 7.5 MB/s eta 0:00:00
+      Collecting tomli&gt;=1.0.0
+        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+      Collecting scipy&gt;=0.13.2
+        Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (36.1 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 36.8 MB/s eta 0:00:00
+      Collecting pyparsing!=3.0.5,&gt;=2.0.2
+        Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 KB 15.2 MB/s eta 0:00:00
+      Using legacy &#x27;setup.py install&#x27; for qdldl, since package &#x27;wheel&#x27; is not installed.
+      Installing collected packages: wheel, tomli, setuptools, pyparsing, numpy, scipy, packaging, oldest-supported-numpy, setuptools_scm, qdldl
+        Running setup.py install for qdldl: started
+        Running setup.py install for qdldl: finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × Running setup.py install for qdldl did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [52 lines of output]
+            running install
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-1zsd_8ov/qdldl_7dc4f36da97a49098d0972e3b607bc7d/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 411, in check_output
+                **kwargs).stdout
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 488, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 800, in __init__
+                restore_signals, start_new_session)
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 1551, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 36, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-1zsd_8ov/qdldl_7dc4f36da97a49098d0972e3b607bc7d/setup.py&quot;, line 124, in &lt;module&gt;
+                ext_modules=[qdldl],
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/__init__.py&quot;, line 165, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib64/python3.7/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/command/install.py&quot;, line 61, in run
+                return orig.install.run(self)
+              File &quot;/usr/lib64/python3.7/distutils/command/install.py&quot;, line 556, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib64/python3.7/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib64/python3.7/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib64/python3.7/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib64/python3.7/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-1zsd_8ov/qdldl_7dc4f36da97a49098d0972e3b607bc7d/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+      error: legacy-install-failure
+      
+      × Encountered error while trying to install package.
+      ╰─&gt; qdldl
+      
+      note: This is an issue with the package mentioned above, not pip.
+      hint: See above for output from the failure.
+      WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+      You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
+<input type="checkbox" id="output_2022-06-18 01:12:21_osqp_focal" class="output-toggle" />
+<label for="output_2022-06-18 01:12:21_osqp_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 20.9 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × pip subprocess to install build dependencies did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [162 lines of output]
+      Collecting oldest-supported-numpy
+        Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
+      Collecting setuptools&gt;=40.8.0
+        Downloading setuptools-62.5.0-py3-none-any.whl (1.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 41.3 MB/s eta 0:00:00
+      Collecting wheel
+        Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+      Collecting setuptools_scm&gt;=6.2
+        Downloading setuptools_scm-6.4.2-py3-none-any.whl (37 kB)
+      Collecting qdldl
+        Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 13.9 MB/s eta 0:00:00
+        Preparing metadata (setup.py): started
+        Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+      Collecting numpy==1.19.2
+        Downloading numpy-1.19.2-cp38-cp38-manylinux2014_aarch64.whl (12.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 62.2 MB/s eta 0:00:00
+      Collecting packaging&gt;=20.0
+        Downloading packaging-21.3-py3-none-any.whl (40 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 7.2 MB/s eta 0:00:00
+      Collecting tomli&gt;=1.0.0
+        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+      Collecting scipy&gt;=0.13.2
+        Downloading scipy-1.8.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (39.1 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.1/39.1 MB 44.8 MB/s eta 0:00:00
+      Collecting pyparsing!=3.0.5,&gt;=2.0.2
+        Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 18.9 MB/s eta 0:00:00
+      Building wheels for collected packages: qdldl
+        Building wheel for qdldl (setup.py): started
+        Building wheel for qdldl (setup.py): finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × python setup.py bdist_wheel did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [50 lines of output]
+            running bdist_wheel
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
+                return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 493, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 858, in __init__
+                self._execute_child(args, executable, preexec_fn, close_fds,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 1704, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 110, in &lt;module&gt;
+                setup(name=&#x27;qdldl&#x27;,
+              File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib/python3.8/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/wheel/bdist_wheel.py&quot;, line 223, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.8/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+        ERROR: Failed building wheel for qdldl
+        Running setup.py clean for qdldl
+      Failed to build qdldl
+      Installing collected packages: wheel, tomli, setuptools, pyparsing, numpy, scipy, packaging, oldest-supported-numpy, setuptools_scm, qdldl
+        Running setup.py install for qdldl: started
+        Running setup.py install for qdldl: finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × Running setup.py install for qdldl did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [52 lines of output]
+            running install
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
+                return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 493, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 858, in __init__
+                self._execute_child(args, executable, preexec_fn, close_fds,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 1704, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 110, in &lt;module&gt;
+                setup(name=&#x27;qdldl&#x27;,
+              File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib/python3.8/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/install.py&quot;, line 61, in run
+                return orig.install.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/install.py&quot;, line 589, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.8/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-q2w1xdup/qdldl_91bf0e1a0c9e4e98bb5a9b53c0c42e7e/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+      error: legacy-install-failure
+      
+      × Encountered error while trying to install package.
+      ╰─&gt; qdldl
+      
+      note: This is an issue with the package mentioned above, not pip.
+      hint: See above for output from the failure.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -2268,12 +3094,323 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_osqp_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_osqp_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 KB 24.0 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × pip subprocess to install build dependencies did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [101 lines of output]
+      Collecting oldest-supported-numpy
+        Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
+      Collecting setuptools&gt;=40.8.0
+        Downloading setuptools-62.6.0-py3-none-any.whl (1.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 60.7 MB/s eta 0:00:00
+      Collecting wheel
+        Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+      Collecting setuptools_scm&gt;=6.2
+        Downloading setuptools_scm-6.4.2-py3-none-any.whl (37 kB)
+      Collecting qdldl
+        Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 KB 12.2 MB/s eta 0:00:00
+        Preparing metadata (setup.py): started
+        Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+      Collecting numpy==1.19.2
+        Downloading numpy-1.19.2-cp37-cp37m-manylinux2014_aarch64.whl (12.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 73.3 MB/s eta 0:00:00
+      Collecting packaging&gt;=20.0
+        Downloading packaging-21.3-py3-none-any.whl (40 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 KB 3.7 MB/s eta 0:00:00
+      Collecting tomli&gt;=1.0.0
+        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+      Collecting scipy&gt;=0.13.2
+        Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (36.1 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 35.5 MB/s eta 0:00:00
+      Collecting pyparsing!=3.0.5,&gt;=2.0.2
+        Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 KB 17.6 MB/s eta 0:00:00
+      Using legacy &#x27;setup.py install&#x27; for qdldl, since package &#x27;wheel&#x27; is not installed.
+      Installing collected packages: wheel, tomli, setuptools, pyparsing, numpy, scipy, packaging, oldest-supported-numpy, setuptools_scm, qdldl
+        Running setup.py install for qdldl: started
+        Running setup.py install for qdldl: finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × Running setup.py install for qdldl did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [52 lines of output]
+            running install
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-wmx0xq1w/qdldl_7091705a54c6430a8564faefa3a13d3f/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 411, in check_output
+                **kwargs).stdout
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 488, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 800, in __init__
+                restore_signals, start_new_session)
+              File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 1551, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 36, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-wmx0xq1w/qdldl_7091705a54c6430a8564faefa3a13d3f/setup.py&quot;, line 124, in &lt;module&gt;
+                ext_modules=[qdldl],
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/__init__.py&quot;, line 165, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib64/python3.7/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/command/install.py&quot;, line 61, in run
+                return orig.install.run(self)
+              File &quot;/usr/lib64/python3.7/distutils/command/install.py&quot;, line 556, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib64/python3.7/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib64/python3.7/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib64/python3.7/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib64/python3.7/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.7/site-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib64/python3.7/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-wmx0xq1w/qdldl_7091705a54c6430a8564faefa3a13d3f/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+      error: legacy-install-failure
+      
+      × Encountered error while trying to install package.
+      ╰─&gt; qdldl
+      
+      note: This is an issue with the package mentioned above, not pip.
+      hint: See above for output from the failure.
+      WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+      You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_osqp_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_osqp_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting osqp
+  Downloading osqp-0.6.2.post5.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 18.7 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;error&#x27;
+  error: subprocess-exited-with-error
+  
+  × pip subprocess to install build dependencies did not run successfully.
+  │ exit code: 1
+  ╰─&gt; [162 lines of output]
+      Collecting oldest-supported-numpy
+        Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
+      Collecting setuptools&gt;=40.8.0
+        Downloading setuptools-62.6.0-py3-none-any.whl (1.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 60.8 MB/s eta 0:00:00
+      Collecting wheel
+        Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+      Collecting setuptools_scm&gt;=6.2
+        Downloading setuptools_scm-6.4.2-py3-none-any.whl (37 kB)
+      Collecting qdldl
+        Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 13.8 MB/s eta 0:00:00
+        Preparing metadata (setup.py): started
+        Preparing metadata (setup.py): finished with status &#x27;done&#x27;
+      Collecting numpy==1.19.2
+        Downloading numpy-1.19.2-cp38-cp38-manylinux2014_aarch64.whl (12.2 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 86.9 MB/s eta 0:00:00
+      Collecting tomli&gt;=1.0.0
+        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+      Collecting packaging&gt;=20.0
+        Downloading packaging-21.3-py3-none-any.whl (40 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.0 MB/s eta 0:00:00
+      Collecting scipy&gt;=0.13.2
+        Downloading scipy-1.8.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (39.1 MB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.1/39.1 MB 46.8 MB/s eta 0:00:00
+      Collecting pyparsing!=3.0.5,&gt;=2.0.2
+        Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 19.7 MB/s eta 0:00:00
+      Building wheels for collected packages: qdldl
+        Building wheel for qdldl (setup.py): started
+        Building wheel for qdldl (setup.py): finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × python setup.py bdist_wheel did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [50 lines of output]
+            running bdist_wheel
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
+                return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 493, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 858, in __init__
+                self._execute_child(args, executable, preexec_fn, close_fds,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 1704, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 110, in &lt;module&gt;
+                setup(name=&#x27;qdldl&#x27;,
+              File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib/python3.8/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/wheel/bdist_wheel.py&quot;, line 223, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.8/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+        ERROR: Failed building wheel for qdldl
+        Running setup.py clean for qdldl
+      Failed to build qdldl
+      Installing collected packages: wheel, tomli, setuptools, pyparsing, numpy, scipy, packaging, oldest-supported-numpy, setuptools_scm, qdldl
+        Running setup.py install for qdldl: started
+        Running setup.py install for qdldl: finished with status &#x27;error&#x27;
+        error: subprocess-exited-with-error
+      
+        × Running setup.py install for qdldl did not run successfully.
+        │ exit code: 1
+        ╰─&gt; [52 lines of output]
+            running install
+            running build
+            running build_ext
+            Traceback (most recent call last):
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 78, in build_extensions
+                check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
+                return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 493, in run
+                with Popen(*popenargs, **kwargs) as process:
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 858, in __init__
+                self._execute_child(args, executable, preexec_fn, close_fds,
+              File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 1704, in _execute_child
+                raise child_exception_type(errno_num, err_msg, err_filename)
+            FileNotFoundError: [Errno 2] No such file or directory: &#x27;cmake&#x27;
+      
+            During handling of the above exception, another exception occurred:
+      
+            Traceback (most recent call last):
+              File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
+              File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 110, in &lt;module&gt;
+                setup(name=&#x27;qdldl&#x27;,
+              File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
+                return distutils.core.setup(**attrs)
+              File &quot;/usr/lib/python3.8/distutils/core.py&quot;, line 148, in setup
+                dist.run_commands()
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 966, in run_commands
+                self.run_command(cmd)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/install.py&quot;, line 61, in run
+                return orig.install.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/install.py&quot;, line 589, in run
+                self.run_command(&#x27;build&#x27;)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3.8/distutils/command/build.py&quot;, line 135, in run
+                self.run_command(cmd_name)
+              File &quot;/usr/lib/python3.8/distutils/cmd.py&quot;, line 313, in run_command
+                self.distribution.run_command(command)
+              File &quot;/usr/lib/python3.8/distutils/dist.py&quot;, line 985, in run_command
+                cmd_obj.run()
+              File &quot;/usr/lib/python3/dist-packages/setuptools/command/build_ext.py&quot;, line 87, in run
+                _build_ext.run(self)
+              File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
+                self.build_extensions()
+              File &quot;/tmp/pip-install-ejjs1emw/qdldl_36a471c5507144ec816e20e137caa0ac/setup.py&quot;, line 80, in build_extensions
+                raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
+            RuntimeError: CMake must be installed to build qdldl
+            [end of output]
+      
+        note: This error originates from a subprocess, and is likely not a problem with pip.
+      error: legacy-install-failure
+      
+      × Encountered error while trying to install package.
+      ╰─&gt; qdldl
+      
+      note: This is an issue with the package mentioned above, not pip.
+      hint: See above for output from the failure.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× pip subprocess to install build dependencies did not run successfully.
+│ exit code: 1
+╰─&gt; See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -2941,7 +4078,7 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line odd">
-<td class="wheel-name different">python-igraph<br /><span class="file-indicator">May 29, 2022</span></td>
+<td class="wheel-name different">python-igraph<br /><span class="file-indicator">May 30, 2022</span></td>
 <td class="">
 <span class="passed badge">yes</span>
 </td>
@@ -3439,6 +4576,43 @@ is always shown, regardless of whether there is any difference.</p>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_Shapely_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_Shapely_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Collecting Shapely
+  Downloading Shapely-1.8.2.tar.gz (198 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.8/198.8 KB 19.3 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status &#x27;done&#x27;
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status &#x27;done&#x27;
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
+Building wheels for collected packages: Shapely
+  Building wheel for Shapely (pyproject.toml): started
+  Building wheel for Shapely (pyproject.toml): finished with status &#x27;done&#x27;
+  Created wheel for Shapely: filename=Shapely-1.8.2-py3-none-any.whl size=181854 sha256=f6f50c103ef115e655a9db1ad034d6fb15fc888b5b786ef2164d71bc717a4b62
+  Stored in directory: /root/.cache/pip/wheels/2f/9e/07/e9e90942b4e31275785d2f7e455607bfe876e53906307f80cd
+Successfully built Shapely
+Installing collected packages: Shapely
+Successfully installed Shapely-1.8.2
+WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+Traceback (most recent call last):
+  File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
+    from shapely.geometry import Point
+  File &quot;/usr/local/lib/python3.7/site-packages/shapely/geometry/__init__.py&quot;, line 4, in &lt;module&gt;
+    from .base import CAP_STYLE, JOIN_STYLE
+  File &quot;/usr/local/lib/python3.7/site-packages/shapely/geometry/base.py&quot;, line 20, in &lt;module&gt;
+    from shapely.coords import CoordinateSequence
+  File &quot;/usr/local/lib/python3.7/site-packages/shapely/coords.py&quot;, line 10, in &lt;module&gt;
+    from shapely.geos import lgeos
+  File &quot;/usr/local/lib/python3.7/site-packages/shapely/geos.py&quot;, line 100, in &lt;module&gt;
+    _lgeos = load_dll(&#x27;geos_c&#x27;, fallbacks=alt_paths)
+  File &quot;/usr/local/lib/python3.7/site-packages/shapely/geos.py&quot;, line 56, in load_dll
+    libname, fallbacks or []))
+OSError: Could not find lib geos_c or load any of its variants [&#x27;libgeos_c.so.1&#x27;, &#x27;libgeos_c.so&#x27;].
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -3590,12 +4764,24 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tensorflow_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow (from versions: none)
+ERROR: No matching distribution found for tensorflow
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 <span class="passed badge">passed</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tensorflow_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tensorflow_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow (from versions: none)
+ERROR: No matching distribution found for tensorflow
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -3610,11 +4796,23 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow-data-validation (from versions: none)
+ERROR: No matching distribution found for tensorflow-data-validation
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tensorflow-data-validation_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow-data-validation (from versions: none)
+ERROR: No matching distribution found for tensorflow-data-validation
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -3628,11 +4826,23 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tfx-bsl_amazon-linux2" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tfx-bsl (from versions: none)
+ERROR: No matching distribution found for tfx-bsl
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#x27;/usr/bin/python3 -m pip install --upgrade pip&#x27; command.
+</pre>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<input type="checkbox" id="output_2022-06-20 18:30:09_tfx-bsl_focal" class="output-toggle" />
+<label for="output_2022-06-20 18:30:09_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
+<pre class="output-content">ERROR: Could not find a version that satisfies the requirement tfx-bsl (from versions: none)
+ERROR: No matching distribution found for tfx-bsl
+</pre>
 </td>
 <td class="test-column package-os">
 </td>
