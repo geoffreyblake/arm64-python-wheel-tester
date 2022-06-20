@@ -8,6 +8,7 @@ import argparse
 from functools import reduce
 from collections import OrderedDict, defaultdict
 from datetime import datetime, timedelta
+from html import escape as html_escape
 
 def main():
     parser = argparse.ArgumentParser(description="Parse result files and render an HTML page with a status summary")
@@ -360,16 +361,26 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
                 if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
                     result = test_result_file.content[wheel][test_name]
+                    show_output = False
                     if result['test-passed']:
                         html.append(make_badge(classes=['passed'], text='passed'))
                     else:
                         html.append(make_badge(classes=['failed'], text='failed'))
+                        show_output = True
                     if result['build-required']:
                         html.append(make_badge(classes=['warning'], text='build required'))
                     if result['slow-install']:
                         html.append(make_badge(classes=['warning'], text='slow install'))
                     if 'timeout' in result and result['timeout']:
                         html.append(make_badge(classes=['failed'], text='timed out'))
+                        show_output = True
+
+                    if show_output:
+                        output_id = html_escape(f"output_{test_result_file.date}_{wheel}_{test_name}")
+                        output_html = html_escape(result['output'])
+                        html.append(f'<input type="checkbox" id="{output_id}" class="output-toggle" />')
+                        html.append(f'<label for="{output_id}" class="output-toggle">Toggle Output</label>')
+                        html.append(f'<pre class="output-content">{output_html}</pre>')
 
                 html.append('</td>')
 
@@ -434,6 +445,7 @@ table.python-wheel-report td, table.python-wheel-report th {
     font-family: monospace;
     line-height: 1.6em;
     width: 14%;
+    vertical-align: baseline;
 }
 
 table.python-wheel-report th {
@@ -499,6 +511,19 @@ table.python-wheel-report td.wheel-name.different {
 }
 
 
+/* Styles for "Toggle Output" accordions */
+input.output-toggle {
+    display: none;
+}
+label.output-toggle {
+    cursor: pointer;
+}
+input.output-toggle + label.output-toggle + pre.output-content {
+    display: none;
+}
+input.output-toggle:checked + label.output-toggle + pre.output-content {
+    display: block;
+}
 
 </style>
 </head>
