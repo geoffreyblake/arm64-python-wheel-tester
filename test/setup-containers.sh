@@ -10,7 +10,7 @@ for image in 'ubuntu:focal' 'amazonlinux'; do
     docker pull ${image}
 done
 
-for image in 'focal' 'amazon-linux2'; do
+for image in 'focal' 'jammy' 'amazon-linux2' 'amazon-linux2-py38'; do
     docker build -t wheel-tester/${image} -f docker/Dockerfile.${image} .
 done
 

@@ -40,6 +40,8 @@ def main():
         containers = {
             'amazon-linux2': ['PIP', 'CONDA'],
             'focal': ['PIP', 'APT', 'CONDA'],
+            'jammy': ['PIP', 'APT'],
+            'amazon-linux2-py38': ['PIP'],
         }
         # this is three nested loops in one
         for package, package_manager, container in itertools.product(packages['packages'], package_managers.keys(), containers.keys()):

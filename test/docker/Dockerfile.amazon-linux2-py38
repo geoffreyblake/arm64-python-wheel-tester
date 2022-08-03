@@ -1,0 +1,11 @@
+FROM amazonlinux
+
+RUN amazon-linux-extras install -y python3.8
+RUN ln -s python3.8 /usr/bin/python3
+RUN yum install -y \
+        "@Development tools" \
+        python38-devel \
+        python38-pip \
+        libgomp \
+        mesa-libGL
+RUN python3 -m pip install --upgrade pip

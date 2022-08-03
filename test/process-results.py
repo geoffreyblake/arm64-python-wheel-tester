@@ -176,7 +176,7 @@ def get_package_name_class(test_name):
         return 'package-pip'
 
 def get_distribution_name(test_name):
-    distros = ["amazon-linux2", "centos8", "focal"]
+    distros = ["amazon-linux2", "centos8", "focal", "jammy"]
     for distro in distros:
         if distro in test_name:
             return distro
@@ -252,7 +252,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     html.append('<section class="summary">')
 
     # Find the result file to compare against for the top-level summary.
-    referene_test_file = None
+    reference_test_file = None
     if type(compare_weekday_num) is int:
         reference_date = test_results_list[0].date
         reference_date = reference_date.replace(hour=23, minute=59)
@@ -324,9 +324,22 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
 
                 wheel_test_results[test_name] = (test_result['test-passed'], test_result['build-required'])
 
-            if previous_wheel_test_results is None:
+            def wheel_test_results_have_important_difference(a, b):
+                if a is None or b is None:
+                    return False
+                for key in (a.keys() | b.keys()):
+                    if key not in a or key not in b:
+                        continue
+                    if a[key] != b[key]:
+                        return True
+                return False
+
+            # do not include rows without any results
+            if len(wheel_test_results.keys()) == 0:
+                pass
+            elif previous_wheel_test_results is None:
                 displayed_test_rows.append(test_result_file)
-            elif wheel_test_results != previous_wheel_test_results:
+            elif wheel_test_results_have_important_difference(wheel_test_results, previous_wheel_test_results):
                 displayed_test_rows.append(test_result_file)
 
             previous_wheel_test_results = wheel_test_results
