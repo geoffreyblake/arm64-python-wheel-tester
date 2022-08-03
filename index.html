@@ -133,13 +133,13 @@ input.output-toggle:checked + label.output-toggle + pre.output-content {
 </head>
 <body>
 
-<h1>Python Wheels on aarch64 test results from August 02, 2022</h1>
+<h1>Python Wheels on aarch64 test results from August 03, 2022</h1>
 <section class="summary">
 <table class="summary">
 <tr>
 <th>date</th>
 <td>Thursday, July 28, 2022</td>
-<td>Tuesday, August 02, 2022</td>
+<td>Wednesday, August 03, 2022</td>
 <td></td>
 </tr>
 <tr>
@@ -332,23 +332,32 @@ is always shown, regardless of whether there is any difference.</p>
 </td>
 </tr>
 <tr class="wheel-line odd">
-<td class="wheel-name different">apache-beam<br /><span class="file-indicator">July 12, 2022</span></td>
+<td class="wheel-name different">apache-beam<br /><span class="file-indicator">July 13, 2022</span></td>
 <td class="">
 <span class="failed badge">no</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-07-12 01:20:56_apache-beam_amazon-linux2" class="output-toggle" />
-<label for="output_2022-07-12 01:20:56_apache-beam_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-07-13 01:16:41_apache-beam_amazon-linux2" class="output-toggle" />
+<label for="output_2022-07-13 01:16:41_apache-beam_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting apache-beam
   Downloading apache_beam-2.40.0-cp37-cp37m-manylinux2014_aarch64.whl (12.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 74.0 MB/s eta 0:00:00
-Collecting pytz&gt;=2018.3
-  Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 33.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 76.6 MB/s eta 0:00:00
+Collecting grpcio&lt;2,&gt;=1.33.1
+  Downloading grpcio-1.47.0-cp37-cp37m-manylinux_2_17_aarch64.whl (62.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 MB 28.1 MB/s eta 0:00:00
+Collecting pyarrow&lt;8.0.0,&gt;=0.15.1
+  Downloading pyarrow-7.0.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (24.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.9/24.9 MB 56.5 MB/s eta 0:00:00
+Collecting python-dateutil&lt;3,&gt;=2.8.0
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 33.0 MB/s eta 0:00:00
+Collecting httplib2&lt;0.21.0,&gt;=0.8
+  Downloading httplib2-0.20.4-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 19.3 MB/s eta 0:00:00
 Collecting orjson&lt;4.0
   Downloading orjson-3.7.7.tar.gz (640 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 640.5/640.5 kB 54.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 640.5/640.5 kB 8.7 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -962,6 +971,25 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 <td class="test-column package-conda">
 </td>
 </tr>
+<tr class="wheel-line odd">
+<td class="wheel-name different">apache-beam<br /><span class="file-indicator">August 03, 2022</span></td>
+<td class="">
+<span class="passed badge">yes</span>
+</td>
+<td class="test-column package-pip">
+<span class="passed badge">passed</span>
+</td>
+<td class="test-column package-conda">
+</td>
+<td class="test-column package-pip">
+<span class="passed badge">passed</span>
+<span class="warning badge">build required</span>
+</td>
+<td class="test-column package-os">
+</td>
+<td class="test-column package-conda">
+</td>
+</tr>
 <tr class="wheel-line even">
 <td class="wheel-name ">arch</td>
 <td class="">
@@ -1098,11 +1126,11 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 <span class="warning badge">build required</span>
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_blosc2_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_blosc2_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_blosc2_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_blosc2_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting blosc2
   Downloading blosc2-0.3.0.tar.gz (2.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 44.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 57.5 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -1114,7 +1142,7 @@ Building wheels for collected packages: blosc2
   Building wheel for blosc2 (pyproject.toml): still running...
   Building wheel for blosc2 (pyproject.toml): still running...
   Building wheel for blosc2 (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for blosc2: filename=blosc2-0.3.0-cp37-cp37m-linux_aarch64.whl size=4126827 sha256=3c16e5e3a12dc965e50a9ed8022838423efd43738eaacba4624f9c335a528001
+  Created wheel for blosc2: filename=blosc2-0.3.0-cp37-cp37m-linux_aarch64.whl size=4126827 sha256=5d4842005be304666538e7ef6ee69338b9e273911ed04606eb40fe77eb7b8fda
   Stored in directory: /root/.cache/pip/wheels/97/a8/40/56377a814dd834042e7b566c856ce27022fc42355d40214038
 Successfully built blosc2
 Installing collected packages: blosc2
@@ -1408,11 +1436,11 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_confluent-kafka_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_confluent-kafka_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting confluent-kafka
   Downloading confluent-kafka-1.9.0.tar.gz (110 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 kB 14.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 kB 15.5 MB/s eta 0:00:00
   Preparing metadata (setup.py): started
   Preparing metadata (setup.py): finished with status &#x27;done&#x27;
 Using legacy &#x27;setup.py install&#x27; for confluent-kafka, since package &#x27;wheel&#x27; is not installed.
@@ -1465,14 +1493,14 @@ Installing collected packages: confluent-kafka
       building &#x27;confluent_kafka.cimpl&#x27; extension
       creating build/temp.linux-aarch64-3.7
       creating build/temp.linux-aarch64-3.7/tmp
-      creating build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d
-      creating build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed
-      creating build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src
-      creating build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka
-      creating build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka/src
-      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python3.7m -c /tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.7/tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka/src/confluent_kafka.o
-      In file included from /tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka/src/confluent_kafka.c:17:0:
-      /tmp/pip-install-ksle5i_d/confluent-kafka_1c605c4ce04b4329931e690dcc55feed/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/usr/include/python3.7m -c /tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.7/tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka/src/confluent_kafka.c:17:0:
+      /tmp/pip-install-zi9_qros/confluent-kafka_54743176fcac4ca0a3f7d8dc99cb4f47/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
        #include &lt;librdkafka/rdkafka.h&gt;
                 ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -1544,11 +1572,11 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_confluent-kafka_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_confluent-kafka_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_confluent-kafka_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_confluent-kafka_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting confluent-kafka
   Downloading confluent-kafka-1.9.0.tar.gz (110 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 kB 13.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.1/110.1 kB 13.8 MB/s eta 0:00:00
   Preparing metadata (setup.py): started
   Preparing metadata (setup.py): finished with status &#x27;done&#x27;
 Building wheels for collected packages: confluent-kafka
@@ -1600,14 +1628,14 @@ Building wheels for collected packages: confluent-kafka
       building &#x27;confluent_kafka.cimpl&#x27; extension
       creating build/temp.linux-aarch64-3.8
       creating build/temp.linux-aarch64-3.8/tmp
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src
-      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.o
-      In file included from /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.c:17:
-      /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src
+      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.c:17:
+      /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
          23 | #include &lt;librdkafka/rdkafka.h&gt;
             |          ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -1667,14 +1695,14 @@ Installing collected packages: confluent-kafka
       building &#x27;confluent_kafka.cimpl&#x27; extension
       creating build/temp.linux-aarch64-3.8
       creating build/temp.linux-aarch64-3.8/tmp
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka
-      creating build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src
-      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.o
-      In file included from /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.c:17:
-      /tmp/pip-install-nc_cc8ys/confluent-kafka_8f628f2948654fceb1677c17ab93c8a7/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka
+      creating build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src
+      aarch64-linux-gnu-gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.8 -c /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.c -o build/temp.linux-aarch64-3.8/tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.o
+      In file included from /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.c:17:
+      /tmp/pip-install-fdlt8x4n/confluent-kafka_0a6c60ba4e4742ae916a4c13bf02d407/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
          23 | #include &lt;librdkafka/rdkafka.h&gt;
             |          ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -1689,56 +1717,6 @@ error: legacy-install-failure
 
 note: This is an issue with the package mentioned above, not pip.
 hint: See above for output from the failure.
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-os">
@@ -2136,11 +2114,11 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_faiss-cpu_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_faiss-cpu_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting faiss-cpu
   Downloading faiss_cpu-1.7.2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 46.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 48.0 MB/s eta 0:00:00
 Installing collected packages: faiss-cpu
 Successfully installed faiss-cpu-1.7.2
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
@@ -2206,64 +2184,14 @@ ModuleNotFoundError: No module named &#x27;numpy&#x27;
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_faiss-cpu_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_faiss-cpu_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_faiss-cpu_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_faiss-cpu_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting faiss-cpu
   Downloading faiss_cpu-1.7.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 55.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 52.9 MB/s eta 0:00:00
 Installing collected packages: faiss-cpu
-Successfully installed faiss-cpu-1.7.2
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
+Successfully installed faiss-cpu-1.7.2
 Traceback (most recent call last):
   File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
     import faiss
@@ -2628,11 +2556,11 @@ ModuleNotFoundError: No module named &#x27;numpy&#x27;
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_hidapi_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_hidapi_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting hidapi
   Downloading hidapi-0.12.0.post2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (889 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 889.2/889.2 kB 35.7 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 889.2/889.2 kB 51.5 MB/s eta 0:00:00
 Requirement already satisfied: setuptools&gt;=19.0 in /usr/lib/python3.7/site-packages (from hidapi) (49.1.3)
 Installing collected packages: hidapi
 Successfully installed hidapi-0.12.0.post2
@@ -2697,65 +2625,15 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_hidapi_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_hidapi_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_hidapi_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_hidapi_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting hidapi
   Downloading hidapi-0.12.0.post2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (926 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 926.7/926.7 kB 39.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 926.7/926.7 kB 43.8 MB/s eta 0:00:00
 Requirement already satisfied: setuptools&gt;=19.0 in /usr/lib/python3/dist-packages (from hidapi) (45.2.0)
 Installing collected packages: hidapi
 Successfully installed hidapi-0.12.0.post2
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 Traceback (most recent call last):
   File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
     import hidapi
@@ -2976,11 +2854,11 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="warning badge">build required</span>
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_landlab_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_landlab_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting landlab
   Downloading landlab-2.5.0.tar.gz (1.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 64.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 69.1 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -2989,94 +2867,94 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
   Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
 Collecting richdem
   Downloading richdem-0.3.4.tar.gz (329 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 329.4/329.4 kB 43.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 329.4/329.4 kB 44.3 MB/s eta 0:00:00
   Preparing metadata (setup.py): started
   Preparing metadata (setup.py): finished with status &#x27;done&#x27;
-Collecting pyshp
-  Downloading pyshp-2.3.1-py2.py3-none-any.whl (46 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.5/46.5 kB 9.0 MB/s eta 0:00:00
-Collecting xarray&gt;=0.16
-  Downloading xarray-0.20.2-py3-none-any.whl (845 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 845.2/845.2 kB 65.5 MB/s eta 0:00:00
-Collecting pyyaml
-  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (656 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 657.0/657.0 kB 59.4 MB/s eta 0:00:00
-Collecting statsmodels
-  Downloading statsmodels-0.13.2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (9.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 74.8 MB/s eta 0:00:00
 Collecting matplotlib
   Downloading matplotlib-3.5.2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (11.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 70.5 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 52.1 MB/s eta 0:00:00
+Collecting pyyaml
+  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (656 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 657.0/657.0 kB 52.8 MB/s eta 0:00:00
+Collecting netcdf4
+  Downloading netCDF4-1.6.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (4.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 74.3 MB/s eta 0:00:00
+Collecting pyshp
+  Downloading pyshp-2.3.1-py2.py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.5/46.5 kB 8.9 MB/s eta 0:00:00
 Collecting pandas
   Downloading pandas-1.3.5-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (10.7 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 73.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 79.6 MB/s eta 0:00:00
+Collecting scipy
+  Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (36.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 46.8 MB/s eta 0:00:00
+Collecting statsmodels
+  Downloading statsmodels-0.13.2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (9.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.6/9.6 MB 75.5 MB/s eta 0:00:00
+Collecting xarray&gt;=0.16
+  Downloading xarray-0.20.2-py3-none-any.whl (845 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 845.2/845.2 kB 62.3 MB/s eta 0:00:00
 Collecting bmipy
   Downloading bmipy-2.0.tar.gz (23 kB)
   Preparing metadata (setup.py): started
   Preparing metadata (setup.py): finished with status &#x27;done&#x27;
-Collecting netcdf4
-  Downloading netCDF4-1.6.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (4.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 79.2 MB/s eta 0:00:00
 Collecting numpy
   Using cached numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
-Collecting scipy
-  Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (36.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 45.4 MB/s eta 0:00:00
 Collecting importlib-metadata
   Downloading importlib_metadata-4.12.0-py3-none-any.whl (21 kB)
 Collecting typing-extensions&gt;=3.7
   Downloading typing_extensions-4.3.0-py3-none-any.whl (25 kB)
 Collecting pytz&gt;=2017.3
   Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 52.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 503.5/503.5 kB 58.4 MB/s eta 0:00:00
 Collecting python-dateutil&gt;=2.7.3
   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 36.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 36.4 MB/s eta 0:00:00
 Collecting black
   Downloading black-22.6.0-py3-none-any.whl (156 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.3/156.3 kB 27.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.3/156.3 kB 8.8 MB/s eta 0:00:00
 Collecting click
   Downloading click-8.1.3-py3-none-any.whl (96 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 16.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 18.1 MB/s eta 0:00:00
 Collecting jinja2
   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 24.4 MB/s eta 0:00:00
-Collecting cycler&gt;=0.10
-  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
-Collecting kiwisolver&gt;=1.0.1
-  Downloading kiwisolver-1.4.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.4 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 78.6 MB/s eta 0:00:00
-Collecting packaging&gt;=20.0
-  Downloading packaging-21.3-py3-none-any.whl (40 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.3 MB/s eta 0:00:00
-Collecting pillow&gt;=6.2.0
-  Downloading Pillow-9.2.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (3.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 59.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 12.1 MB/s eta 0:00:00
 Collecting pyparsing&gt;=2.2.1
   Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 18.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 10.3 MB/s eta 0:00:00
+Collecting kiwisolver&gt;=1.0.1
+  Downloading kiwisolver-1.4.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 70.4 MB/s eta 0:00:00
 Collecting fonttools&gt;=4.22.0
   Downloading fonttools-4.34.4-py3-none-any.whl (944 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 944.1/944.1 kB 71.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 944.1/944.1 kB 70.5 MB/s eta 0:00:00
+Collecting pillow&gt;=6.2.0
+  Downloading Pillow-9.2.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (3.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 82.0 MB/s eta 0:00:00
+Collecting packaging&gt;=20.0
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.4 MB/s eta 0:00:00
+Collecting cycler&gt;=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
 Collecting cftime
   Downloading cftime-1.6.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (211 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.7/211.7 kB 32.8 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.7/211.7 kB 25.4 MB/s eta 0:00:00
 Collecting patsy&gt;=0.5.2
   Downloading patsy-0.5.2-py2.py3-none-any.whl (233 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.7/233.7 kB 34.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.7/233.7 kB 13.0 MB/s eta 0:00:00
 Collecting six
   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
-Collecting typed-ast&gt;=1.4.2
-  Downloading typed_ast-1.5.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (793 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 793.2/793.2 kB 47.4 MB/s eta 0:00:00
-Collecting tomli&gt;=1.1.0
-  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
-Collecting mypy-extensions&gt;=0.4.3
-  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
-Collecting pathspec&gt;=0.9.0
-  Downloading pathspec-0.9.0-py2.py3-none-any.whl (31 kB)
 Collecting platformdirs&gt;=2
   Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Collecting tomli&gt;=1.1.0
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting pathspec&gt;=0.9.0
+  Downloading pathspec-0.9.0-py2.py3-none-any.whl (31 kB)
+Collecting mypy-extensions&gt;=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting typed-ast&gt;=1.4.2
+  Downloading typed_ast-1.5.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (793 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 793.2/793.2 kB 67.1 MB/s eta 0:00:00
 Collecting zipp&gt;=0.5
   Downloading zipp-3.8.1-py3-none-any.whl (5.6 kB)
 Collecting MarkupSafe&gt;=2.0
@@ -3087,7 +2965,7 @@ Building wheels for collected packages: landlab
   Building wheel for landlab (pyproject.toml): started
   Building wheel for landlab (pyproject.toml): still running...
   Building wheel for landlab (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for landlab: filename=landlab-2.5.0-cp37-cp37m-linux_aarch64.whl size=5439088 sha256=a66b7588dc4595863ed0950b0de9c0002d8ee52d04d48ec2a558ea497772b49b
+  Created wheel for landlab: filename=landlab-2.5.0-cp37-cp37m-linux_aarch64.whl size=5439239 sha256=1f0057c028ea432aee833a5639e7b98a30bdd58aa7f1243200fbe88bf4a4a122
   Stored in directory: /root/.cache/pip/wheels/e2/7c/3b/16328ceb5c05a80433e8059e46fae876bf223e180bc385f8ca
 Successfully built landlab
 Installing collected packages: pytz, mypy-extensions, zipp, typing-extensions, typed-ast, tomli, six, pyyaml, pyshp, pyparsing, platformdirs, pillow, pathspec, numpy, MarkupSafe, fonttools, cycler, scipy, richdem, python-dateutil, patsy, packaging, kiwisolver, jinja2, importlib-metadata, cftime, pandas, netcdf4, matplotlib, click, xarray, statsmodels, black, bmipy, landlab
@@ -3098,6 +2976,56 @@ Installing collected packages: pytz, mypy-extensions, zipp, typing-extensions, t
   Running setup.py install for bmipy: finished with status &#x27;done&#x27;
 Successfully installed MarkupSafe-2.1.1 black-22.6.0 bmipy-2.0 cftime-1.6.1 click-8.1.3 cycler-0.11.0 fonttools-4.34.4 importlib-metadata-4.12.0 jinja2-3.1.2 kiwisolver-1.4.4 landlab-2.5.0 matplotlib-3.5.2 mypy-extensions-0.4.3 netcdf4-1.6.0 numpy-1.21.6 packaging-21.3 pandas-1.3.5 pathspec-0.9.0 patsy-0.5.2 pillow-9.2.0 platformdirs-2.5.2 pyparsing-3.0.9 pyshp-2.3.1 python-dateutil-2.8.2 pytz-2022.1 pyyaml-6.0 richdem-0.3.4 scipy-1.7.3 six-1.16.0 statsmodels-0.13.2 tomli-2.0.1 typed-ast-1.5.4 typing-extensions-4.3.0 xarray-0.20.2 zipp-3.8.1
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+--- Logging error ---
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
+    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
+    extend(render(renderable, render_options))
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
+    for render_output in iter_render:
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
+    for line in lines:
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
+    for segment in segments:
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
+    renderable = rich_cast(renderable)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
+    renderable = cast_method()
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
+    pip_cmd = get_best_invocation_for_this_pip()
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/utils/entrypoints.py&quot;, line 60, in get_best_invocation_for_this_pip
+    os.path.join(binary_prefix, exe_name),
+  File &quot;/usr/lib64/python3.7/genericpath.py&quot;, line 101, in samefile
+    s2 = os.stat(f2)
+FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip&#x27;
+Call stack:
+  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/cli/main.py&quot;, line 70, in main
+    return command.main(cmd_args)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
+    return self._main(args)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
+    self.handle_pip_version_check(options)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
+    pip_self_version_check(session, options)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
+    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
+  File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 1378, in info
+    self._log(INFO, msg, args, **kwargs)
+  File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 1514, in _log
+    self.handle(record)
+  File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 1524, in handle
+    self.callHandlers(record)
+  File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 1586, in callHandlers
+    hdlr.handle(record)
+  File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 894, in handle
+    self.emit(record)
+  File &quot;/usr/local/lib/python3.7/site-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
+    self.handleError(record)
+Message: &#x27;[present-rich] %s&#x27;
+Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-conda">
@@ -3432,26 +3360,20 @@ WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissio
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_mocpy_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_mocpy_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting mocpy
   Downloading MOCPy-0.11.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (615 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 615.6/615.6 kB 42.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 615.6/615.6 kB 48.5 MB/s eta 0:00:00
 Collecting matplotlib
   Downloading matplotlib-3.5.2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (11.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 26.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 77.7 MB/s eta 0:00:00
 Collecting cdshealpix
   Downloading cdshealpix-0.6.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (857 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.2/857.2 kB 63.1 MB/s eta 0:00:00
-Collecting networkx
-  Downloading networkx-2.6.3-py3-none-any.whl (1.9 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 82.2 MB/s eta 0:00:00
-Collecting lark-parser
-  Downloading lark_parser-0.12.0-py2.py3-none-any.whl (103 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.5/103.5 kB 17.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.2/857.2 kB 26.3 MB/s eta 0:00:00
 Collecting astropy
   Downloading astropy-4.3.1.tar.gz (7.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 73.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 69.1 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -3468,26 +3390,26 @@ Collecting astropy
           json_out[&#x27;return_val&#x27;] = hook(**hook_input[&#x27;kwargs&#x27;])
         File &quot;/usr/local/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py&quot;, line 130, in get_requires_for_build_wheel
           return hook(config_settings)
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 178, in get_requires_for_build_wheel
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 178, in get_requires_for_build_wheel
           config_settings, requirements=[&#x27;wheel&#x27;])
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 159, in _get_build_requires
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 159, in _get_build_requires
           self.run_setup()
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 174, in run_setup
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/setuptools/build_meta.py&quot;, line 174, in run_setup
           exec(code, locals())
         File &quot;&lt;string&gt;&quot;, line 70, in &lt;module&gt;
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/extension_helpers/_setup_helpers.py&quot;, line 67, in get_extensions
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/extension_helpers/_setup_helpers.py&quot;, line 67, in get_extensions
           ext_modules.extend(setuppkg.get_extensions())
         File &quot;./astropy/modeling/setup_package.py&quot;, line 59, in get_extensions
           from jinja2 import Environment, FileSystemLoader
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/jinja2/__init__.py&quot;, line 33, in &lt;module&gt;
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/jinja2/__init__.py&quot;, line 33, in &lt;module&gt;
           from jinja2.environment import Environment, Template
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/jinja2/environment.py&quot;, line 15, in &lt;module&gt;
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/jinja2/environment.py&quot;, line 15, in &lt;module&gt;
           from jinja2 import nodes
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/jinja2/nodes.py&quot;, line 19, in &lt;module&gt;
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/jinja2/nodes.py&quot;, line 19, in &lt;module&gt;
           from jinja2.utils import Markup
-        File &quot;/tmp/pip-build-env-hoyaryuh/overlay/lib/python3.7/site-packages/jinja2/utils.py&quot;, line 642, in &lt;module&gt;
+        File &quot;/tmp/pip-build-env-s1d2hlbv/overlay/lib/python3.7/site-packages/jinja2/utils.py&quot;, line 642, in &lt;module&gt;
           from markupsafe import Markup, escape, soft_unicode
-      ImportError: cannot import name &#x27;soft_unicode&#x27; from &#x27;markupsafe&#x27; (/tmp/pip-build-env-hoyaryuh/overlay/lib64/python3.7/site-packages/markupsafe/__init__.py)
+      ImportError: cannot import name &#x27;soft_unicode&#x27; from &#x27;markupsafe&#x27; (/tmp/pip-build-env-s1d2hlbv/overlay/lib64/python3.7/site-packages/markupsafe/__init__.py)
       [end of output]
   
   note: This error originates from a subprocess, and is likely not a problem with pip.
@@ -3605,14 +3527,14 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_Mosek_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_Mosek_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting Mosek
   Downloading Mosek-9.3.20-cp37-cp37m-manylinux2014_aarch64.whl (4.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 56.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 76.8 MB/s eta 0:00:00
 Collecting numpy
   Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 56.9 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 68.4 MB/s eta 0:00:00
 Installing collected packages: numpy, Mosek
 Successfully installed Mosek-9.3.20 numpy-1.21.6
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
@@ -3948,15 +3870,15 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_open3d_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_open3d_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting open3d
   Downloading open3d-0.15.1-cp37-cp37m-manylinux2014_aarch64.whl (94.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.6/94.6 MB 23.0 MB/s eta 0:00:00
-Requirement already satisfied: setuptools&gt;=40.8.0 in /usr/lib/python3.7/site-packages (from open3d) (49.1.3)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.6/94.6 MB 8.1 MB/s eta 0:00:00
 Collecting numpy&gt;=1.18.0
   Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 72.3 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 72.4 MB/s eta 0:00:00
+Requirement already satisfied: setuptools&gt;=40.8.0 in /usr/lib/python3.7/site-packages (from open3d) (49.1.3)
 Collecting wheel&gt;=0.36.0
   Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
 Installing collected packages: wheel, numpy, open3d
@@ -4055,11 +3977,11 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_osqp_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_osqp_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_osqp_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_osqp_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting osqp
   Downloading osqp-0.6.2.post5.tar.gz (226 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 22.4 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 26.0 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;error&#x27;
   error: subprocess-exited-with-error
@@ -4071,35 +3993,35 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
         Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
       Collecting setuptools&gt;=40.8.0
         Downloading setuptools-63.3.0-py3-none-any.whl (1.2 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 55.8 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 62.7 MB/s eta 0:00:00
       Collecting wheel
         Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
       Collecting setuptools_scm&gt;=6.2
         Downloading setuptools_scm-7.0.5-py3-none-any.whl (42 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.9/42.9 kB 8.7 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.9/42.9 kB 8.4 MB/s eta 0:00:00
       Collecting qdldl
         Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 12.8 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 13.6 MB/s eta 0:00:00
         Preparing metadata (setup.py): started
         Preparing metadata (setup.py): finished with status &#x27;done&#x27;
       Collecting numpy==1.19.2
         Downloading numpy-1.19.2-cp37-cp37m-manylinux2014_aarch64.whl (12.2 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 81.6 MB/s eta 0:00:00
-      Collecting importlib-metadata
-        Downloading importlib_metadata-4.12.0-py3-none-any.whl (21 kB)
-      Collecting packaging&gt;=20.0
-        Downloading packaging-21.3-py3-none-any.whl (40 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 7.2 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 64.8 MB/s eta 0:00:00
       Collecting tomli&gt;=1.0.0
         Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+      Collecting packaging&gt;=20.0
+        Downloading packaging-21.3-py3-none-any.whl (40 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.4 MB/s eta 0:00:00
+      Collecting importlib-metadata
+        Downloading importlib_metadata-4.12.0-py3-none-any.whl (21 kB)
       Collecting typing-extensions
         Downloading typing_extensions-4.3.0-py3-none-any.whl (25 kB)
       Collecting scipy&gt;=0.13.2
         Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (36.1 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 44.1 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 32.3 MB/s eta 0:00:00
       Collecting pyparsing!=3.0.5,&gt;=2.0.2
         Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 18.8 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 16.8 MB/s eta 0:00:00
       Collecting zipp&gt;=0.5
         Downloading zipp-3.8.1-py3-none-any.whl (5.6 kB)
       Using legacy &#x27;setup.py install&#x27; for qdldl, since package &#x27;wheel&#x27; is not installed.
@@ -4115,7 +4037,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
             running build
             running build_ext
             Traceback (most recent call last):
-              File &quot;/tmp/pip-install-n4at7541/qdldl_7395dabb2eb94a46ac9bdc96f0e35cc0/setup.py&quot;, line 78, in build_extensions
+              File &quot;/tmp/pip-install-9vei_tj6/qdldl_008085dfd2cd4548b606e0c9f6d8f549/setup.py&quot;, line 78, in build_extensions
                 check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
               File &quot;/usr/lib64/python3.7/subprocess.py&quot;, line 411, in check_output
                 **kwargs).stdout
@@ -4132,7 +4054,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
             Traceback (most recent call last):
               File &quot;&lt;string&gt;&quot;, line 36, in &lt;module&gt;
               File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
-              File &quot;/tmp/pip-install-n4at7541/qdldl_7395dabb2eb94a46ac9bdc96f0e35cc0/setup.py&quot;, line 124, in &lt;module&gt;
+              File &quot;/tmp/pip-install-9vei_tj6/qdldl_008085dfd2cd4548b606e0c9f6d8f549/setup.py&quot;, line 124, in &lt;module&gt;
                 ext_modules=[qdldl],
               File &quot;/usr/lib/python3.7/site-packages/setuptools/__init__.py&quot;, line 165, in setup
                 return distutils.core.setup(**attrs)
@@ -4160,7 +4082,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
                 _build_ext.run(self)
               File &quot;/usr/lib64/python3.7/distutils/command/build_ext.py&quot;, line 340, in run
                 self.build_extensions()
-              File &quot;/tmp/pip-install-n4at7541/qdldl_7395dabb2eb94a46ac9bdc96f0e35cc0/setup.py&quot;, line 80, in build_extensions
+              File &quot;/tmp/pip-install-9vei_tj6/qdldl_008085dfd2cd4548b606e0c9f6d8f549/setup.py&quot;, line 80, in build_extensions
                 raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
             RuntimeError: CMake must be installed to build qdldl
             [end of output]
@@ -4175,23 +4097,23 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
       hint: See above for output from the failure.
       --- Logging error ---
       Traceback (most recent call last):
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 177, in emit
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 177, in emit
           self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1752, in print
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1752, in print
           extend(render(renderable, render_options))
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1390, in render
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1390, in render
           for render_output in iter_render:
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
           for line in lines:
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
           for segment in segments:
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1368, in render
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1368, in render
           renderable = rich_cast(renderable)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
           renderable = cast_method()
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
           pip_cmd = get_best_invocation_for_this_pip()
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/utils/entrypoints.py&quot;, line 60, in get_best_invocation_for_this_pip
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/utils/entrypoints.py&quot;, line 60, in get_best_invocation_for_this_pip
           os.path.join(binary_prefix, exe_name),
         File &quot;/usr/lib64/python3.7/genericpath.py&quot;, line 101, in samefile
           s2 = os.stat(f2)
@@ -4201,17 +4123,17 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
           &quot;__main__&quot;, mod_spec)
         File &quot;/usr/lib64/python3.7/runpy.py&quot;, line 85, in _run_code
           exec(code, run_globals)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/__main__.py&quot;, line 31, in &lt;module&gt;
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/__main__.py&quot;, line 31, in &lt;module&gt;
           sys.exit(_main())
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/cli/main.py&quot;, line 70, in main
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/cli/main.py&quot;, line 70, in main
           return command.main(cmd_args)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 101, in main
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 101, in main
           return self._main(args)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 223, in _main
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 223, in _main
           self.handle_pip_version_check(options)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
           pip_self_version_check(session, options)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
           logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
         File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 1378, in info
           self._log(INFO, msg, args, **kwargs)
@@ -4223,7 +4145,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
           hdlr.handle(record)
         File &quot;/usr/lib64/python3.7/logging/__init__.py&quot;, line 894, in handle
           self.emit(record)
-        File &quot;/tmp/pip-standalone-pip-tyd8ktl1/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 179, in emit
+        File &quot;/tmp/pip-standalone-pip-by3a05z4/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 179, in emit
           self.handleError(record)
       Message: &#x27;[present-rich] %s&#x27;
       Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
@@ -4294,49 +4216,49 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_osqp_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_osqp_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_osqp_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_osqp_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting osqp
   Downloading osqp-0.6.2.post5.tar.gz (226 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 26.2 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.6/226.6 kB 21.2 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;error&#x27;
   error: subprocess-exited-with-error
   
   × pip subprocess to install build dependencies did not run successfully.
   │ exit code: 1
-  ╰─&gt; [219 lines of output]
+  ╰─&gt; [165 lines of output]
       Collecting oldest-supported-numpy
         Downloading oldest_supported_numpy-2022.5.28-py3-none-any.whl (3.9 kB)
       Collecting setuptools&gt;=40.8.0
         Downloading setuptools-63.3.0-py3-none-any.whl (1.2 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 52.1 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 67.0 MB/s eta 0:00:00
       Collecting wheel
         Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
       Collecting setuptools_scm&gt;=6.2
         Downloading setuptools_scm-7.0.5-py3-none-any.whl (42 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.9/42.9 kB 8.7 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.9/42.9 kB 8.3 MB/s eta 0:00:00
       Collecting qdldl
         Downloading qdldl-0.1.5.post2.tar.gz (69 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 15.1 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 kB 14.4 MB/s eta 0:00:00
         Preparing metadata (setup.py): started
         Preparing metadata (setup.py): finished with status &#x27;done&#x27;
       Collecting numpy==1.19.2
         Downloading numpy-1.19.2-cp38-cp38-manylinux2014_aarch64.whl (12.2 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 88.7 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 88.6 MB/s eta 0:00:00
+      Collecting tomli&gt;=1.0.0
+        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
       Collecting typing-extensions
         Downloading typing_extensions-4.3.0-py3-none-any.whl (25 kB)
       Collecting packaging&gt;=20.0
         Downloading packaging-21.3-py3-none-any.whl (40 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.7 MB/s eta 0:00:00
-      Collecting tomli&gt;=1.0.0
-        Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 8.2 MB/s eta 0:00:00
       Collecting scipy&gt;=0.13.2
         Downloading scipy-1.9.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (40.3 MB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.3/40.3 MB 47.9 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.3/40.3 MB 34.6 MB/s eta 0:00:00
       Collecting pyparsing!=3.0.5,&gt;=2.0.2
         Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
-           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 19.8 MB/s eta 0:00:00
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 20.5 MB/s eta 0:00:00
       Building wheels for collected packages: qdldl
         Building wheel for qdldl (setup.py): started
         Building wheel for qdldl (setup.py): finished with status &#x27;error&#x27;
@@ -4349,7 +4271,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
             running build
             running build_ext
             Traceback (most recent call last):
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 78, in build_extensions
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 78, in build_extensions
                 check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
               File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
                 return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
@@ -4366,7 +4288,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
             Traceback (most recent call last):
               File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
               File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 110, in &lt;module&gt;
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 110, in &lt;module&gt;
                 setup(name=&#x27;qdldl&#x27;,
               File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
                 return distutils.core.setup(**attrs)
@@ -4392,7 +4314,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
                 _build_ext.run(self)
               File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
                 self.build_extensions()
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 80, in build_extensions
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 80, in build_extensions
                 raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
             RuntimeError: CMake must be installed to build qdldl
             [end of output]
@@ -4413,7 +4335,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
             running build
             running build_ext
             Traceback (most recent call last):
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 78, in build_extensions
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 78, in build_extensions
                 check_output([&#x27;cmake&#x27;, &#x27;--version&#x27;])
               File &quot;/usr/lib/python3.8/subprocess.py&quot;, line 415, in check_output
                 return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
@@ -4430,7 +4352,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
             Traceback (most recent call last):
               File &quot;&lt;string&gt;&quot;, line 2, in &lt;module&gt;
               File &quot;&lt;pip-setuptools-caller&gt;&quot;, line 34, in &lt;module&gt;
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 110, in &lt;module&gt;
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 110, in &lt;module&gt;
                 setup(name=&#x27;qdldl&#x27;,
               File &quot;/usr/lib/python3/dist-packages/setuptools/__init__.py&quot;, line 144, in setup
                 return distutils.core.setup(**attrs)
@@ -4458,7 +4380,7 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
                 _build_ext.run(self)
               File &quot;/usr/lib/python3.8/distutils/command/build_ext.py&quot;, line 340, in run
                 self.build_extensions()
-              File &quot;/tmp/pip-install-_3p3ship/qdldl_846e47a26c8144709fc11dde0b502d3d/setup.py&quot;, line 80, in build_extensions
+              File &quot;/tmp/pip-install-m67_3sfr/qdldl_7fc44059e29244f9aeedd65ff3c77f81/setup.py&quot;, line 80, in build_extensions
                 raise RuntimeError(&quot;CMake must be installed to build qdldl&quot;)
             RuntimeError: CMake must be installed to build qdldl
             [end of output]
@@ -4471,60 +4393,6 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
       
       note: This is an issue with the package mentioned above, not pip.
       hint: See above for output from the failure.
-      --- Logging error ---
-      Traceback (most recent call last):
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 177, in emit
-          self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1752, in print
-          extend(render(renderable, render_options))
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1390, in render
-          for render_output in iter_render:
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-          for line in lines:
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-          for segment in segments:
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_vendor/rich/console.py&quot;, line 1368, in render
-          renderable = rich_cast(renderable)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-          renderable = cast_method()
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-          pip_cmd = get_best_invocation_for_this_pip()
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-          if found_executable and os.path.samefile(
-        File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-          s2 = os.stat(f2)
-      FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-      Call stack:
-        File &quot;/usr/lib/python3.8/runpy.py&quot;, line 194, in _run_module_as_main
-          return _run_code(code, main_globals, None,
-        File &quot;/usr/lib/python3.8/runpy.py&quot;, line 87, in _run_code
-          exec(code, run_globals)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/__main__.py&quot;, line 31, in &lt;module&gt;
-          sys.exit(_main())
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/cli/main.py&quot;, line 70, in main
-          return command.main(cmd_args)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 101, in main
-          return self._main(args)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-          self.handle_pip_version_check(options)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-          pip_self_version_check(session, options)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-          logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-        File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-          self._log(INFO, msg, args, **kwargs)
-        File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-          self.handle(record)
-        File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-          self.callHandlers(record)
-        File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-          hdlr.handle(record)
-        File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-          self.emit(record)
-        File &quot;/tmp/pip-standalone-pip-tldbpd4r/__env_pip__.zip/pip/_internal/utils/logging.py&quot;, line 179, in emit
-          self.handleError(record)
-      Message: &#x27;[present-rich] %s&#x27;
-      Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
       [end of output]
   
   note: This error originates from a subprocess, and is likely not a problem with pip.
@@ -4535,56 +4403,6 @@ error: subprocess-exited-with-error
 ╰─&gt; See above for output.
 
 note: This error originates from a subprocess, and is likely not a problem with pip.
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-os">
@@ -5660,11 +5478,11 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_rtree_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_rtree_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_rtree_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_rtree_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting Rtree
   Downloading Rtree-1.0.0.tar.gz (48 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 kB 9.1 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 kB 9.4 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -5676,7 +5494,7 @@ Collecting typing-extensions&gt;=3.7
 Building wheels for collected packages: Rtree
   Building wheel for Rtree (pyproject.toml): started
   Building wheel for Rtree (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for Rtree: filename=Rtree-1.0.0-cp37-cp37m-linux_aarch64.whl size=24128 sha256=614e45493337672f568081af933fe99705e892f8bd4df935fafa8249f32f9e1d
+  Created wheel for Rtree: filename=Rtree-1.0.0-cp37-cp37m-linux_aarch64.whl size=24128 sha256=1293821d400f39a5c9cbac5185282ecec91c43c78d1e9752c810bf5e24bae5ca
   Stored in directory: /root/.cache/pip/wheels/f8/59/4e/8d1dda044cd6747d9dd77d6507459a5aafe126204ed1197b22
 Successfully built Rtree
 Installing collected packages: typing-extensions, Rtree
@@ -5751,11 +5569,11 @@ OSError: Could not load libspatialindex_c library
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_rtree_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_rtree_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_rtree_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_rtree_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting Rtree
   Downloading Rtree-1.0.0.tar.gz (48 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 kB 7.0 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.8/48.8 kB 9.0 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -5765,62 +5583,12 @@ OSError: Could not load libspatialindex_c library
 Building wheels for collected packages: Rtree
   Building wheel for Rtree (pyproject.toml): started
   Building wheel for Rtree (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for Rtree: filename=Rtree-1.0.0-cp38-cp38-linux_aarch64.whl size=24126 sha256=18dd57e9edb4a80ce4d37717bc0f725252e49162feb294e0a6aa3de270830bbf
+  Created wheel for Rtree: filename=Rtree-1.0.0-cp38-cp38-linux_aarch64.whl size=24126 sha256=506f38f7e248c1a655cb4eb56a71a2f74665b7cb1e8e384cc5b4835af822a881
   Stored in directory: /root/.cache/pip/wheels/d2/b3/16/e36966869fb2e8e0930f6f913115f84cd84e37c2534710b7c8
 Successfully built Rtree
 Installing collected packages: Rtree
 Successfully installed Rtree-1.0.0
 WARNING: Running pip as the &#x27;root&#x27; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 Traceback (most recent call last):
   File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
     import rtree
@@ -6066,11 +5834,11 @@ OSError: Could not load libspatialindex_c library
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="warning badge">build required</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_Shapely_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_Shapely_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_Shapely_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_Shapely_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Collecting Shapely
   Downloading Shapely-1.8.2.tar.gz (198 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.8/198.8 kB 23.6 MB/s eta 0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.8/198.8 kB 25.5 MB/s eta 0:00:00
   Installing build dependencies: started
   Installing build dependencies: finished with status &#x27;done&#x27;
   Getting requirements to build wheel: started
@@ -6080,7 +5848,7 @@ OSError: Could not load libspatialindex_c library
 Building wheels for collected packages: Shapely
   Building wheel for Shapely (pyproject.toml): started
   Building wheel for Shapely (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for Shapely: filename=Shapely-1.8.2-py3-none-any.whl size=181913 sha256=d17d53bd1b3cc5a83336cd1fb721fe97dad9edb3c3bef58e36d8a4b3f2ce3d49
+  Created wheel for Shapely: filename=Shapely-1.8.2-py3-none-any.whl size=181913 sha256=c6bc181162b90a1685a4f93448afd6ebe1245ff716940cf91f9717bad8157db5
   Stored in directory: /root/.cache/pip/wheels/2f/9e/07/e9e90942b4e31275785d2f7e455607bfe876e53906307f80cd
 Successfully built Shapely
 Installing collected packages: Shapely
@@ -6182,7 +5950,7 @@ OSError: Could not find lib geos_c or load any of its variants [&#x27;libgeos_c.
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">snowflake-connector-python<br /><span class="file-indicator">July 12, 2022</span></td>
+<td class="wheel-name different">snowflake-connector-python<br /><span class="file-indicator">July 13, 2022</span></td>
 <td class="">
 <span class="passed badge">yes</span>
 </td>
@@ -6262,7 +6030,7 @@ OSError: Could not find lib geos_c or load any of its variants [&#x27;libgeos_c.
 </td>
 </tr>
 <tr class="wheel-line even">
-<td class="wheel-name different">snowflake-connector-python<br /><span class="file-indicator">August 02, 2022</span></td>
+<td class="wheel-name different">snowflake-connector-python<br /><span class="file-indicator">August 03, 2022</span></td>
 <td class="">
 <span class="passed badge">yes</span>
 </td>
@@ -6394,8 +6162,8 @@ OSError: Could not find lib geos_c or load any of its variants [&#x27;libgeos_c.
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tensorflow_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tensorflow_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow (from versions: none)
 ERROR: No matching distribution found for tensorflow
 --- Logging error ---
@@ -6455,60 +6223,10 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tensorflow_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tensorflow_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tensorflow_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tensorflow_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow (from versions: none)
 ERROR: No matching distribution found for tensorflow
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-os">
@@ -6524,8 +6242,8 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow-data-validation (from versions: none)
 ERROR: No matching distribution found for tensorflow-data-validation
 --- Logging error ---
@@ -6584,60 +6302,10 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tensorflow-data-validation_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tensorflow-data-validation_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tensorflow-data-validation (from versions: none)
 ERROR: No matching distribution found for tensorflow-data-validation
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-os">
@@ -6652,8 +6320,8 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tfx-bsl_amazon-linux2" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tfx-bsl_amazon-linux2" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tfx-bsl (from versions: none)
 ERROR: No matching distribution found for tfx-bsl
 --- Logging error ---
@@ -6712,60 +6380,10 @@ Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<input type="checkbox" id="output_2022-08-02 01:23:21_tfx-bsl_focal" class="output-toggle" />
-<label for="output_2022-08-02 01:23:21_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2022-08-03 01:27:23_tfx-bsl_focal" class="output-toggle" />
+<label for="output_2022-08-03 01:27:23_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">ERROR: Could not find a version that satisfies the requirement tfx-bsl (from versions: none)
 ERROR: No matching distribution found for tfx-bsl
---- Logging error ---
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1752, in print
-    extend(render(renderable, render_options))
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1390, in render
-    for render_output in iter_render:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 134, in __rich_console__
-    for line in lines:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/segment.py&quot;, line 245, in split_lines
-    for segment in segments:
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/console.py&quot;, line 1368, in render
-    renderable = rich_cast(renderable)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_vendor/rich/protocol.py&quot;, line 36, in rich_cast
-    renderable = cast_method()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 130, in __rich__
-    pip_cmd = get_best_invocation_for_this_pip()
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/entrypoints.py&quot;, line 58, in get_best_invocation_for_this_pip
-    if found_executable and os.path.samefile(
-  File &quot;/usr/lib/python3.8/genericpath.py&quot;, line 101, in samefile
-    s2 = os.stat(f2)
-FileNotFoundError: [Errno 2] No such file or directory: &#x27;/usr/bin/pip3.8&#x27;
-Call stack:
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    self.handle_pip_version_check(options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/cli/req_command.py&quot;, line 148, in handle_pip_version_check
-    pip_self_version_check(session, options)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/self_outdated_check.py&quot;, line 237, in pip_self_version_check
-    logger.info(&quot;[present-rich] %s&quot;, upgrade_prompt)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1446, in info
-    self._log(INFO, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1589, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1599, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 1661, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.8/logging/__init__.py&quot;, line 954, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.8/dist-packages/pip/_internal/utils/logging.py&quot;, line 179, in emit
-    self.handleError(record)
-Message: &#x27;[present-rich] %s&#x27;
-Arguments: (UpgradePrompt(old=&#x27;22.1.2&#x27;, new=&#x27;22.2.1&#x27;),)
 </pre>
 </td>
 <td class="test-column package-os">
