@@ -1,4 +1,4 @@
-FROM amazonlinux
+FROM amazonlinux:2
 
 RUN amazon-linux-extras install -y python3.8
 RUN ln -s python3.8 /usr/bin/python3
