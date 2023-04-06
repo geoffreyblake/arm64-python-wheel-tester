@@ -6,11 +6,12 @@ set -ex
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 # fetch the latest version of each base image
-for image in 'ubuntu:focal' 'amazonlinux'; do
+# without this step the build phase will use cached (old) versions of the base containers
+for image in 'ubuntu:focal' 'ubuntu:jammy' 'amazonlinux:2' 'amazonlinux:2023'; do
     docker pull ${image}
 done
 
-for image in 'focal' 'jammy' 'amazon-linux2' 'amazon-linux2-py38'; do
+for image in 'focal' 'jammy' 'amazon-linux2' 'amazon-linux2-py38' 'amazon-linux2023'; do
     docker build -t wheel-tester/${image} -f docker/Dockerfile.${image} .
 done
 
