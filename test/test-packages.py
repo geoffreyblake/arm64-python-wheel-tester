@@ -23,6 +23,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run wheel tests")
     parser.add_argument('--token', type=str, help="Github API token")
     parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.', default=[])
+    parser.add_argument('--container', type=str, nargs='*', help='Specify which containers to test')
     args = parser.parse_args()
 
     # change working directory the path of this script
@@ -35,16 +36,21 @@ def main():
             'CONDA': 'container-conda-test.sh',
             'PIP': 'container-script.sh',
             'APT': 'container-apt-test.sh',
-            'YUM': 'container-yum-test.sh'
+            'YUM': 'container-yum-test.sh',
         }
         containers = {
             'amazon-linux2': ['PIP', 'CONDA'],
             'focal': ['PIP', 'APT', 'CONDA'],
             'jammy': ['PIP', 'APT'],
             'amazon-linux2-py38': ['PIP'],
+            'amazon-linux2023': ['PIP', 'YUM'],
         }
+        if args.container is not None and len(args.container) > 0:
+            test_containers = args.container
+        else:
+            test_containers = containers.keys()
         # this is three nested loops in one
-        for package, package_manager, container in itertools.product(packages['packages'], package_managers.keys(), containers.keys()):
+        for package, package_manager, container in itertools.product(packages['packages'], package_managers.keys(), test_containers):
             package_list_key = f'{package_manager}_NAME'
             if package_list_key not in package or package_manager not in containers[container]:
                 continue
