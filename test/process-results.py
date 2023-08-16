@@ -5,6 +5,7 @@ import glob
 import json
 import lzma
 import argparse
+import requests
 from functools import reduce
 from collections import OrderedDict, defaultdict
 from datetime import datetime, timedelta
@@ -210,6 +211,23 @@ class TestResultFile():
             self.wheels[wheel]['passed-by-disribution'] = passed_by_distro
             self.wheels[wheel]['each-distribution-has-passing-option'] = len(list(filter(lambda x: not x, passed_by_distro.values()))) == 0
 
+def get_wheel_ranks():
+    url = 'https://hugovk.github.io/top-pypi-packages/top-pypi-packages-30-days.min.json'
+    try:
+        r = requests.get(url)
+    except requests.RequestsError:
+        print('failed to load top pypi packages list')
+        return []
+
+    try:
+        packages = r.json()['rows']
+        # the list should be sorted already, but lets not assume that
+        packages = sorted(packages, key=lambda x: x['download_count'])
+        packages = [package['project'] for package in packages]
+        return packages
+    except KeyError:
+        print('unable to parse top pypi packages list; the format may have changed')
+        return []
 
 def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compare_weekday_num=None):
 
@@ -244,6 +262,9 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                     all_test_names.add(test_name)
     wheel_name_set = sorted(list(wheel_name_set), key=str.lower)
     all_test_names = sorted(list(all_test_names))
+
+    # get the wheel popularity ranking
+    wheel_ranks = get_wheel_ranks()
 
     html = []
     html.append(HTML_HEADER)
@@ -300,6 +321,7 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     html.append('<table class="python-wheel-report">')
     html.append('<tr>')
     html.append('<th></th>')
+    html.append('<th>rank by downloads on pypi</th>')
     html.append('<th>at least one passing option per distribution?</th>')
     for test_name in all_test_names:
         html.append(f'<th class="test-column {get_package_name_class(test_name)}">{test_name}</th>')
@@ -362,6 +384,11 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 file_indicator = ''
             html.append(f'<tr class="wheel-line {odd_even}">')
             html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
+            try:
+                wheel_rank = wheel_ranks.index(wheel) + 1
+            except (IndexError, ValueError):
+                wheel_rank = ''
+            html.append(f'<td class="">{wheel_rank}</td>')
             html.append('<td class="">')
             if wheel in test_result_file.wheels:
                 distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
