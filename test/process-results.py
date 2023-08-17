@@ -4,6 +4,7 @@ import re
 import glob
 import json
 import lzma
+import math
 import argparse
 import requests
 from functools import reduce
@@ -222,7 +223,7 @@ def get_wheel_ranks():
     try:
         packages = r.json()['rows']
         # the list should be sorted already, but lets not assume that
-        packages = sorted(packages, key=lambda x: x['download_count'])
+        packages = sorted(packages, key=lambda x: x['download_count'], reverse=True)
         packages = [package['project'] for package in packages]
         return packages
     except KeyError:
@@ -265,6 +266,9 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
 
     # get the wheel popularity ranking
     wheel_ranks = get_wheel_ranks()
+    leading_zeros = math.floor(math.log10(len(wheel_ranks))) + 1
+    wheel_rank_format = f'{{n:0{leading_zeros}d}}'
+    print(wheel_rank_format)
 
     html = []
     html.append(HTML_HEADER)
@@ -314,121 +318,93 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     html.append('When differences exist, the first test report exhibting the difference is shown. The current test result')
     html.append('is always shown, regardless of whether there is any difference.</p>')
     html.append('</section>')
-    html.append('<section class="display-controls">')
-    html.append('<input type="checkbox" checked="true" name="pip" class="package-pip" /><label for="pip">pip</label>')
-    html.append('<input type="checkbox" name="os" class="package-os" /><label for="os">apt/yum</label>')
-    html.append('<input type="checkbox" name="conda" class="package-conda"/><label for="conda">anaconda</label>')
-    html.append('<table class="python-wheel-report">')
-    html.append('<tr>')
+    html.append('<section>')
+    html.append('<table class="python-wheel-report" id="python-wheel-report">')
+    html.append('<thead><tr>')
     html.append('<th></th>')
     html.append('<th>rank by downloads on pypi</th>')
     html.append('<th>at least one passing option per distribution?</th>')
     for test_name in all_test_names:
         html.append(f'<th class="test-column {get_package_name_class(test_name)}">{test_name}</th>')
-    html.append('</tr>')
+    html.append('</thead></tr><tbody>')
+
+    def date_of_last_passing_html(wheel, test_name):
+        if test_name == 'each-distribution-has-passing-option':
+            passing_lambda = lambda tf: tf.wheels[wheel][test_name]
+        else:
+            passing_lambda = lambda tf: tf.content[wheel][test_name]['test-passed']
+        last_passing = None
+        for test_result_file in test_results_list[1:]:
+            try:
+                if passing_lambda(test_result_file):
+                    last_passing = test_result_file.date
+                    break
+            except KeyError:
+                continue
+        if last_passing:
+            last_passing = last_passing.strftime("%B %d, %Y")
+            return f'<br /><span class="file-indicator">last passed on {last_passing}</span>'
+        else:
+            return ''
+
+    test_result_file = test_results_list[0]
     # Iterate over the sorted list of wheel names
     for i, wheel in enumerate(wheel_name_set):
-
-        # Make a list of test files to display by finding changes. Cap the total number of
-        # rows for each wheel to a specified number.
-        previous_wheel_test_results = None
-        displayed_test_rows = []
-        # Iterating over each input file, in reverse order
-        for test_result_file in test_results_list[::-1]:
-            wheel_test_results = {}
-            # Iterating over each test (centos, focal, ...)
-            for test_name in all_test_names:
-                try:
-                    test_result = test_result_file.content[wheel][test_name]
-                except KeyError:
-                    # This file does not have a result for this wheel and test name. Skip it.
-                    continue
-
-                wheel_test_results[test_name] = (test_result['test-passed'], test_result['build-required'])
-
-            def wheel_test_results_have_important_difference(a, b):
-                if a is None or b is None:
-                    return False
-                for key in (a.keys() | b.keys()):
-                    if key not in a or key not in b:
-                        continue
-                    if a[key] != b[key]:
-                        return True
-                return False
-
-            # do not include rows without any results
-            if len(wheel_test_results.keys()) == 0:
-                pass
-            elif previous_wheel_test_results is None:
-                displayed_test_rows.append(test_result_file)
-            elif wheel_test_results_have_important_difference(wheel_test_results, previous_wheel_test_results):
-                displayed_test_rows.append(test_result_file)
-
-            previous_wheel_test_results = wheel_test_results
-
-        # If there are no changes to the results, only show the last result
-        if len(displayed_test_rows) == 1:
-            displayed_test_rows = [test_results_list[0]]
-        # Always display results from the most recent run.
-        elif test_results_list[0] not in displayed_test_rows:
-            displayed_test_rows.append(test_results_list[0])
-
-        different = len(displayed_test_rows) > 1
         odd_even = 'even' if (i+1) % 2 == 0 else 'odd'
+        different = False
         different_class = 'different' if different else ''
-        for test_result_file in displayed_test_rows:
-            if different:
-                pretty_date = test_result_file.date.strftime("%B %d, %Y")
-                file_indicator = f'<br /><span class="file-indicator">{pretty_date}</span>'
+        if different:
+            pretty_date = test_result_file.date.strftime("%B %d, %Y")
+            file_indicator = f'<br /><span class="file-indicator">{pretty_date}</span>'
+        else:
+            file_indicator = ''
+        html.append(f'<tr class="wheel-line {odd_even}">')
+        html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
+        try:
+            wheel_rank = wheel_rank_format.format(n=wheel_ranks.index(wheel) + 1)
+        except (IndexError, ValueError):
+            wheel_rank = '~'
+        html.append(f'<td class="">{wheel_rank}</td>')
+        html.append('<td class="">')
+        if wheel in test_result_file.wheels:
+            distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
+            if distro_passing:
+                html.append(make_badge(classes=['passed'], text='yes'))
             else:
-                file_indicator = ''
-            html.append(f'<tr class="wheel-line {odd_even}">')
-            html.append(f'<td class="wheel-name {different_class}">{wheel}{file_indicator}</td>')
-            try:
-                wheel_rank = wheel_ranks.index(wheel) + 1
-            except (IndexError, ValueError):
-                wheel_rank = ''
-            html.append(f'<td class="">{wheel_rank}</td>')
-            html.append('<td class="">')
-            if wheel in test_result_file.wheels:
-                distro_passing = test_result_file.wheels[wheel]['each-distribution-has-passing-option']
-                if distro_passing:
-                    html.append(make_badge(classes=['passed'], text='yes'))
+                html.append(make_badge(classes=['failed'], text='no'))
+                html.append(date_of_last_passing_html(wheel, 'each-distribution-has-passing-option'))
+        html.append('</td>')
+        for test_name in all_test_names:
+            html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
+            if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
+                result = test_result_file.content[wheel][test_name]
+                show_output = False
+                if result['test-passed']:
+                    html.append(make_badge(classes=['passed'], text='passed'))
                 else:
-                    html.append(make_badge(classes=['failed'], text='no'))
+                    html.append(make_badge(classes=['failed'], text='failed'))
+                    show_output = True
+                if result['build-required']:
+                    html.append(make_badge(classes=['warning'], text='build required'))
+                if result['slow-install']:
+                    html.append(make_badge(classes=['warning'], text='slow install'))
+                if 'timeout' in result and result['timeout']:
+                    html.append(make_badge(classes=['failed'], text='timed out'))
+                    show_output = True
+
+                if show_output:
+                    html.append(date_of_last_passing_html(wheel, test_name))
+                    output_id = html_escape(f"output_{test_result_file.date}_{wheel}_{test_name}")
+                    output_html = html_escape(result['output'])
+                    html.append(f'<input type="checkbox" id="{output_id}" class="output-toggle" />')
+                    html.append(f'<label for="{output_id}" class="output-toggle">Toggle Output</label>')
+                    html.append(f'<pre class="output-content">{output_html}</pre>')
+
             html.append('</td>')
-            for test_name in all_test_names:
-                html.append(f'<td class="test-column {get_package_name_class(test_name)}">')
-                if wheel in test_result_file.content and test_name in test_result_file.content[wheel]:
-                    result = test_result_file.content[wheel][test_name]
-                    show_output = False
-                    if result['test-passed']:
-                        html.append(make_badge(classes=['passed'], text='passed'))
-                    else:
-                        html.append(make_badge(classes=['failed'], text='failed'))
-                        show_output = True
-                    if result['build-required']:
-                        html.append(make_badge(classes=['warning'], text='build required'))
-                    if result['slow-install']:
-                        html.append(make_badge(classes=['warning'], text='slow install'))
-                    if 'timeout' in result and result['timeout']:
-                        html.append(make_badge(classes=['failed'], text='timed out'))
-                        show_output = True
 
-                    if show_output:
-                        output_id = html_escape(f"output_{test_result_file.date}_{wheel}_{test_name}")
-                        output_html = html_escape(result['output'])
-                        html.append(f'<input type="checkbox" id="{output_id}" class="output-toggle" />')
-                        html.append(f'<label for="{output_id}" class="output-toggle">Toggle Output</label>')
-                        html.append(f'<pre class="output-content">{output_html}</pre>')
+        html.append('</tr>')
 
-                html.append('</td>')
-
-            html.append('</tr>')
-            if not different:
-                break
-
-    html.append('</table>')
+    html.append('</tbody></table>')
     html.append('</section>')
     html.append(HTML_FOOTER)
     html = '\n'.join(html)
@@ -438,6 +414,16 @@ HTML_HEADER = '''
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+            $('#python-wheel-report').DataTable({
+                paginate: false
+            });
+        });
+</script>
 <style type="text/css">
 
 h1 {
@@ -460,17 +446,6 @@ section.summary th, section.summary td {
     border: solid 1px;
     margin: 0px;
     padding: 3px;
-}
-
-table.python-wheel-report .test-column {
-    display: none;
-}
-
-section.display-controls > input.package-pip:checked ~ table.python-wheel-report .test-column.package-pip,
-section.display-controls > input.package-os:checked ~ table.python-wheel-report .test-column.package-os,
-section.display-controls > input.package-conda:checked ~ table.python-wheel-report .test-column.package-conda
-{
-    display: table-cell;
 }
 
 table.python-wheel-report {
