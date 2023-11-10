@@ -266,11 +266,6 @@ packages:
   - PKG_NAME: pyrsistent
     PIP_NAME: pyrsistent
     PKG_TEST: from pyrsistent import v, pvector
-  - PKG_NAME: pynacl
-    PIP_NAME: pynacl
-    PKG_TEST: import nacl._sodium
-    YUM_NAME: python3-pynacl
-    APT_NAME: python3-nacl
   - PKG_NAME: dill
     PIP_NAME: dill
     PKG_TEST: import dill
@@ -719,8 +714,11 @@ packages:
     PIP_NAME: MCEq
     PKG_TEST: from MCEq.core import config, MCEqRun
   - PKG_NAME: pynacl
-    PIP_NAME: PyNaCl
-    PKG_TEST: import nacl.signing
+    PIP_NAME: pynacl
+    PKG_TEST: |
+      import nacl.signing
+      import nacl._sodium
+    APT_NAME: python3-nacl
   - PKG_NAME: reportlab
     PIP_NAME: reportlab
     PKG_TEST: from reportlab.pdfgen import canvas
