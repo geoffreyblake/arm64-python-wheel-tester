@@ -268,7 +268,6 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
     wheel_ranks = get_wheel_ranks()
     leading_zeros = math.floor(math.log10(len(wheel_ranks))) + 1
     wheel_rank_format = f'{{n:0{leading_zeros}d}}'
-    print(wheel_rank_format)
 
     html = []
     html.append(HTML_HEADER)

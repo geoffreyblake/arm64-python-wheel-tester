@@ -24,6 +24,8 @@ def main():
     parser.add_argument('--token', type=str, help="Github API token")
     parser.add_argument('--ignore', type=str, action='append', help='Ignore tests with the specified name; can be used more than once.', default=[])
     parser.add_argument('--container', type=str, nargs='*', help='Specify which containers to test')
+    parser.add_argument('--packages', type=str, nargs='*', help='Specify which packages to test')
+    parser.add_argument('--skip-webpage', action='store_true', help='Do not download history from GitHub to generate the web report')
     args = parser.parse_args()
 
     # change working directory the path of this script
@@ -53,6 +55,8 @@ def main():
         for package, package_manager, container in itertools.product(packages['packages'], package_managers.keys(), test_containers):
             package_list_key = f'{package_manager}_NAME'
             if package_list_key not in package or package_manager not in containers[container]:
+                continue
+            if args.packages is not None and package['PKG_NAME'] not in args.packages:
                 continue
             package_main_name = re.findall(r'([\S]+)', package['PKG_NAME'])[0]
             package_list = package[package_list_key]
@@ -98,6 +102,9 @@ def main():
     with open(f'{output_dir}/report-{now}.html', 'w') as f:
         f.write(html)
 
+    if args.skip_webpage:
+        return
+
     # Run the GitHub pages generator
     print("generate the website...")
     generate_website.generate_website(output_dir='build',
@@ -124,6 +131,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
         'binary-wheel': False,
         'slow-install': False,
         'timeout': False,
+        'runtime': 0,
         'wheel': package_main_name,
         'test-name': test_name,
     }
@@ -141,16 +149,19 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
 
     # wait until the timeout for the container to complete
     while True:
+        time.sleep(1)
+        runtime = time.time() - start
         proc = subprocess.run(['docker', 'container', 'inspect', '-f', '{{ .State.Running }}', container_id],
                 encoding='utf-8', stdout=subprocess.PIPE)
         if proc.stdout.strip() != "true":
+            result['runtime'] = runtime
             break
-        elif time.time() - start > TIMEOUT:
+        elif runtime > TIMEOUT:
             result['timeout'] = True
+            result['runtime'] = runtime
             subprocess.run(['docker', 'stop', container_id])
             print(f"{package_manager}: Package {package_main_name} on {test_name} TIMED OUT!!")
             break
-        time.sleep(1)
 
     proc = subprocess.run(['docker', 'container', 'inspect', '-f', '{{ .State.ExitCode }}', container_id],
             encoding='utf-8', stdout=subprocess.PIPE)
