@@ -200,7 +200,6 @@ packages:
   - PKG_NAME: matplotlib
     PIP_NAME: matplotlib
     PKG_TEST: import matplotlib
-    YUM_NAME: python3-matplotlib
     APT_NAME: python3-matplotlib
   - PKG_NAME: psycopg2-binary
     PIP_NAME: psycopg2-binary
