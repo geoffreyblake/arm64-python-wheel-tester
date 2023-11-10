@@ -195,8 +195,6 @@ packages:
   - PKG_NAME: pyzmq
     PIP_NAME: pyzmq
     PKG_TEST: import zmq.backend
-  #- PIP_NAME: psutil
-  #  PKG_TEST: import psutil
   - PKG_NAME: matplotlib
     PIP_NAME: matplotlib
     PKG_TEST: import matplotlib
@@ -233,16 +231,12 @@ packages:
   - PKG_NAME: zope.interface
     PIP_NAME: zope.interface
     PKG_TEST: from zope.interface import _zope_interface_coptimizations as c_opt
-  #- PIP_NAME: grpc-google-iam-v1
-  #  PKG_TEST: import google
   - PKG_NAME: ansible
     PIP_NAME: ansible
     PKG_TEST: from ansible import context
   - PKG_NAME: thrift
     PIP_NAME: thrift
     PKG_TEST: from thrift import Thrift
-  #- PIP_NAME: mysqlclient
-  #  PKG_TEST: import MySQLdb
   - PKG_NAME: apache-beam
     PIP_NAME: apache-beam
     PKG_TEST: import apache_beam
