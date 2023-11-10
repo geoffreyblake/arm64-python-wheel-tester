@@ -162,7 +162,7 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
     if time.time() - start > SLOW_INSTALL_TIME:
         result['slow-install'] = True
 
-    if return_code == 0:
+    if not result['timeout'] and return_code == 0:
         result['test-passed'] = True
 
     if re.search(r'Building wheel for', output) is not None:
