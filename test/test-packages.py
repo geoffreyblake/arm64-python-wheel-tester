@@ -111,7 +111,7 @@ def main():
             new_results=new_results_file,
             github_token=args.token,
             days_ago_list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 21],
-            compare_weekday_num=3,
+            compare_weekday_num=0,
             ignore_tests=args.ignore)
 
 
