@@ -178,7 +178,7 @@ def get_package_name_class(test_name):
         return 'package-pip'
 
 def get_distribution_name(test_name):
-    distros = ["amazon-linux2", "centos8", "focal", "jammy"]
+    distros = ["amazon-linux2", "centos8", "focal", "jammy", "noble"]
     for distro in distros:
         if distro in test_name:
             return distro
@@ -383,6 +383,10 @@ def print_table_by_distro_report(test_results_fname_list, ignore_tests=[], compa
                 else:
                     html.append(make_badge(classes=['failed'], text='failed'))
                     show_output = True
+                if result["installed-version"]:
+                    html.append(make_badge(classes=['passed'], text=f"installed version {result['installed-version']}"))
+                if result["installed-version"] and (result["installed-version"] != result["latest-version"]):
+                    html.append(make_badge(classes=['warning'], text=f"latest version {result['latest-version']}"))
                 if result['build-required']:
                     html.append(make_badge(classes=['warning'], text='build required'))
                 if result['slow-install']:
