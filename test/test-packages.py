@@ -19,6 +19,7 @@ generate_website = importlib.import_module("generate-website")
 SLOW_INSTALL_TIME = 60
 TIMEOUT = 180
 
+
 def main():
     parser = argparse.ArgumentParser(description="Run wheel tests")
     parser.add_argument('--token', type=str, help="Github API token")
@@ -44,6 +45,7 @@ def main():
             'amazon-linux2': ['PIP', 'CONDA'],
             'focal': ['PIP', 'APT', 'CONDA'],
             'jammy': ['PIP', 'APT'],
+            'noble': ['PIP'],
             'amazon-linux2-py38': ['PIP'],
             'amazon-linux2023': ['PIP', 'YUM'],
         }
@@ -116,20 +118,45 @@ def main():
 
 
 process_work_dir = ''
+
+
 def do_test_initializer():
     global process_work_dir
     process_work_dir = "work_pid_%d" % os.getpid()
     os.mkdir(process_work_dir)
     subprocess.run(f'cp container-* {process_work_dir}/', shell=True)
 
+
 def do_test_lambda(x):
     return do_test(*x)
+
+
+def process_pip_report(report, package):
+    result = None
+    try:
+        f = open(report)
+        install_data = json.load(f)
+        # assume the primary package is the first one listed
+        for entry in install_data["install"]:
+            metadata = entry["metadata"]
+            if metadata["name"].lower() == package.lower():
+                result = metadata["version"]
+                break
+        f.close()
+    except Exception:
+        pass
+
+    return result
+
+
 def do_test(package_main_name, package_list, container, test_sh_script, test_py_script, test_name, package_manager):
     result = {
         'test-passed': False,
         'build-required': False,
         'binary-wheel': False,
         'slow-install': False,
+        'latest-version': None,
+        'installed-version': None,
         'timeout': False,
         'runtime': 0,
         'wheel': package_main_name,
@@ -181,6 +208,13 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
 
     if re.search(f'Downloading {package_main_name}[^\n]*aarch64[^\n]*whl', output) is not None:
         result['binary-wheel'] = True
+
+    # Primary package assumed the first listed
+    primary_package = package_list.split()[0] 
+    if latest_version := process_pip_report(f"{wd}/{process_work_dir}/pip_latest.json", primary_package):
+        result["latest-version"] = latest_version
+    if binary_version := process_pip_report(f"{wd}/{process_work_dir}/pip_binary.json", primary_package):
+        result['installed-version'] = binary_version
 
     result['output'] = output
 

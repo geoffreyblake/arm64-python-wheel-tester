@@ -8,4 +8,4 @@ RUN yum install -y \
         python38-pip \
         libgomp \
         mesa-libGL
-RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install virtualenv
