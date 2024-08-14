@@ -9,3 +9,5 @@ RUN yum install -y \
 ADD https://repo.anaconda.com/archive/Anaconda3-2021.04-Linux-aarch64.sh /root/anaconda.sh
 RUN bash ~/anaconda.sh -b -p $HOME/anaconda
 RUN python3 -m pip install virtualenv
+RUN python3 -m venv .test
+RUN /bin/bash -c "source .test/bin/activate && python3 -m pip install --upgrade pip"

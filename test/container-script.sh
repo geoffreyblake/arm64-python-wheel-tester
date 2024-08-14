@@ -2,9 +2,8 @@
 
 set -e
 
-cd /io
-python3 -m venv .test
 source .test/bin/activate
+cd /io
 pip3 install --progress-bar off --upgrade pip
 
 # Check if we will have a mismatch between latest release and wheel, by doing a dry-run

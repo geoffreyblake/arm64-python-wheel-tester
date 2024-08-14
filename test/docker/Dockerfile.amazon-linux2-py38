@@ -9,3 +9,5 @@ RUN yum install -y \
         libgomp \
         mesa-libGL
 RUN python3 -m pip install virtualenv
+RUN python3 -m venv .test
+RUN /bin/bash -c "source .test/bin/activate && python3 -m pip install --upgrade pip"
