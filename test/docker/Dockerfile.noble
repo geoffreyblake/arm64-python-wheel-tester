@@ -9,4 +9,4 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libglib2.0-0 \
     tzdata
 RUN python3 -m venv .test
-RUN RUN /bin/bash -c "source .test/bin/activate && python3 -m pip install --upgrade pip"
+RUN /bin/bash -c "source .test/bin/activate && python3 -m pip install --upgrade pip"
