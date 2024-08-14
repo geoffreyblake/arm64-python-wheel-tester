@@ -144,6 +144,7 @@ def process_pip_report(report, package):
                 break
         f.close()
     except Exception:
+        print(f"No report file {report}")
         pass
 
     return result
@@ -211,9 +212,9 @@ def do_test(package_main_name, package_list, container, test_sh_script, test_py_
 
     # Primary package assumed the first listed
     primary_package = package_list.split()[0] 
-    if latest_version := process_pip_report(f"{wd}/{process_work_dir}/pip_latest.json", primary_package):
+    if latest_version := process_pip_report(f"{process_work_dir}/pip_latest.json", primary_package):
         result["latest-version"] = latest_version
-    if binary_version := process_pip_report(f"{wd}/{process_work_dir}/pip_binary.json", primary_package):
+    if binary_version := process_pip_report(f"{process_work_dir}/pip_binary.json", primary_package):
         result['installed-version'] = binary_version
 
     result['output'] = output
