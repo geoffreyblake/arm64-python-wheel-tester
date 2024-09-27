@@ -132,13 +132,13 @@ input.output-toggle:checked + label.output-toggle + pre.output-content {
 </head>
 <body>
 
-<h1>Python Wheels on aarch64 test results from September 26, 2024</h1>
+<h1>Python Wheels on aarch64 test results from September 27, 2024</h1>
 <section class="summary">
 <table class="summary">
 <tr>
 <th>date</th>
 <td>Saturday, September 21, 2024</td>
-<td>Thursday, September 26, 2024</td>
+<td>Friday, September 27, 2024</td>
 <td></td>
 </tr>
 <tr>
@@ -162,8 +162,8 @@ input.output-toggle:checked + label.output-toggle + pre.output-content {
 <tr>
 <th>each dist has passing option</th>
 <td>206</td>
-<td>206</td>
-<td>+0</td>
+<td>209</td>
+<td>+3</td>
 </tr>
 </table>
 <p>The table shows test results from the current test run and differences, if any, with previous runs.
@@ -448,8 +448,8 @@ is always shown, regardless of whether there is any difference.</p>
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_ansible_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_ansible_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_ansible_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_ansible_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting ansible
   Using cached ansible-4.10.0.tar.gz (36.8 MB)
@@ -497,13 +497,12 @@ Using cached MarkupSafe-2.1.5-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aa
 Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
 Building wheels for collected packages: ansible, ansible-core
   Building wheel for ansible (pyproject.toml): started
-  Building wheel for ansible (pyproject.toml): still running...
   Building wheel for ansible (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for ansible: filename=ansible-4.10.0-py3-none-any.whl size=60568504 sha256=4e332f292daec67fea638437e0dde1363fc308d2a4bdfc57c5cad9e0279bee47
+  Created wheel for ansible: filename=ansible-4.10.0-py3-none-any.whl size=60568504 sha256=b7dd223678c939f39fc2af1834cdad68765fa6df8ac95dd3374b11835624aaa2
   Stored in directory: /root/.cache/pip/wheels/63/73/49/abc8cc94c80bbc9ffa3d4dad9e860562e7d2929312a7977463
   Building wheel for ansible-core (pyproject.toml): started
   Building wheel for ansible-core (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for ansible-core: filename=ansible_core-2.11.12-py3-none-any.whl size=1960954 sha256=0b4444b0d53ad54c431e2bcb7584fc6ab3a5c185c0dd198ea73db66b92722b5e
+  Created wheel for ansible-core: filename=ansible_core-2.11.12-py3-none-any.whl size=1960954 sha256=5c5f690c0fe3658f3435fae8bebd2835b817f37bf2b259b265d79a30e3382e9b
   Stored in directory: /root/.cache/pip/wheels/cc/01/76/7e9834e0dd51992e45d7995e174c128121d83b7c19b8bcf47a
 Successfully built ansible ansible-core
 Installing collected packages: resolvelib, PyYAML, pycparser, packaging, MarkupSafe, jinja2, cffi, cryptography, ansible-core, ansible
@@ -941,8 +940,8 @@ Installing collected packages: resolvelib, PyYAML, pycparser, packaging, MarkupS
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.5.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_blosc2_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_blosc2_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_blosc2_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_blosc2_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting blosc2
   Using cached blosc2-2.5.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (9.2 kB)
@@ -1502,8 +1501,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="passed badge">installed version 2.5.3</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_confluent-kafka_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_confluent-kafka_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting confluent-kafka
   Using cached confluent-kafka-2.5.3.tar.gz (137 kB)
@@ -1577,14 +1576,14 @@ Building wheels for collected packages: confluent-kafka
       building &#x27;confluent_kafka.cimpl&#x27; extension
       creating build/temp.linux-aarch64-cpython-37
       creating build/temp.linux-aarch64-cpython-37/tmp
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka/src
-      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.7m -c /tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-37/tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka/src/Admin.o
-      In file included from /tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka/src/Admin.c:17:0:
-      /tmp/pip-install-5k0nn2js/confluent-kafka_4da4fbde683449dcb6eac808ea264dd6/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.7m -c /tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-37/tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka/src/Admin.o
+      In file included from /tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka/src/Admin.c:17:0:
+      /tmp/pip-install-ezm59gju/confluent-kafka_1313a70bd29f4bf7aa6b77c6d2f87746/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
        #include &lt;librdkafka/rdkafka.h&gt;
                 ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -1604,8 +1603,8 @@ ERROR: Could not build wheels for confluent-kafka, which is required to install 
 <span class="passed badge">installed version 2.5.3</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_confluent-kafka_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_confluent-kafka_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_confluent-kafka_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_confluent-kafka_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting confluent-kafka
   Using cached confluent-kafka-2.5.3.tar.gz (137 kB)
@@ -1673,10 +1672,10 @@ Building wheels for collected packages: confluent-kafka
       copying src/confluent_kafka/avro/serializer/message_serializer.py -&gt; build/lib.linux-aarch64-cpython-38/confluent_kafka/avro/serializer
       running build_ext
       building &#x27;confluent_kafka.cimpl&#x27; extension
-      creating build/temp.linux-aarch64-cpython-38/tmp/pip-install-ooihkcjq/confluent-kafka_e4e363c6f81747389286477ac083991e/src/confluent_kafka/src
-      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.8 -c /tmp/pip-install-ooihkcjq/confluent-kafka_e4e363c6f81747389286477ac083991e/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-38/tmp/pip-install-ooihkcjq/confluent-kafka_e4e363c6f81747389286477ac083991e/src/confluent_kafka/src/Admin.o
-      In file included from /tmp/pip-install-ooihkcjq/confluent-kafka_e4e363c6f81747389286477ac083991e/src/confluent_kafka/src/Admin.c:17:0:
-      /tmp/pip-install-ooihkcjq/confluent-kafka_e4e363c6f81747389286477ac083991e/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-cpython-38/tmp/pip-install-gm5srrrr/confluent-kafka_f54b77cde3ac43148a086b7fc1860468/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.8 -c /tmp/pip-install-gm5srrrr/confluent-kafka_f54b77cde3ac43148a086b7fc1860468/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-38/tmp/pip-install-gm5srrrr/confluent-kafka_f54b77cde3ac43148a086b7fc1860468/src/confluent_kafka/src/Admin.o
+      In file included from /tmp/pip-install-gm5srrrr/confluent-kafka_f54b77cde3ac43148a086b7fc1860468/src/confluent_kafka/src/Admin.c:17:0:
+      /tmp/pip-install-gm5srrrr/confluent-kafka_f54b77cde3ac43148a086b7fc1860468/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
        #include &lt;librdkafka/rdkafka.h&gt;
                 ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -2060,23 +2059,23 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -2084,13 +2083,13 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 2.13.0</span>
+<span class="passed badge">installed version 2.14.0</span>
 </td>
 </tr>
 <tr class="wheel-line even">
@@ -2156,8 +2155,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.9</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_dedupe-hcluster_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_dedupe-hcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_dedupe-hcluster_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_dedupe-hcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting dedupe-hcluster
   Using cached dedupe_hcluster-0.3.9-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.7 kB)
@@ -2192,8 +2191,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.9</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_dedupe-hcluster_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_dedupe-hcluster_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_dedupe-hcluster_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_dedupe-hcluster_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting dedupe-hcluster
   Using cached dedupe_hcluster-0.3.9-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.7 kB)
@@ -2324,9 +2323,10 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="passed badge">installed version 3.2.3</span>
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
+<span class="warning badge">slow install</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_divik_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_divik_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_divik_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_divik_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting divik
   Downloading divik-3.2.3-cp38-cp38-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
@@ -2456,7 +2456,7 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=d655857210e3b885cd6f61a8d656d13caf415e6edfda4c124e4a9694dd62d5c8
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=570bde03c1e51c541bea95b64d305a726fe6478f1c207760582029a8f5dc68cf
   Stored in directory: /root/.cache/pip/wheels/7f/1a/8f/7f5269f3670f46d69b900921a8f06f7592daf09572ea27865b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, PyWavelets, python-dateutil, partd, lazy_loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-distance, divik
@@ -2489,8 +2489,8 @@ AttributeError: module &#x27;skimage.feature&#x27; has no attribute &#x27;greyco
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_divik_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_divik_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_divik_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_divik_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting divik
   Downloading divik-3.2.3-cp39-cp39-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
@@ -2505,7 +2505,7 @@ Collecting dask-distance&lt;0.3.0,&gt;=0.2.0 (from divik)
 Collecting dask&gt;=2.14.0 (from dask[dataframe]&gt;=2.14.0-&gt;divik)
   Using cached dask-2024.8.0-py3-none-any.whl.metadata (3.8 kB)
 Collecting h5py&gt;=2.8.0 (from divik)
-  Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
+  Using cached h5py-3.12.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
 Collecting joblib&lt;2.0.0,&gt;=1.0.0 (from divik)
   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
 Collecting kneed&gt;=0.5.1 (from divik)
@@ -2582,7 +2582,7 @@ Collecting six&gt;=1.5 (from python-dateutil&gt;=2.7-&gt;matplotlib&lt;4.0.0,&gt
   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
 Downloading divik-3.2.3-cp39-cp39-manylinux_2_17_aarch64.whl (159 kB)
 Using cached dask-2024.8.0-py3-none-any.whl (1.2 MB)
-Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.9 MB)
+Using cached h5py-3.12.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (5.2 MB)
 Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
 Using cached kneed-0.8.5-py3-none-any.whl (10 kB)
 Using cached matplotlib-3.9.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.2 MB)
@@ -2623,11 +2623,11 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=70400dac403276d90df3a42a3525de8662b1d25ce944ade36e88c8cc03a3cdb6
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=a85ba30a4b30f8f4d39da18c9f8389c7de7f77e07f0f6f756fb922dc92c0e734
   Stored in directory: /root/.cache/pip/wheels/f0/dc/86/a1cda14932f21a53a27d58823f2c5c36b03e619d701236992b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, python-dateutil, pyarrow, partd, lazy-loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-expr, dask-distance, divik
-Successfully installed click-8.1.7 cloudpickle-3.0.0 contourpy-1.3.0 cycler-0.12.1 dask-2024.8.0 dask-distance-0.2.0 dask-expr-1.1.10 divik-3.2.3 fonttools-4.54.1 fsspec-2024.9.0 h5py-3.10.0 imageio-2.35.1 importlib-metadata-8.5.0 importlib-resources-6.4.5 joblib-1.4.2 kiwisolver-1.4.7 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.9.2 networkx-3.2.1 numpy-2.0.2 packaging-24.1 pandas-2.2.3 partd-1.4.2 pillow-10.4.0 pyarrow-17.0.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.24.0 scikit-learn-1.5.2 scipy-1.13.1 six-1.16.0 threadpoolctl-3.5.0 tifffile-2024.8.30 toolz-0.12.1 tqdm-4.66.5 tzdata-2024.2 zipp-3.20.2
+Successfully installed click-8.1.7 cloudpickle-3.0.0 contourpy-1.3.0 cycler-0.12.1 dask-2024.8.0 dask-distance-0.2.0 dask-expr-1.1.10 divik-3.2.3 fonttools-4.54.1 fsspec-2024.9.0 h5py-3.12.1 imageio-2.35.1 importlib-metadata-8.5.0 importlib-resources-6.4.5 joblib-1.4.2 kiwisolver-1.4.7 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.9.2 networkx-3.2.1 numpy-2.0.2 packaging-24.1 pandas-2.2.3 partd-1.4.2 pillow-10.4.0 pyarrow-17.0.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.24.0 scikit-learn-1.5.2 scipy-1.13.1 six-1.16.0 threadpoolctl-3.5.0 tifffile-2024.8.30 toolz-0.12.1 tqdm-4.66.5 tzdata-2024.2 zipp-3.20.2
 Traceback (most recent call last):
   File &quot;/io/test-script.py&quot;, line 1, in &lt;module&gt;
     import divik.cluster
@@ -2660,8 +2660,8 @@ AttributeError: No skimage.feature attribute greycomatrix
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_divik_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_divik_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_divik_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_divik_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting divik
   Downloading divik-3.2.3-cp38-cp38-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
@@ -2791,7 +2791,7 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=be815d68683c5e38a932096ae788972a5766011d70fa6e3fb063739ff318de6d
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=5d7d65923c46b36d6dc9b20dc64662b8f8fccbf0ec17cb1f5bd62059d3319b31
   Stored in directory: /root/.cache/pip/wheels/7f/1a/8f/7f5269f3670f46d69b900921a8f06f7592daf09572ea27865b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, PyWavelets, python-dateutil, partd, lazy_loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-distance, divik
@@ -2828,8 +2828,8 @@ AttributeError: module &#x27;skimage.feature&#x27; has no attribute &#x27;greyco
 <span class="warning badge">build required</span>
 <span class="warning badge">slow install</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_divik_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_divik_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_divik_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_divik_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting divik
   Using cached divik-3.2.4.tar.gz (83 kB)
@@ -2850,7 +2850,7 @@ Collecting dask-distance&lt;0.3.0,&gt;=0.2.0 (from divik)
 Collecting dask&gt;=2.14.0 (from dask[dataframe]&gt;=2.14.0-&gt;divik)
   Using cached dask-2024.9.0-py3-none-any.whl.metadata (3.7 kB)
 Collecting h5py&gt;=2.8.0 (from divik)
-  Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
+  Using cached h5py-3.12.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
 Collecting joblib&lt;2.0.0,&gt;=1.0.0 (from divik)
   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
 Collecting kneed&gt;=0.5.1 (from divik)
@@ -2924,7 +2924,7 @@ Collecting locket (from partd&gt;=1.4.0-&gt;dask&gt;=2.14.0-&gt;dask[dataframe]&
 Collecting six&gt;=1.5 (from python-dateutil&gt;=2.7-&gt;matplotlib&lt;4.0.0,&gt;=3.3.3-&gt;divik)
   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
 Using cached dask-2024.9.0-py3-none-any.whl (1.3 MB)
-Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.7 MB)
+Using cached h5py-3.12.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (5.2 MB)
 Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
 Using cached kneed-0.8.5-py3-none-any.whl (10 kB)
 Using cached matplotlib-3.9.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.2 MB)
@@ -2964,15 +2964,15 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: divik, dask-distance
   Building wheel for divik (pyproject.toml): started
   Building wheel for divik (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for divik: filename=divik-3.2.4-cp310-cp310-manylinux_2_35_aarch64.whl size=159322 sha256=e19af0c47930e23811557d515ad57be2717399b1227be06a5003c66d6b157dd3
+  Created wheel for divik: filename=divik-3.2.4-cp310-cp310-manylinux_2_35_aarch64.whl size=159333 sha256=61622353e68ecc918a873f06e05047e1aaf410c39059bd32c1610b9b17696ebb
   Stored in directory: /root/.cache/pip/wheels/5d/e8/8f/7ed27b86439e75c827a29d91e7e6b7f9428b8fab1a06e170f5
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=ea63e7483a9014f46c54775597a201784b73ad2823153653c1925968730595d7
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9076 sha256=b55015cbb6ba053e99226fdfcb95f1bb749b95bc1dc6f0cb1de6810d8de86077
   Stored in directory: /root/.cache/pip/wheels/54/64/fe/4c4f1d1961291e59480394abf8cbbaedafc0f7c796189f31ae
 Successfully built divik dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, python-dateutil, pyarrow, partd, lazy-loader, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-expr, dask-distance, divik
-Successfully installed click-8.1.7 cloudpickle-3.0.0 contourpy-1.3.0 cycler-0.12.1 dask-2024.9.0 dask-distance-0.2.0 dask-expr-1.1.14 divik-3.2.4 fonttools-4.54.1 fsspec-2024.9.0 h5py-3.10.0 imageio-2.35.1 importlib-metadata-8.5.0 joblib-1.4.2 kiwisolver-1.4.7 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.9.2 networkx-3.3 numpy-2.1.1 packaging-24.1 pandas-2.2.3 partd-1.4.2 pillow-10.4.0 pyarrow-17.0.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.24.0 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tifffile-2024.9.20 toolz-0.12.1 tqdm-4.66.5 tzdata-2024.2 zipp-3.20.2
+Successfully installed click-8.1.7 cloudpickle-3.0.0 contourpy-1.3.0 cycler-0.12.1 dask-2024.9.0 dask-distance-0.2.0 dask-expr-1.1.14 divik-3.2.4 fonttools-4.54.1 fsspec-2024.9.0 h5py-3.12.1 imageio-2.35.1 importlib-metadata-8.5.0 joblib-1.4.2 kiwisolver-1.4.7 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.9.2 networkx-3.3 numpy-2.1.1 packaging-24.1 pandas-2.2.3 partd-1.4.2 pillow-10.4.0 pyarrow-17.0.0 pyparsing-3.1.4 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.24.0 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tifffile-2024.9.20 toolz-0.12.1 tqdm-4.66.5 tzdata-2024.2 zipp-3.20.2
 
 A module that was compiled using NumPy 1.x cannot be run in
 NumPy 2.1.1 as it may crash. To support both 1.x and 2.x
@@ -3023,8 +3023,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 3.2.3</span>
 <span class="warning badge">latest version 3.2.4</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_divik_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_divik_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_divik_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_divik_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -3339,8 +3339,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.7.4</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_faiss-cpu_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_faiss-cpu_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting faiss-cpu
   Using cached faiss_cpu-1.7.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.3 kB)
@@ -3448,8 +3448,8 @@ ModuleNotFoundError: No module named &#x27;numpy&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_fastcluster_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_fastcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_fastcluster_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_fastcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting fastcluster
   Using cached fastcluster-1.2.6-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
@@ -3496,8 +3496,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_fastcluster_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_fastcluster_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_fastcluster_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_fastcluster_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting fastcluster
   Using cached fastcluster-1.2.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
@@ -3537,8 +3537,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 1.2.6</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_fastcluster_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_fastcluster_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_fastcluster_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_fastcluster_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting fastcluster
   Using cached fastcluster-1.2.6.tar.gz (173 kB)
@@ -3554,7 +3554,7 @@ Using cached numpy-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch6
 Building wheels for collected packages: fastcluster
   Building wheel for fastcluster (pyproject.toml): started
   Building wheel for fastcluster (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for fastcluster: filename=fastcluster-1.2.6-cp312-cp312-linux_aarch64.whl size=166762 sha256=df8d1223479c64ce65c3b5b6a8734a4fac422c9a040fdd1ae4d468c488b1c055
+  Created wheel for fastcluster: filename=fastcluster-1.2.6-cp312-cp312-linux_aarch64.whl size=166764 sha256=6ab19c7f2acfad42b0b9954087b23b6844c169a9fc5bb6370128755c998686ee
   Stored in directory: /root/.cache/pip/wheels/de/90/c4/cc6319fd0f00be054c8ec041b37fb5b10585a19e6855a82bbd
 Successfully built fastcluster
 Installing collected packages: numpy, fastcluster
@@ -3974,8 +3974,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 3.0.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_glcontext_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_glcontext_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_glcontext_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_glcontext_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting glcontext
   Using cached glcontext-3.0.0.tar.gz (16 kB)
@@ -4308,8 +4308,7 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="wheel-name ">h5py</td>
 <td class="">0388</td>
 <td class="">
-<span class="failed badge">no</span>
-
+<span class="passed badge">yes</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
@@ -4323,36 +4322,15 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="warning badge">latest version 3.11.0</span>
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
-<span class="passed badge">installed version 3.10.0</span>
-<span class="warning badge">latest version 3.11.0</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_h5py_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_h5py_amazon-linux2023" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
-Collecting h5py
-  Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
-Collecting numpy&gt;=1.17.3 (from h5py)
-  Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.9 MB)
-Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
-Installing collected packages: numpy, h5py
-Successfully installed h5py-3.10.0 numpy-2.0.2
-Traceback (most recent call last):
-  File &quot;/io/test-script.py&quot;, line 1, in &lt;module&gt;
-    import h5py
-  File &quot;/.test/lib64/python3.9/site-packages/h5py/__init__.py&quot;, line 25, in &lt;module&gt;
-    from . import _errors
-  File &quot;h5py/_errors.pyx&quot;, line 1, in init h5py._errors
-ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
-</pre>
+<span class="passed badge">passed</span>
+<span class="passed badge">installed version 3.12.1</span>
 </td>
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_h5py_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_h5py_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Last metadata expiration check: 1 day, 0:22:32 ago on Wed Sep 25 00:52:43 2024.
+<input type="checkbox" id="output_2024-09-27 02:40:52_h5py_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_h5py_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Amazon Linux 2023 repository                    9.7 kB/s | 3.6 kB     00:00    
 No match for argument: python3-h5py
 Error: Unable to find a match: python3-h5py
 </pre>
@@ -4368,138 +4346,15 @@ Error: Unable to find a match: python3-h5py
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
-<span class="passed badge">installed version 3.10.0</span>
-<span class="warning badge">latest version 3.11.0</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_h5py_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_h5py_jammy" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
-Collecting h5py
-  Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
-Collecting numpy&gt;=1.17.3 (from h5py)
-  Using cached numpy-2.1.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.7 MB)
-Using cached numpy-2.1.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.0 MB)
-Installing collected packages: numpy, h5py
-Successfully installed h5py-3.10.0 numpy-2.1.1
-Traceback (most recent call last):
-  File &quot;/io/test-script.py&quot;, line 1, in &lt;module&gt;
-    import h5py
-  File &quot;/.test/lib/python3.10/site-packages/h5py/__init__.py&quot;, line 25, in &lt;module&gt;
-    from . import _errors
-  File &quot;h5py/_errors.pyx&quot;, line 1, in init h5py._errors
-ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
-</pre>
+<span class="passed badge">passed</span>
+<span class="passed badge">installed version 3.12.1</span>
 </td>
 <td class="test-column package-os">
 <span class="passed badge">passed</span>
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
-<span class="passed badge">installed version 3.11.0</span>
-<span class="warning badge">build required</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_h5py_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_h5py_noble" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
-Collecting h5py
-  Using cached h5py-3.11.0.tar.gz (406 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status &#x27;done&#x27;
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status &#x27;done&#x27;
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
-Collecting numpy&gt;=1.17.3 (from h5py)
-  Using cached numpy-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Using cached numpy-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.7 MB)
-Building wheels for collected packages: h5py
-  Building wheel for h5py (pyproject.toml): started
-  Building wheel for h5py (pyproject.toml): finished with status &#x27;error&#x27;
-  error: subprocess-exited-with-error
-  
-  × Building wheel for h5py (pyproject.toml) did not run successfully.
-  │ exit code: 1
-  ╰─&gt; [71 lines of output]
-      running bdist_wheel
-      running build
-      running build_py
-      creating build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/version.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/h5py_warnings.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/ipy_completer.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      creating build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dims.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/compat.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/files.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_alignment.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5pl.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dimension_scales.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_objects.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_errors.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/conftest.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_image.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5t.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_getitem.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/common.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_completions.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5o.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_ros3.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs_data.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_big_endian_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5z.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5d_direct_chunk.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dtype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_swmr.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5f.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attribute_create.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_slicing.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5p.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dims_dimensionproxy.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_highlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_virtual_source.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_lowlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/data_files/vlen_string_dset_utc.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_dset.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_s390x.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      running build_ext
-      Building h5py requires pkg-config unless the HDF5 path is explicitly specified using the environment variable HDF5_DIR. For more information and details, see https://docs.h5py.org/en/stable/build.html#custom-installation
-      error: pkg-config probably not installed: FileNotFoundError(2, &#x27;No such file or directory&#x27;)
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for h5py
-Failed to build h5py
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (h5py)
-</pre>
+<span class="passed badge">passed</span>
+<span class="passed badge">installed version 3.12.1</span>
 </td>
 </tr>
 <tr class="wheel-line even">
@@ -4513,8 +4368,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4534,8 +4389,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4553,8 +4408,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4574,8 +4429,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4597,8 +4452,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4618,8 +4473,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_hidapi_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_hidapi_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_hidapi_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_hidapi_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting hidapi
   Using cached hidapi-0.14.0.post2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4817,8 +4672,8 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.27.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_iminuit_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_iminuit_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_iminuit_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_iminuit_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting iminuit
   Using cached iminuit-2.27.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
@@ -4855,8 +4710,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.27.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_iminuit_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_iminuit_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_iminuit_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_iminuit_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting iminuit
   Using cached iminuit-2.27.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
@@ -4948,8 +4803,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_jellyfish_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_jellyfish_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_jellyfish_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_jellyfish_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -5165,8 +5020,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_landlab_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_landlab_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -5183,8 +5038,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <span class="passed badge">installed version 2.6.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_landlab_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_landlab_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_landlab_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_landlab_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting landlab
   Using cached landlab-2.6.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (12 kB)
@@ -5317,7 +5172,7 @@ Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 Building wheels for collected packages: bmipy
   Building wheel for bmipy (pyproject.toml): started
   Building wheel for bmipy (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=8cc5d3b7cce341cc49f74709477630c9d78454c237c2d6a1842173c518f1e37f
+  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=18adf5280e704b16e5005cbcfe2d90a9b3e0282ac151fe2378559b2b0f32ba80
   Stored in directory: /root/.cache/pip/wheels/5e/1c/42/956e8e18e7f5c32990a7d52fb11fdb63a3e074371032c242eb
 Successfully built bmipy
 Installing collected packages: pytz, zipp, tzdata, typing-extensions, tomli, six, pyyaml, pyshp, pyparsing, pygments, platformdirs, pillow, pathspec, packaging, numpy, mypy-extensions, mdurl, MarkupSafe, kiwisolver, fonttools, cycler, click, certifi, scipy, python-dateutil, patsy, markdown-it-py, jinja2, importlib-resources, contourpy, cftime, black, rich, pandas, netcdf4, matplotlib, bmipy, xarray, statsmodels, rich-click, landlab
@@ -5356,8 +5211,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="passed badge">installed version 2.8.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_landlab_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_landlab_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_landlab_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_landlab_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting landlab
   Using cached landlab-2.8.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
@@ -5487,7 +5342,7 @@ Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 Building wheels for collected packages: bmipy
   Building wheel for bmipy (pyproject.toml): started
   Building wheel for bmipy (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=3a0763cbd86bbc80088c37c3f7808cd590796aaeeaa1c3aa20c507e8ea174394
+  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=4024b5fb5be308fc693de51cf6dfbc21c4120c7dc6b4cb9a6034ebfba7c915ea
   Stored in directory: /root/.cache/pip/wheels/fd/66/ff/eb9901bcabae7e3b9d08bb60e712a1e371d9b82c26a363403f
 Successfully built bmipy
 Installing collected packages: pytz, tzdata, typing-extensions, tomli, six, pyyaml, pyshp, pyparsing, pygments, platformdirs, pillow, pathspec, packaging, numpy, mypy-extensions, mdurl, MarkupSafe, kiwisolver, importlib-resources, fonttools, cycler, click, certifi, scipy, python-dateutil, patsy, markdown-it-py, jinja2, contourpy, cftime, black, rich, pandas, netcdf4, matplotlib, bmipy, xarray, statsmodels, rich-click, landlab
@@ -5538,8 +5393,8 @@ ImportError: numpy.core.multiarray failed to import (auto-generated because you 
 <span class="passed badge">installed version 2.8.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_landlab_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_landlab_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_landlab_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_landlab_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting landlab
   Using cached landlab-2.8.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
@@ -5663,7 +5518,7 @@ Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 Building wheels for collected packages: bmipy
   Building wheel for bmipy (pyproject.toml): started
   Building wheel for bmipy (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=c413e3646ea9e3bdb377eb5e38391dfa2c87a8ef81cdc8f3ca1cf626fe733ed3
+  Created wheel for bmipy: filename=bmipy-2.0.1-py3-none-any.whl size=8355 sha256=c316546566a5364b556ce6869fd4485560739d29b376a850d2b88d256fe18e4d
   Stored in directory: /root/.cache/pip/wheels/1e/8e/64/2bc2590e06f470365659572c85775b306b6df6581842fd82c2
 Successfully built bmipy
 Installing collected packages: pytz, tzdata, typing-extensions, six, pyyaml, pyshp, pyparsing, pygments, platformdirs, pillow, pathspec, packaging, numpy, mypy-extensions, mdurl, MarkupSafe, kiwisolver, fonttools, cycler, click, certifi, scipy, python-dateutil, patsy, markdown-it-py, jinja2, contourpy, cftime, black, rich, pandas, netcdf4, matplotlib, bmipy, xarray, statsmodels, rich-click, landlab
@@ -5846,8 +5701,8 @@ ImportError: numpy.core.multiarray failed to import (auto-generated because you 
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version 4.1.3</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -5878,8 +5733,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -5908,8 +5763,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -5940,8 +5795,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -5974,8 +5829,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -6006,8 +5861,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_line-profiler_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_line-profiler_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_line-profiler_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_line-profiler_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -6161,8 +6016,8 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.28</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_lukeparser_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_lukeparser_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_lukeparser_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_lukeparser_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -6231,9 +6086,9 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_lz4_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_lz4_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Last metadata expiration check: 1 day, 0:37:43 ago on Wed Sep 25 00:52:43 2024.
+<input type="checkbox" id="output_2024-09-27 02:40:52_lz4_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_lz4_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Amazon Linux 2023 repository                    9.2 kB/s | 3.6 kB     00:00    
 No match for argument: python3-lz4
 Error: Unable to find a match: python3-lz4
 </pre>
@@ -6394,23 +6249,23 @@ Error: Unable to find a match: python3-lz4
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -6418,28 +6273,27 @@ Error: Unable to find a match: python3-lz4
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.7.3</span>
+<span class="passed badge">installed version 1.7.4</span>
 </td>
 </tr>
 <tr class="wheel-line even">
 <td class="wheel-name ">mceq</td>
 <td class="">~</td>
 <td class="">
-<span class="failed badge">no</span>
-
+<span class="passed badge">yes</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_mceq_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mceq_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_mceq_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_mceq_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting MCEq
   Using cached MCEq-1.2.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
@@ -6506,8 +6360,8 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_mceq_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mceq_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_mceq_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_mceq_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting MCEq
   Using cached MCEq-1.2.6-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
@@ -6569,77 +6423,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 </pre>
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
+<span class="passed badge">passed</span>
 <span class="passed badge">installed version 1.2.6</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_mceq_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mceq_amazon-linux2023" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
-Collecting MCEq
-  Using cached MCEq-1.2.6-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
-Collecting six (from MCEq)
-  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
-Collecting h5py (from MCEq)
-  Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
-Collecting particletools (from MCEq)
-  Using cached particletools-1.1.7-py2.py3-none-any.whl.metadata (2.3 kB)
-Collecting crflux&gt;1.0.4 (from MCEq)
-  Using cached crflux-1.0.6-py2.py3-none-any.whl.metadata (2.6 kB)
-Collecting scipy (from MCEq)
-  Using cached scipy-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (60 kB)
-Collecting numpy (from MCEq)
-  Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Collecting tqdm (from MCEq)
-  Using cached tqdm-4.66.5-py3-none-any.whl.metadata (57 kB)
-Collecting requests (from MCEq)
-  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
-Requirement already satisfied: setuptools in /.test/lib/python3.9/site-packages (from crflux&gt;1.0.4-&gt;MCEq) (59.6.0)
-Collecting charset-normalizer&lt;4,&gt;=2 (from requests-&gt;MCEq)
-  Using cached charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
-Collecting idna&lt;4,&gt;=2.5 (from requests-&gt;MCEq)
-  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
-Collecting urllib3&lt;3,&gt;=1.21.1 (from requests-&gt;MCEq)
-  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
-Collecting certifi&gt;=2017.4.17 (from requests-&gt;MCEq)
-  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
-Using cached MCEq-1.2.6-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (135 kB)
-Using cached crflux-1.0.6-py2.py3-none-any.whl (92 kB)
-Downloading h5py-3.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.9 MB)
-Using cached numpy-2.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
-Using cached particletools-1.1.7-py2.py3-none-any.whl (52 kB)
-Using cached requests-2.32.3-py3-none-any.whl (64 kB)
-Using cached scipy-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (33.7 MB)
-Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
-Using cached tqdm-4.66.5-py3-none-any.whl (78 kB)
-Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
-Using cached charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (138 kB)
-Using cached idna-3.10-py3-none-any.whl (70 kB)
-Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
-Installing collected packages: urllib3, tqdm, six, numpy, idna, charset-normalizer, certifi, scipy, requests, particletools, h5py, crflux, MCEq
-Successfully installed MCEq-1.2.6 certifi-2024.8.30 charset-normalizer-3.3.2 crflux-1.0.6 h5py-3.10.0 idna-3.10 numpy-2.0.2 particletools-1.1.7 requests-2.32.3 scipy-1.13.1 six-1.16.0 tqdm-4.66.5 urllib3-2.2.3
-Downloading for mceq database file mceq_db_lext_dpm191_v12.h5.
-
-  0%|          | 0.00/198 [00:00&lt;?, ?MB/s]
-  9%|▉         | 18.0/198 [00:00&lt;00:01, 164MB/s]
- 22%|██▏       | 43.0/198 [00:00&lt;00:00, 212MB/s]
- 33%|███▎      | 65.0/198 [00:00&lt;00:00, 210MB/s]
- 45%|████▌     | 90.0/198 [00:00&lt;00:00, 225MB/s]
- 57%|█████▋    | 113/198 [00:00&lt;00:00, 227MB/s] 
- 74%|███████▎  | 146/198 [00:00&lt;00:00, 260MB/s]
- 90%|████████▉ | 178/198 [00:00&lt;00:00, 277MB/s]
-199MB [00:00, 253MB/s]                         
-Traceback (most recent call last):
-  File &quot;/io/test-script.py&quot;, line 1, in &lt;module&gt;
-    from MCEq.core import config, MCEqRun
-  File &quot;/.test/lib64/python3.9/site-packages/MCEq/core.py&quot;, line 8, in &lt;module&gt;
-    import MCEq.data
-  File &quot;/.test/lib64/python3.9/site-packages/MCEq/data.py&quot;, line 4, in &lt;module&gt;
-    import h5py
-  File &quot;/.test/lib64/python3.9/site-packages/h5py/__init__.py&quot;, line 25, in &lt;module&gt;
-    from . import _errors
-  File &quot;h5py/_errors.pyx&quot;, line 1, in init h5py._errors
-ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
-</pre>
 </td>
 <td class="test-column package-os">
 </td>
@@ -6652,229 +6437,15 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <td class="test-column package-conda">
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
+<span class="passed badge">passed</span>
 <span class="passed badge">installed version 1.2.6</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_mceq_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mceq_jammy" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
-Collecting MCEq
-  Using cached MCEq-1.2.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
-Collecting six (from MCEq)
-  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
-Collecting h5py (from MCEq)
-  Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
-Collecting particletools (from MCEq)
-  Using cached particletools-1.1.7-py2.py3-none-any.whl.metadata (2.3 kB)
-Collecting crflux&gt;1.0.4 (from MCEq)
-  Using cached crflux-1.0.6-py2.py3-none-any.whl.metadata (2.6 kB)
-Collecting scipy (from MCEq)
-  Using cached scipy-1.14.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (60 kB)
-Collecting numpy (from MCEq)
-  Using cached numpy-2.1.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Collecting tqdm (from MCEq)
-  Using cached tqdm-4.66.5-py3-none-any.whl.metadata (57 kB)
-Collecting requests (from MCEq)
-  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
-Requirement already satisfied: setuptools in /.test/lib/python3.10/site-packages (from crflux&gt;1.0.4-&gt;MCEq) (59.6.0)
-Collecting charset-normalizer&lt;4,&gt;=2 (from requests-&gt;MCEq)
-  Using cached charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
-Collecting idna&lt;4,&gt;=2.5 (from requests-&gt;MCEq)
-  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
-Collecting urllib3&lt;3,&gt;=1.21.1 (from requests-&gt;MCEq)
-  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
-Collecting certifi&gt;=2017.4.17 (from requests-&gt;MCEq)
-  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
-Using cached MCEq-1.2.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (135 kB)
-Using cached crflux-1.0.6-py2.py3-none-any.whl (92 kB)
-Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.7 MB)
-Using cached numpy-2.1.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.0 MB)
-Using cached particletools-1.1.7-py2.py3-none-any.whl (52 kB)
-Using cached requests-2.32.3-py3-none-any.whl (64 kB)
-Using cached scipy-1.14.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (35.6 MB)
-Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
-Using cached tqdm-4.66.5-py3-none-any.whl (78 kB)
-Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
-Using cached charset_normalizer-3.3.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (138 kB)
-Using cached idna-3.10-py3-none-any.whl (70 kB)
-Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
-Installing collected packages: urllib3, tqdm, six, numpy, idna, charset-normalizer, certifi, scipy, requests, particletools, h5py, crflux, MCEq
-Successfully installed MCEq-1.2.6 certifi-2024.8.30 charset-normalizer-3.3.2 crflux-1.0.6 h5py-3.10.0 idna-3.10 numpy-2.1.1 particletools-1.1.7 requests-2.32.3 scipy-1.14.1 six-1.16.0 tqdm-4.66.5 urllib3-2.2.3
-Downloading for mceq database file mceq_db_lext_dpm191_v12.h5.
-
-  0%|          | 0.00/198 [00:00&lt;?, ?MB/s]
- 19%|█▉        | 38.0/198 [00:00&lt;00:00, 375MB/s]
- 38%|███▊      | 76.0/198 [00:00&lt;00:00, 378MB/s]
- 59%|█████▊    | 116/198 [00:00&lt;00:00, 386MB/s] 
- 79%|███████▉  | 156/198 [00:00&lt;00:00, 387MB/s]
- 98%|█████████▊| 195/198 [00:00&lt;00:00, 330MB/s]
-199MB [00:00, 342MB/s]                         
-Traceback (most recent call last):
-  File &quot;/io/test-script.py&quot;, line 1, in &lt;module&gt;
-    from MCEq.core import config, MCEqRun
-  File &quot;/.test/lib/python3.10/site-packages/MCEq/core.py&quot;, line 8, in &lt;module&gt;
-    import MCEq.data
-  File &quot;/.test/lib/python3.10/site-packages/MCEq/data.py&quot;, line 4, in &lt;module&gt;
-    import h5py
-  File &quot;/.test/lib/python3.10/site-packages/h5py/__init__.py&quot;, line 25, in &lt;module&gt;
-    from . import _errors
-  File &quot;h5py/_errors.pyx&quot;, line 1, in init h5py._errors
-ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
-</pre>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
+<span class="passed badge">passed</span>
 <span class="passed badge">installed version 1.2.6</span>
 <span class="warning badge">build required</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_mceq_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mceq_noble" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
-Collecting MCEq
-  Using cached MCEq-1.2.6.tar.gz (96 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status &#x27;done&#x27;
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status &#x27;done&#x27;
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
-Collecting six (from MCEq)
-  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
-Collecting h5py (from MCEq)
-  Using cached h5py-3.11.0.tar.gz (406 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status &#x27;done&#x27;
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status &#x27;done&#x27;
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
-Collecting particletools (from MCEq)
-  Using cached particletools-1.1.7-py2.py3-none-any.whl.metadata (2.3 kB)
-Collecting crflux&gt;1.0.4 (from MCEq)
-  Using cached crflux-1.0.6-py2.py3-none-any.whl.metadata (2.6 kB)
-Collecting scipy (from MCEq)
-  Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (113 kB)
-Collecting numpy (from MCEq)
-  Using cached numpy-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Collecting tqdm (from MCEq)
-  Using cached tqdm-4.66.5-py3-none-any.whl.metadata (57 kB)
-Collecting requests (from MCEq)
-  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
-Collecting setuptools (from crflux&gt;1.0.4-&gt;MCEq)
-  Using cached setuptools-75.1.0-py3-none-any.whl.metadata (6.9 kB)
-Collecting charset-normalizer&lt;4,&gt;=2 (from requests-&gt;MCEq)
-  Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
-Collecting idna&lt;4,&gt;=2.5 (from requests-&gt;MCEq)
-  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
-Collecting urllib3&lt;3,&gt;=1.21.1 (from requests-&gt;MCEq)
-  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
-Collecting certifi&gt;=2017.4.17 (from requests-&gt;MCEq)
-  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
-Using cached crflux-1.0.6-py2.py3-none-any.whl (92 kB)
-Using cached numpy-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.7 MB)
-Using cached particletools-1.1.7-py2.py3-none-any.whl (52 kB)
-Using cached requests-2.32.3-py3-none-any.whl (64 kB)
-Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (35.3 MB)
-Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
-Using cached tqdm-4.66.5-py3-none-any.whl (78 kB)
-Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
-Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (137 kB)
-Using cached idna-3.10-py3-none-any.whl (70 kB)
-Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
-Using cached setuptools-75.1.0-py3-none-any.whl (1.2 MB)
-Building wheels for collected packages: MCEq, h5py
-  Building wheel for MCEq (pyproject.toml): started
-  Building wheel for MCEq (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for MCEq: filename=MCEq-1.2.6-cp312-cp312-linux_aarch64.whl size=133761 sha256=5ad85d2c9cc5b5a67275eed60845991fece70abcb266bff8ff2d98d61edc22fb
-  Stored in directory: /root/.cache/pip/wheels/fa/f5/09/e85f8f7e0424ea09fe1801f926d8c26f558090bddd70d353be
-  Building wheel for h5py (pyproject.toml): started
-  Building wheel for h5py (pyproject.toml): finished with status &#x27;error&#x27;
-  error: subprocess-exited-with-error
-  
-  × Building wheel for h5py (pyproject.toml) did not run successfully.
-  │ exit code: 1
-  ╰─&gt; [71 lines of output]
-      running bdist_wheel
-      running build
-      running build_py
-      creating build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/version.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/h5py_warnings.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/ipy_completer.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      creating build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dims.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/compat.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/files.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_alignment.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5pl.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dimension_scales.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_objects.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_errors.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/conftest.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_image.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5t.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_getitem.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/common.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_completions.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5o.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_ros3.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs_data.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_big_endian_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5z.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5d_direct_chunk.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dtype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_swmr.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5f.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attribute_create.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_slicing.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5p.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dims_dimensionproxy.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_highlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_virtual_source.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_lowlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/data_files/vlen_string_dset_utc.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_dset.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_s390x.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      running build_ext
-      Building h5py requires pkg-config unless the HDF5 path is explicitly specified using the environment variable HDF5_DIR. For more information and details, see https://docs.h5py.org/en/stable/build.html#custom-installation
-      error: pkg-config probably not installed: FileNotFoundError(2, &#x27;No such file or directory&#x27;)
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for h5py
-Successfully built MCEq
-Failed to build h5py
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (h5py)
-</pre>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -7004,8 +6575,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_mocpy_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_mocpy_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -7087,8 +6658,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="passed badge">installed version 5.11.1</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_moderngl_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_moderngl_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_moderngl_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_moderngl_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting moderngl
   Using cached moderngl-5.11.1.tar.gz (185 kB)
@@ -7109,7 +6680,7 @@ Collecting glcontext&gt;=3.0.0 (from moderngl)
 Building wheels for collected packages: moderngl, glcontext
   Building wheel for moderngl (pyproject.toml): started
   Building wheel for moderngl (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for moderngl: filename=moderngl-5.11.1-cp312-cp312-linux_aarch64.whl size=256912 sha256=5556790dd38320b8d61c206fd7cdb83a1989bfaf7ef3fbecd33ee732627eaa05
+  Created wheel for moderngl: filename=moderngl-5.11.1-cp312-cp312-linux_aarch64.whl size=256911 sha256=a505ca20112fd2b4905899acdbf28ed3c4e19a83943e8b1a7ba632d697bdf3a1
   Stored in directory: /root/.cache/pip/wheels/03/d3/38/18b0516c085958da7a97f43806aaef914883493a542e8f58f2
   Building wheel for glcontext (pyproject.toml): started
   Building wheel for glcontext (pyproject.toml): finished with status &#x27;error&#x27;
@@ -7200,8 +6771,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 10.0.47</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_Mosek_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_Mosek_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting Mosek
   Using cached Mosek-10.0.47-cp37-cp37m-manylinux2014_aarch64.whl.metadata (626 bytes)
@@ -7222,8 +6793,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 10.0.47</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_Mosek_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_Mosek_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_Mosek_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_Mosek_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting Mosek
   Using cached Mosek-10.0.47-cp38-cp38-manylinux2014_aarch64.whl.metadata (626 bytes)
@@ -7436,8 +7007,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_netcdf4_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_netcdf4_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_netcdf4_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_netcdf4_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -7528,8 +7099,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_neuron-nightly_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_neuron-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_neuron-nightly_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_neuron-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -7643,8 +7214,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_nmslib_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_nmslib_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_nmslib_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_nmslib_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting nmslib
   Using cached nmslib-2.1.1.tar.gz (188 kB)
@@ -7680,8 +7251,8 @@ Building wheels for collected packages: nmslib
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_nmslib_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_nmslib_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_nmslib_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_nmslib_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting nmslib
   Using cached nmslib-2.1.1.tar.gz (188 kB)
@@ -7929,8 +7500,8 @@ Building wheels for collected packages: nmslib
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.16.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_open3d_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_open3d_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting open3d
   Using cached open3d-0.16.0-cp37-cp37m-manylinux2014_aarch64.whl.metadata (3.7 kB)
@@ -8057,8 +7628,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.16.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_open3d_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_open3d_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_open3d_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_open3d_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting open3d
   Using cached open3d-0.16.0-cp38-cp38-manylinux2014_aarch64.whl.metadata (3.7 kB)
@@ -8215,8 +7786,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.18.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_open3d_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_open3d_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_open3d_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_open3d_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -8646,8 +8217,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_psd-tools_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_psd-tools_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_psd-tools_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_psd-tools_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -8830,8 +8401,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.13.2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyagrum_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyagrum_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyagrum_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyagrum_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pyagrum
   Using cached pyAgrum-1.13.2-cp38-cp38-manylinux2014_aarch64.whl.metadata (4.2 kB)
@@ -8926,8 +8497,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyagrum-nightly_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyagrum-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyagrum-nightly_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyagrum-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -8937,8 +8508,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.13.2.9.dev202406101715182293</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyagrum-nightly_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyagrum-nightly_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyagrum-nightly_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyagrum-nightly_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pyagrum-nightly
   Using cached pyAgrum_nightly-1.13.2.9.dev202406101715182293-cp38-cp38-manylinux2014_aarch64.whl.metadata (4.2 kB)
@@ -9015,13 +8586,13 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.15.1.9.dev202409261723794729</span>
+<span class="passed badge">installed version 1.15.1.9.dev202409271723794729</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.15.1.9.dev202409261723794729</span>
+<span class="passed badge">installed version 1.15.1.9.dev202409271723794729</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -9376,8 +8947,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pygeos_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pygeos_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pygeos_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pygeos_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting pygeos
   Downloading pygeos-0.13-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
@@ -9426,8 +8997,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pygeos_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pygeos_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pygeos_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pygeos_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pygeos
   Downloading pygeos-0.13-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
@@ -9467,8 +9038,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pygeos_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pygeos_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pygeos_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pygeos_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -9700,8 +9271,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pymars_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pymars_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pymars_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pymars_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting pymars
   Using cached pymars-0.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
@@ -9807,8 +9378,8 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pymars_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pymars_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pymars_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pymars_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pymars
   Using cached pymars-0.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
@@ -9906,8 +9477,8 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pymars_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pymars_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pymars_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pymars_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -10047,8 +9618,8 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.11.6.5</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyodps_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyodps_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyodps_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyodps_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting pyodps
   Using cached pyodps-0.11.6.5-cp37-cp37m-manylinux2014_aarch64.whl.metadata (7.7 kB)
@@ -10102,8 +9673,8 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.11.6.5</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyodps_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyodps_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyodps_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyodps_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pyodps
   Using cached pyodps-0.11.6.5-cp38-cp38-manylinux2014_aarch64.whl.metadata (7.7 kB)
@@ -10217,8 +9788,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.37.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pyonmttok_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pyonmttok_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pyonmttok_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pyonmttok_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -10443,8 +10014,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pysam_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pysam_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pysam_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pysam_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -10454,8 +10025,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.22.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pysam_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pysam_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pysam_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pysam_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 </pre>
 </td>
@@ -10761,8 +10332,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pytokenizations_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pytokenizations_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pytokenizations_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pytokenizations_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 </pre>
 </td>
@@ -10778,9 +10349,10 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pytokenizations_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pytokenizations_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pytokenizations_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pytokenizations_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 </pre>
 </td>
@@ -10790,8 +10362,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_pytokenizations_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_pytokenizations_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_pytokenizations_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_pytokenizations_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -11807,9 +11379,10 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_Shapely_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_Shapely_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Last metadata expiration check: 1 day, 0:19:09 ago on Wed Sep 25 00:52:43 2024.
+<input type="checkbox" id="output_2024-09-27 02:40:52_Shapely_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_Shapely_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Amazon Linux 2023 repository                    9.4 kB/s | 3.6 kB     00:00    
+Last metadata expiration check: 0:00:01 ago on Wed Sep 25 00:52:43 2024.
 No match for argument: python3-shapely
 Error: Unable to find a match: python3-shapely
 </pre>
@@ -12040,8 +11613,8 @@ Error: Unable to find a match: python3-shapely
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.0.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_ssh-python_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_ssh-python_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_ssh-python_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_ssh-python_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -12087,8 +11660,8 @@ Error: Unable to find a match: python3-shapely
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.0.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_ssh2-python_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_ssh2-python_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_ssh2-python_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_ssh2-python_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -12154,8 +11727,8 @@ Error: Unable to find a match: python3-shapely
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 3.9.2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tables_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tables_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tables_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tables_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting tables
   Using cached tables-3.9.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.3 kB)
@@ -12217,15 +11790,14 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <td class="wheel-name ">tensorflow</td>
 <td class="">0405</td>
 <td class="">
-<span class="failed badge">no</span>
-
+<span class="passed badge">yes</span>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.11.0</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting tensorflow
   Using cached tensorflow-2.11.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
@@ -12405,8 +11977,8 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.13.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting tensorflow
   Using cached tensorflow-2.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.6 kB)
@@ -12429,7 +12001,7 @@ Collecting libclang&gt;=13.0.0 (from tensorflow-cpu-aws==2.13.1-&gt;tensorflow)
 Collecting numpy&lt;=1.24.3,&gt;=1.22 (from tensorflow-cpu-aws==2.13.1-&gt;tensorflow)
   Using cached numpy-1.24.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (5.6 kB)
 Collecting opt-einsum&gt;=2.3.2 (from tensorflow-cpu-aws==2.13.1-&gt;tensorflow)
-  Using cached opt_einsum-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
 Collecting packaging (from tensorflow-cpu-aws==2.13.1-&gt;tensorflow)
   Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
 Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.20.3 (from tensorflow-cpu-aws==2.13.1-&gt;tensorflow)
@@ -12505,7 +12077,7 @@ Downloading h5py-3.10.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.w
 Using cached keras-2.13.1-py3-none-any.whl (1.7 MB)
 Using cached libclang-18.1.1-py2.py3-none-manylinux2014_aarch64.whl (23.8 MB)
 Using cached numpy-1.24.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.0 MB)
-Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
 Using cached protobuf-4.25.5-cp37-abi3-manylinux2014_aarch64.whl (293 kB)
 Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
 Using cached tensorboard-2.13.0-py3-none-any.whl (5.6 MB)
@@ -12535,8 +12107,8 @@ Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
 Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
 Using cached pyasn1-0.6.1-py3-none-any.whl (83 kB)
 Using cached zipp-3.20.2-py3-none-any.whl (9.2 kB)
-Installing collected packages: libclang, flatbuffers, zipp, wrapt, wheel, urllib3, typing-extensions, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard-data-server, six, pyasn1, protobuf, packaging, oauthlib, numpy, MarkupSafe, keras, idna, grpcio, gast, charset-normalizer, certifi, cachetools, absl-py, werkzeug, rsa, requests, pyasn1-modules, opt-einsum, importlib-metadata, h5py, google-pasta, astunparse, requests-oauthlib, markdown, google-auth, google-auth-oauthlib, tensorboard, tensorflow-cpu-aws, tensorflow
-Successfully installed MarkupSafe-2.1.5 absl-py-2.1.0 astunparse-1.6.3 cachetools-5.5.0 certifi-2024.8.30 charset-normalizer-3.3.2 flatbuffers-24.3.25 gast-0.4.0 google-auth-2.35.0 google-auth-oauthlib-1.0.0 google-pasta-0.2.0 grpcio-1.66.1 h5py-3.10.0 idna-3.10 importlib-metadata-8.5.0 keras-2.13.1 libclang-18.1.1 markdown-3.7 numpy-1.24.3 oauthlib-3.2.2 opt-einsum-3.3.0 packaging-24.1 protobuf-4.25.5 pyasn1-0.6.1 pyasn1-modules-0.4.1 requests-2.32.3 requests-oauthlib-2.0.0 rsa-4.9 six-1.16.0 tensorboard-2.13.0 tensorboard-data-server-0.7.2 tensorflow-2.13.1 tensorflow-cpu-aws-2.13.1 tensorflow-estimator-2.13.0 tensorflow-io-gcs-filesystem-0.35.0 termcolor-2.4.0 typing-extensions-4.5.0 urllib3-2.2.3 werkzeug-3.0.4 wheel-0.44.0 wrapt-1.16.0 zipp-3.20.2
+Installing collected packages: libclang, flatbuffers, zipp, wrapt, wheel, urllib3, typing-extensions, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard-data-server, six, pyasn1, protobuf, packaging, opt-einsum, oauthlib, numpy, MarkupSafe, keras, idna, grpcio, gast, charset-normalizer, certifi, cachetools, absl-py, werkzeug, rsa, requests, pyasn1-modules, importlib-metadata, h5py, google-pasta, astunparse, requests-oauthlib, markdown, google-auth, google-auth-oauthlib, tensorboard, tensorflow-cpu-aws, tensorflow
+Successfully installed MarkupSafe-2.1.5 absl-py-2.1.0 astunparse-1.6.3 cachetools-5.5.0 certifi-2024.8.30 charset-normalizer-3.3.2 flatbuffers-24.3.25 gast-0.4.0 google-auth-2.35.0 google-auth-oauthlib-1.0.0 google-pasta-0.2.0 grpcio-1.66.1 h5py-3.10.0 idna-3.10 importlib-metadata-8.5.0 keras-2.13.1 libclang-18.1.1 markdown-3.7 numpy-1.24.3 oauthlib-3.2.2 opt-einsum-3.4.0 packaging-24.1 protobuf-4.25.5 pyasn1-0.6.1 pyasn1-modules-0.4.1 requests-2.32.3 requests-oauthlib-2.0.0 rsa-4.9 six-1.16.0 tensorboard-2.13.0 tensorboard-data-server-0.7.2 tensorflow-2.13.1 tensorflow-cpu-aws-2.13.1 tensorflow-estimator-2.13.0 tensorflow-io-gcs-filesystem-0.35.0 termcolor-2.4.0 typing-extensions-4.5.0 urllib3-2.2.3 werkzeug-3.0.4 wheel-0.44.0 wrapt-1.16.0 zipp-3.20.2
 Traceback (most recent call last):
   File &quot;test-script.py&quot;, line 1, in &lt;module&gt;
     import tensorflow
@@ -12598,215 +12170,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
+<span class="passed badge">passed</span>
 <span class="passed badge">installed version 2.17.0</span>
-<span class="warning badge">build required</span>
-
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow_noble" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
-Collecting tensorflow
-  Using cached tensorflow-2.17.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
-Collecting absl-py&gt;=1.0.0 (from tensorflow)
-  Using cached absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
-Collecting astunparse&gt;=1.6.0 (from tensorflow)
-  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
-Collecting flatbuffers&gt;=24.3.25 (from tensorflow)
-  Using cached flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
-Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,&gt;=0.2.1 (from tensorflow)
-  Using cached gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
-Collecting google-pasta&gt;=0.1.1 (from tensorflow)
-  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
-Collecting h5py&gt;=3.10.0 (from tensorflow)
-  Using cached h5py-3.11.0.tar.gz (406 kB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status &#x27;done&#x27;
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status &#x27;done&#x27;
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status &#x27;done&#x27;
-Collecting libclang&gt;=13.0.0 (from tensorflow)
-  Using cached libclang-18.1.1-py2.py3-none-manylinux2014_aarch64.whl.metadata (5.2 kB)
-Collecting ml-dtypes&lt;0.5.0,&gt;=0.3.1 (from tensorflow)
-  Using cached ml_dtypes-0.4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (20 kB)
-Collecting opt-einsum&gt;=2.3.2 (from tensorflow)
-  Using cached opt_einsum-3.3.0-py3-none-any.whl.metadata (6.5 kB)
-Collecting packaging (from tensorflow)
-  Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
-Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.20.3 (from tensorflow)
-  Using cached protobuf-4.25.5-cp37-abi3-manylinux2014_aarch64.whl.metadata (541 bytes)
-Collecting requests&lt;3,&gt;=2.21.0 (from tensorflow)
-  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
-Collecting setuptools (from tensorflow)
-  Using cached setuptools-75.1.0-py3-none-any.whl.metadata (6.9 kB)
-Collecting six&gt;=1.12.0 (from tensorflow)
-  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
-Collecting termcolor&gt;=1.1.0 (from tensorflow)
-  Using cached termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
-Collecting typing-extensions&gt;=3.6.6 (from tensorflow)
-  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
-Collecting wrapt&gt;=1.11.0 (from tensorflow)
-  Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
-Collecting grpcio&lt;2.0,&gt;=1.24.3 (from tensorflow)
-  Using cached grpcio-1.66.1-cp312-cp312-manylinux_2_17_aarch64.whl.metadata (3.9 kB)
-Collecting tensorboard&lt;2.18,&gt;=2.17 (from tensorflow)
-  Using cached tensorboard-2.17.1-py3-none-any.whl.metadata (1.6 kB)
-Collecting keras&gt;=3.2.0 (from tensorflow)
-  Using cached keras-3.5.0-py3-none-any.whl.metadata (5.8 kB)
-Collecting numpy&lt;2.0.0,&gt;=1.26.0 (from tensorflow)
-  Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
-Collecting wheel&lt;1.0,&gt;=0.23.0 (from astunparse&gt;=1.6.0-&gt;tensorflow)
-  Using cached wheel-0.44.0-py3-none-any.whl.metadata (2.3 kB)
-Collecting rich (from keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached rich-13.8.1-py3-none-any.whl.metadata (18 kB)
-Collecting namex (from keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached namex-0.0.8-py3-none-any.whl.metadata (246 bytes)
-Collecting optree (from keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached optree-0.12.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (47 kB)
-Collecting charset-normalizer&lt;4,&gt;=2 (from requests&lt;3,&gt;=2.21.0-&gt;tensorflow)
-  Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
-Collecting idna&lt;4,&gt;=2.5 (from requests&lt;3,&gt;=2.21.0-&gt;tensorflow)
-  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
-Collecting urllib3&lt;3,&gt;=1.21.1 (from requests&lt;3,&gt;=2.21.0-&gt;tensorflow)
-  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
-Collecting certifi&gt;=2017.4.17 (from requests&lt;3,&gt;=2.21.0-&gt;tensorflow)
-  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
-Collecting markdown&gt;=2.6.8 (from tensorboard&lt;2.18,&gt;=2.17-&gt;tensorflow)
-  Using cached Markdown-3.7-py3-none-any.whl.metadata (7.0 kB)
-Collecting tensorboard-data-server&lt;0.8.0,&gt;=0.7.0 (from tensorboard&lt;2.18,&gt;=2.17-&gt;tensorflow)
-  Using cached tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
-Collecting werkzeug&gt;=1.0.1 (from tensorboard&lt;2.18,&gt;=2.17-&gt;tensorflow)
-  Using cached werkzeug-3.0.4-py3-none-any.whl.metadata (3.7 kB)
-Collecting MarkupSafe&gt;=2.1.1 (from werkzeug&gt;=1.0.1-&gt;tensorboard&lt;2.18,&gt;=2.17-&gt;tensorflow)
-  Using cached MarkupSafe-2.1.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
-Collecting markdown-it-py&gt;=2.2.0 (from rich-&gt;keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
-Collecting pygments&lt;3.0.0,&gt;=2.13.0 (from rich-&gt;keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
-Collecting mdurl~=0.1 (from markdown-it-py&gt;=2.2.0-&gt;rich-&gt;keras&gt;=3.2.0-&gt;tensorflow)
-  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
-Using cached tensorflow-2.17.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (224.0 MB)
-Using cached absl_py-2.1.0-py3-none-any.whl (133 kB)
-Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
-Using cached flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
-Using cached gast-0.6.0-py3-none-any.whl (21 kB)
-Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
-Using cached grpcio-1.66.1-cp312-cp312-manylinux_2_17_aarch64.whl (5.4 MB)
-Using cached keras-3.5.0-py3-none-any.whl (1.1 MB)
-Using cached libclang-18.1.1-py2.py3-none-manylinux2014_aarch64.whl (23.8 MB)
-Using cached ml_dtypes-0.4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.2 MB)
-Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.9 MB)
-Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
-Using cached protobuf-4.25.5-cp37-abi3-manylinux2014_aarch64.whl (293 kB)
-Using cached requests-2.32.3-py3-none-any.whl (64 kB)
-Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
-Using cached tensorboard-2.17.1-py3-none-any.whl (5.5 MB)
-Using cached setuptools-75.1.0-py3-none-any.whl (1.2 MB)
-Using cached termcolor-2.4.0-py3-none-any.whl (7.7 kB)
-Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
-Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (86 kB)
-Using cached packaging-24.1-py3-none-any.whl (53 kB)
-Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
-Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (137 kB)
-Using cached idna-3.10-py3-none-any.whl (70 kB)
-Using cached Markdown-3.7-py3-none-any.whl (106 kB)
-Using cached tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
-Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
-Using cached werkzeug-3.0.4-py3-none-any.whl (227 kB)
-Using cached wheel-0.44.0-py3-none-any.whl (67 kB)
-Using cached namex-0.0.8-py3-none-any.whl (5.8 kB)
-Using cached optree-0.12.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (314 kB)
-Using cached rich-13.8.1-py3-none-any.whl (241 kB)
-Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
-Using cached MarkupSafe-2.1.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (29 kB)
-Using cached pygments-2.18.0-py3-none-any.whl (1.2 MB)
-Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
-Building wheels for collected packages: h5py
-  Building wheel for h5py (pyproject.toml): started
-  Building wheel for h5py (pyproject.toml): finished with status &#x27;error&#x27;
-  error: subprocess-exited-with-error
-  
-  × Building wheel for h5py (pyproject.toml) did not run successfully.
-  │ exit code: 1
-  ╰─&gt; [71 lines of output]
-      running bdist_wheel
-      running build
-      running build_py
-      creating build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/version.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/h5py_warnings.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      copying h5py/ipy_completer.py -&gt; build/lib.linux-aarch64-cpython-312/h5py
-      creating build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dims.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/compat.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/files.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      copying h5py/_hl/selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/_hl
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_datatype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_alignment.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5pl.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_base.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dimension_scales.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_objects.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_errors.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_group.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_filters.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/conftest.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file_image.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5t.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_getitem.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_selections.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/common.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_completions.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5o.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_ros3.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs_data.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_big_endian_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file2.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_file.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5z.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5d_direct_chunk.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dtype.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset_swmr.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5f.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attribute_create.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dataset.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_slicing.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_h5p.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_dims_dimensionproxy.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      copying h5py/tests/test_attrs.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      creating build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/__init__.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_highlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_virtual_source.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/test_vds/test_lowlevel_vds.py -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/test_vds
-      copying h5py/tests/data_files/vlen_string_dset_utc.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_dset.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      copying h5py/tests/data_files/vlen_string_s390x.h5 -&gt; build/lib.linux-aarch64-cpython-312/h5py/tests/data_files
-      running build_ext
-      Building h5py requires pkg-config unless the HDF5 path is explicitly specified using the environment variable HDF5_DIR. For more information and details, see https://docs.h5py.org/en/stable/build.html#custom-installation
-      error: pkg-config probably not installed: FileNotFoundError(2, &#x27;No such file or directory&#x27;)
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for h5py
-Failed to build h5py
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (h5py)
-</pre>
 </td>
 </tr>
 <tr class="wheel-line even">
@@ -12819,8 +12184,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -12829,16 +12194,16 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 </pre>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 </pre>
 </td>
@@ -12847,8 +12212,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 </pre>
 </td>
@@ -12859,8 +12224,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 </pre>
 </td>
@@ -12869,8 +12234,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tensorflow-data-validation_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tensorflow-data-validation_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tensorflow-data-validation_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tensorflow-data-validation_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -12885,8 +12250,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -12895,16 +12260,16 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 </pre>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 </pre>
 </td>
@@ -12913,8 +12278,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 </pre>
 </td>
@@ -12925,8 +12290,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 </pre>
 </td>
@@ -12935,8 +12300,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_tfx-bsl_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_tfx-bsl_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_tfx-bsl_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_tfx-bsl_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 </pre>
 </td>
@@ -13121,8 +12486,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_torchtext_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_torchtext_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_torchtext_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_torchtext_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting torchtext
   Using cached torchtext-0.14.1-cp37-cp37m-manylinux2014_aarch64.whl.metadata (6.9 kB)
@@ -13182,8 +12547,8 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.15.2</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_torchtext_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_torchtext_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_torchtext_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_torchtext_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting torchtext
   Using cached torchtext-0.15.2-cp38-cp38-manylinux2014_aarch64.whl.metadata (7.4 kB)
@@ -13297,8 +12662,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.1</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_torchvision_amazon-linux2" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_torchvision_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_torchvision_amazon-linux2" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_torchvision_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting torchvision
   Using cached torchvision-0.14.1-cp37-cp37m-manylinux2014_aarch64.whl.metadata (11 kB)
@@ -13709,8 +13074,8 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="passed badge">installed version 9.10.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2024-09-26 02:41:45_vowpalwabbit_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_vowpalwabbit_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_vowpalwabbit_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_vowpalwabbit_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting vowpalwabbit
   Using cached vowpalwabbit-9.10.0.tar.gz (33.3 MB)
@@ -13761,7 +13126,7 @@ Building wheels for collected packages: vowpalwabbit
       copying python/vowpalwabbit/conda_install.sh -&gt; build/lib.linux-aarch64-cpython-312/vowpalwabbit
       running build_ext
       creating build/temp.linux-aarch64-cpython-312
-      cmake -DCMAKE_BUILD_TYPE=Release -DPY_VERSION=3.12 -DBUILD_PYTHON=On -DBUILD_TESTING=Off -DWARNINGS=Off -DVW_FEAT_CB_GRAPH_FEEDBACK=On -DSTD_INV_SQRT=On -DVW_PYTHON_SHARED_LIB_SUFFIX=.cpython-312-aarch64-linux-gnu.so -DBoost_NO_BOOST_CMAKE=ON -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/tmp/pip-install-4pf7_92k/vowpalwabbit_829e5017c6aa4d07abdd7fd114fa522b/build/lib.linux-aarch64-cpython-312 /tmp/pip-install-4pf7_92k/vowpalwabbit_829e5017c6aa4d07abdd7fd114fa522b
+      cmake -DCMAKE_BUILD_TYPE=Release -DPY_VERSION=3.12 -DBUILD_PYTHON=On -DBUILD_TESTING=Off -DWARNINGS=Off -DVW_FEAT_CB_GRAPH_FEEDBACK=On -DSTD_INV_SQRT=On -DVW_PYTHON_SHARED_LIB_SUFFIX=.cpython-312-aarch64-linux-gnu.so -DBoost_NO_BOOST_CMAKE=ON -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/tmp/pip-install-p1k6ym3d/vowpalwabbit_2533fdef45b24e3f9d33edaead5c8943/build/lib.linux-aarch64-cpython-312 /tmp/pip-install-p1k6ym3d/vowpalwabbit_2533fdef45b24e3f9d33edaead5c8943
       error: command &#x27;cmake&#x27; failed: No such file or directory
       [end of output]
   
@@ -13998,8 +13363,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 4.1</span>
 <br /><span class="file-indicator">last passed on September 17, 2024</span>
-<input type="checkbox" id="output_2024-09-26 02:41:45_zodbpickle_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_zodbpickle_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_zodbpickle_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_zodbpickle_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting zodbpickle
   Using cached zodbpickle-4.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (13 kB)
@@ -14019,8 +13384,8 @@ NameError: name &#x27;is_pure&#x27; is not defined
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 4.1</span>
 <br /><span class="file-indicator">last passed on September 17, 2024</span>
-<input type="checkbox" id="output_2024-09-26 02:41:45_zodbpickle_amazon-linux2023" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_zodbpickle_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_zodbpickle_amazon-linux2023" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_zodbpickle_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.2)
 Collecting zodbpickle
   Using cached zodbpickle-4.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (13 kB)
@@ -14042,8 +13407,8 @@ NameError: name &#x27;is_pure&#x27; is not defined
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 4.1</span>
 <br /><span class="file-indicator">last passed on September 17, 2024</span>
-<input type="checkbox" id="output_2024-09-26 02:41:45_zodbpickle_focal" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_zodbpickle_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_zodbpickle_focal" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_zodbpickle_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting zodbpickle
   Using cached zodbpickle-4.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (13 kB)
@@ -14067,8 +13432,8 @@ NameError: name &#x27;is_pure&#x27; is not defined
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 4.1</span>
 <br /><span class="file-indicator">last passed on September 17, 2024</span>
-<input type="checkbox" id="output_2024-09-26 02:41:45_zodbpickle_jammy" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_zodbpickle_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_zodbpickle_jammy" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_zodbpickle_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting zodbpickle
   Using cached zodbpickle-4.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (13 kB)
@@ -14090,8 +13455,8 @@ NameError: name &#x27;is_pure&#x27; is not defined
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 4.1</span>
 <br /><span class="file-indicator">last passed on September 17, 2024</span>
-<input type="checkbox" id="output_2024-09-26 02:41:45_zodbpickle_noble" class="output-toggle" />
-<label for="output_2024-09-26 02:41:45_zodbpickle_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2024-09-27 02:40:52_zodbpickle_noble" class="output-toggle" />
+<label for="output_2024-09-27 02:40:52_zodbpickle_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.2)
 Collecting zodbpickle
   Using cached zodbpickle-4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (13 kB)
