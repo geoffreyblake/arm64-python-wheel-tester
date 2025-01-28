@@ -132,13 +132,13 @@ input.output-toggle:checked + label.output-toggle + pre.output-content {
 </head>
 <body>
 
-<h1>Python Wheels on aarch64 test results from January 26, 2025</h1>
+<h1>Python Wheels on aarch64 test results from January 28, 2025</h1>
 <section class="summary">
 <table class="summary">
 <tr>
 <th>date</th>
-<td>Saturday, January 18, 2025</td>
 <td>Sunday, January 26, 2025</td>
+<td>Tuesday, January 28, 2025</td>
 <td></td>
 </tr>
 <tr>
@@ -149,21 +149,21 @@ input.output-toggle:checked + label.output-toggle + pre.output-content {
 </tr>
 <tr>
 <th>all tests passed</th>
-<td>189</td>
 <td>187</td>
-<td>-2</td>
-</tr>
-<tr>
-<th>some tests failed</th>
-<td>42</td>
-<td>44</td>
+<td>189</td>
 <td>+2</td>
 </tr>
 <tr>
+<th>some tests failed</th>
+<td>44</td>
+<td>42</td>
+<td>-2</td>
+</tr>
+<tr>
 <th>each dist has passing option</th>
-<td>210</td>
 <td>209</td>
-<td>-1</td>
+<td>210</td>
+<td>+1</td>
 </tr>
 </table>
 <p>The table shows test results from the current test run and differences, if any, with previous runs.
@@ -448,8 +448,8 @@ is always shown, regardless of whether there is any difference.</p>
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_ansible_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_ansible_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_ansible_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_ansible_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting ansible
   Using cached ansible-4.10.0.tar.gz (36.8 MB)
@@ -499,11 +499,11 @@ Building wheels for collected packages: ansible, ansible-core
   Building wheel for ansible (pyproject.toml): started
   Building wheel for ansible (pyproject.toml): still running...
   Building wheel for ansible (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for ansible: filename=ansible-4.10.0-py3-none-any.whl size=60568504 sha256=a001512e71842c14c1c6981955cf6301196ac922c0d399ab13a325b5bdda8226
+  Created wheel for ansible: filename=ansible-4.10.0-py3-none-any.whl size=60568504 sha256=e8a15a6602a87a290baca2826010a0206f025effa9d48e06a3fd33234bf23b9e
   Stored in directory: /root/.cache/pip/wheels/63/73/49/abc8cc94c80bbc9ffa3d4dad9e860562e7d2929312a7977463
   Building wheel for ansible-core (pyproject.toml): started
   Building wheel for ansible-core (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for ansible-core: filename=ansible_core-2.11.12-py3-none-any.whl size=1960954 sha256=5541ccdbad3675ddc32b3378364b2adcc3b714f0426d325ff9090f1ac901af9c
+  Created wheel for ansible-core: filename=ansible_core-2.11.12-py3-none-any.whl size=1960954 sha256=beb0848144e0e21ea90c64d74c0c72e398001234a11751eb7482ed56a603cde8
   Stored in directory: /root/.cache/pip/wheels/cc/01/76/7e9834e0dd51992e45d7995e174c128121d83b7c19b8bcf47a
 Successfully built ansible ansible-core
 Installing collected packages: resolvelib, PyYAML, pycparser, packaging, MarkupSafe, jinja2, cffi, cryptography, ansible-core, ansible
@@ -940,9 +940,18 @@ Installing collected packages: resolvelib, PyYAML, pycparser, packaging, MarkupS
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.5.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_blosc2_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_blosc2_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_blosc2_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_blosc2_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting blosc2
   Using cached blosc2-2.5.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (9.2 kB)
 Collecting numpy&gt;=1.20.3 (from blosc2)
@@ -1501,8 +1510,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="passed badge">installed version 2.8.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_confluent-kafka_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_confluent-kafka_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_confluent-kafka_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting confluent-kafka
   Using cached confluent_kafka-2.8.0.tar.gz (189 kB)
@@ -1625,18 +1634,18 @@ Building wheels for collected packages: confluent-kafka
       building &#x27;confluent_kafka.cimpl&#x27; extension
       creating build/temp.linux-aarch64-cpython-37
       creating build/temp.linux-aarch64-cpython-37/tmp
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka
-      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka/src
-      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.7m -c /tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-37/tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka/src/Admin.o
-      In file included from /tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka/src/Admin.c:17:0:
-      /tmp/pip-install-7uxjlxs0/confluent-kafka_a089a9b3987a4e50927367684489399f/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka
+      creating build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.7m -c /tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-37/tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka/src/Admin.o
+      In file included from /tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka/src/Admin.c:17:0:
+      /tmp/pip-install-orvrqv3k/confluent-kafka_18a786359a6340ef9cfe7fd44788c9b2/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
        #include &lt;librdkafka/rdkafka.h&gt;
                 ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
-      /tmp/pip-build-env-9_c3bbrt/overlay/lib/python3.7/site-packages/setuptools/config/pyprojecttoml.py:66: _BetaConfiguration: Support for `[tool.setuptools]` in `pyproject.toml` is still *beta*.
+      /tmp/pip-build-env-pz1hpzgd/overlay/lib/python3.7/site-packages/setuptools/config/pyprojecttoml.py:66: _BetaConfiguration: Support for `[tool.setuptools]` in `pyproject.toml` is still *beta*.
         config = read_configuration(filepath, True, ignore_option_errors, dist)
       error: command &#x27;/usr/bin/gcc&#x27; failed with exit code 1
       [end of output]
@@ -1654,9 +1663,18 @@ ERROR: Could not build wheels for confluent-kafka, which is required to install 
 <span class="passed badge">installed version 2.8.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_confluent-kafka_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_confluent-kafka_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_confluent-kafka_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_confluent-kafka_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting confluent-kafka
   Using cached confluent_kafka-2.8.0.tar.gz (189 kB)
   Installing build dependencies: started
@@ -1774,10 +1792,10 @@ Building wheels for collected packages: confluent-kafka
       copying src/confluent_kafka/avro/serializer/message_serializer.py -&gt; build/lib.linux-aarch64-cpython-38/confluent_kafka/avro/serializer
       running build_ext
       building &#x27;confluent_kafka.cimpl&#x27; extension
-      creating build/temp.linux-aarch64-cpython-38/tmp/pip-install-ugrkio3l/confluent-kafka_c5ab3f3fb7564cb0b3021306751db9af/src/confluent_kafka/src
-      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.8 -c /tmp/pip-install-ugrkio3l/confluent-kafka_c5ab3f3fb7564cb0b3021306751db9af/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-38/tmp/pip-install-ugrkio3l/confluent-kafka_c5ab3f3fb7564cb0b3021306751db9af/src/confluent_kafka/src/Admin.o
-      In file included from /tmp/pip-install-ugrkio3l/confluent-kafka_c5ab3f3fb7564cb0b3021306751db9af/src/confluent_kafka/src/Admin.c:17:0:
-      /tmp/pip-install-ugrkio3l/confluent-kafka_c5ab3f3fb7564cb0b3021306751db9af/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
+      creating build/temp.linux-aarch64-cpython-38/tmp/pip-install-bo_669dt/confluent-kafka_16c89de80e474af398d364f9d6473b4f/src/confluent_kafka/src
+      gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -moutline-atomics -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/.test/include -I/usr/include/python3.8 -c /tmp/pip-install-bo_669dt/confluent-kafka_16c89de80e474af398d364f9d6473b4f/src/confluent_kafka/src/Admin.c -o build/temp.linux-aarch64-cpython-38/tmp/pip-install-bo_669dt/confluent-kafka_16c89de80e474af398d364f9d6473b4f/src/confluent_kafka/src/Admin.o
+      In file included from /tmp/pip-install-bo_669dt/confluent-kafka_16c89de80e474af398d364f9d6473b4f/src/confluent_kafka/src/Admin.c:17:0:
+      /tmp/pip-install-bo_669dt/confluent-kafka_16c89de80e474af398d364f9d6473b4f/src/confluent_kafka/src/confluent_kafka.h:23:10: fatal error: librdkafka/rdkafka.h: No such file or directory
        #include &lt;librdkafka/rdkafka.h&gt;
                 ^~~~~~~~~~~~~~~~~~~~~~
       compilation terminated.
@@ -1787,7 +1805,7 @@ Building wheels for collected packages: confluent-kafka
   note: This error originates from a subprocess, and is likely not a problem with pip.
   ERROR: Failed building wheel for confluent-kafka
 Failed to build confluent-kafka
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (confluent-kafka)
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (confluent-kafka)
 </pre>
 </td>
 <td class="test-column package-pip">
@@ -2259,9 +2277,18 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.9</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_dedupe-hcluster_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_dedupe-hcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_dedupe-hcluster_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_dedupe-hcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting dedupe-hcluster
   Using cached dedupe_hcluster-0.3.9-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.7 kB)
 Collecting numpy (from dedupe-hcluster)
@@ -2295,18 +2322,18 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.9</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_dedupe-hcluster_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_dedupe-hcluster_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_dedupe-hcluster_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_dedupe-hcluster_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting dedupe-hcluster
   Using cached dedupe_hcluster-0.3.9-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.7 kB)
 Collecting numpy (from dedupe-hcluster)
@@ -2437,9 +2464,18 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_divik_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_divik_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_divik_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_divik_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting divik
   Downloading divik-3.2.3-cp38-cp38-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
 Collecting dask-distance&lt;0.3.0,&gt;=0.2.0 (from divik)
@@ -2568,7 +2604,7 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9078 sha256=9e19648e188af694cb344b873bde08695c1852c4a61d50b558216ef3ecc81184
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9078 sha256=16183e3b6d9a4130d8cd563b3a20d5609986a6e6f84674924b7d50849b1bb3f9
   Stored in directory: /root/.cache/pip/wheels/7f/1a/8f/7f5269f3670f46d69b900921a8f06f7592daf09572ea27865b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, PyWavelets, python-dateutil, partd, lazy_loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-distance, divik
@@ -2601,9 +2637,18 @@ AttributeError: module &#x27;skimage.feature&#x27; has no attribute &#x27;greyco
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_divik_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_divik_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_divik_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_divik_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting divik
   Downloading divik-3.2.3-cp39-cp39-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
 Collecting dask-distance&lt;0.3.0,&gt;=0.2.0 (from divik)
@@ -2735,7 +2780,7 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9131 sha256=cb106b2ca7e469213868f74125eddd103cbc6f97f1096dc9fc1ddbc78432ea8d
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9131 sha256=40ab4415d6909b299fbd06ce7f3351cbda354f6126453dfef5698527985c2d20
   Stored in directory: /root/.cache/pip/wheels/f0/dc/86/a1cda14932f21a53a27d58823f2c5c36b03e619d701236992b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pyarrow, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, python-dateutil, partd, lazy-loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-expr, dask-distance, divik
@@ -2772,18 +2817,18 @@ AttributeError: No skimage.feature attribute greycomatrix
 <span class="warning badge">latest version 3.2.4</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_divik_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_divik_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_divik_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_divik_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting divik
   Downloading divik-3.2.3-cp38-cp38-manylinux_2_17_aarch64.whl.metadata (7.3 kB)
 Collecting dask-distance&lt;0.3.0,&gt;=0.2.0 (from divik)
@@ -2912,7 +2957,7 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: dask-distance
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9078 sha256=f741f5dd586f3498b6c1bd005e69c38644ca1215c404cc84fe84a5e2807d88eb
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9078 sha256=fed5712d8e49c0981636be4dd2ccd1be30518fded2b186dd16c9554642da3f53
   Stored in directory: /root/.cache/pip/wheels/7f/1a/8f/7f5269f3670f46d69b900921a8f06f7592daf09572ea27865b
 Successfully built dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, PyWavelets, python-dateutil, partd, lazy_loader, importlib-resources, importlib-metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-distance, divik
@@ -2949,18 +2994,18 @@ AttributeError: module &#x27;skimage.feature&#x27; has no attribute &#x27;greyco
 <span class="warning badge">build required</span>
 <span class="warning badge">slow install</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_divik_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_divik_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_divik_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_divik_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting divik
   Using cached divik-3.2.4.tar.gz (83 kB)
   Installing build dependencies: started
@@ -2992,7 +3037,7 @@ Collecting numpy&gt;=0.12.1 (from divik)
 Collecting pandas&gt;=0.20.3 (from divik)
   Using cached pandas-2.2.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (89 kB)
 Collecting scikit-image&gt;=0.14.1 (from divik)
-  Using cached scikit_image-0.25.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (14 kB)
+  Using cached scikit_image-0.25.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (14 kB)
 Collecting scikit-learn&gt;=0.19.0 (from divik)
   Using cached scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
 Collecting scipy&gt;=0.19.1 (from divik)
@@ -3058,7 +3103,7 @@ Using cached kneed-0.8.5-py3-none-any.whl (10 kB)
 Using cached matplotlib-3.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (8.4 MB)
 Using cached numpy-2.2.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.3 MB)
 Using cached pandas-2.2.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (66.5 MB)
-Using cached scikit_image-0.25.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.2 MB)
+Using cached scikit_image-0.25.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (14.2 MB)
 Using cached scikit_learn-1.6.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (12.6 MB)
 Using cached scipy-1.15.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (38.4 MB)
 Using cached tqdm-4.67.1-py3-none-any.whl (78 kB)
@@ -3091,15 +3136,15 @@ Using cached locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
 Building wheels for collected packages: divik, dask-distance
   Building wheel for divik (pyproject.toml): started
   Building wheel for divik (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for divik: filename=divik-3.2.4-cp310-cp310-manylinux_2_35_aarch64.whl size=159342 sha256=a796f2f7bf63eb1115adb88809b9385a995ce6fbd3e4a8d5c868021551a81c1c
+  Created wheel for divik: filename=divik-3.2.4-cp310-cp310-manylinux_2_35_aarch64.whl size=159337 sha256=fb2393deb7363e2f2f2024db650b32cf58b69c7070847e20196576e572dfc677
   Stored in directory: /root/.cache/pip/wheels/5d/e8/8f/7ed27b86439e75c827a29d91e7e6b7f9428b8fab1a06e170f5
   Building wheel for dask-distance (pyproject.toml): started
   Building wheel for dask-distance (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9131 sha256=175a164d4611950a973d73c7067e6aeb560e051345a5263049d67a627d8add48
+  Created wheel for dask-distance: filename=dask_distance-0.2.0-py2.py3-none-any.whl size=9131 sha256=012811f5bda084aa9832c163cdd02f829c5d25d936d532f25e513b9e265f2e06
   Stored in directory: /root/.cache/pip/wheels/54/64/fe/4c4f1d1961291e59480394abf8cbbaedafc0f7c796189f31ae
 Successfully built divik dask-distance
 Installing collected packages: pytz, zipp, tzdata, tqdm, toolz, threadpoolctl, six, pyyaml, pyparsing, pyarrow, pillow, packaging, numpy, networkx, locket, kiwisolver, joblib, fsspec, fonttools, cycler, cloudpickle, click, tifffile, scipy, python-dateutil, partd, lazy-loader, importlib_metadata, imageio, h5py, contourpy, scikit-learn, scikit-image, pandas, matplotlib, kneed, dask, dask-distance, divik
-Successfully installed click-8.1.8 cloudpickle-3.1.1 contourpy-1.3.1 cycler-0.12.1 dask-2025.1.0 dask-distance-0.2.0 divik-3.2.4 fonttools-4.55.6 fsspec-2024.12.0 h5py-3.12.1 imageio-2.37.0 importlib_metadata-8.6.1 joblib-1.4.2 kiwisolver-1.4.8 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.10.0 networkx-3.4.2 numpy-2.2.2 packaging-24.2 pandas-2.2.3 partd-1.4.2 pillow-11.1.0 pyarrow-19.0.0 pyparsing-3.2.1 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.25.0 scikit-learn-1.6.1 scipy-1.15.1 six-1.17.0 threadpoolctl-3.5.0 tifffile-2025.1.10 toolz-1.0.0 tqdm-4.67.1 tzdata-2025.1 zipp-3.21.0
+Successfully installed click-8.1.8 cloudpickle-3.1.1 contourpy-1.3.1 cycler-0.12.1 dask-2025.1.0 dask-distance-0.2.0 divik-3.2.4 fonttools-4.55.6 fsspec-2024.12.0 h5py-3.12.1 imageio-2.37.0 importlib_metadata-8.6.1 joblib-1.4.2 kiwisolver-1.4.8 kneed-0.8.5 lazy-loader-0.4 locket-1.0.0 matplotlib-3.10.0 networkx-3.4.2 numpy-2.2.2 packaging-24.2 pandas-2.2.3 partd-1.4.2 pillow-11.1.0 pyarrow-19.0.0 pyparsing-3.2.1 python-dateutil-2.9.0.post0 pytz-2024.2 pyyaml-6.0.2 scikit-image-0.25.1 scikit-learn-1.6.1 scipy-1.15.1 six-1.17.0 threadpoolctl-3.5.0 tifffile-2025.1.10 toolz-1.0.0 tqdm-4.67.1 tzdata-2025.1 zipp-3.21.0
 
 A module that was compiled using NumPy 1.x cannot be run in
 NumPy 2.2.2 as it may crash. To support both 1.x and 2.x
@@ -3150,9 +3195,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 3.2.3</span>
 <span class="warning badge">latest version 3.2.4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_divik_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_divik_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_divik_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_divik_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -3461,8 +3515,8 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.7.4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_faiss-cpu_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_faiss-cpu_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_faiss-cpu_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting faiss-cpu
   Using cached faiss_cpu-1.7.4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (1.3 kB)
@@ -3570,9 +3624,18 @@ ModuleNotFoundError: No module named &#x27;numpy&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_fastcluster_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_fastcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_fastcluster_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_fastcluster_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting fastcluster
   Using cached fastcluster-1.2.6-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
 Collecting numpy&gt;=1.9 (from fastcluster)
@@ -3618,18 +3681,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_fastcluster_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_fastcluster_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_fastcluster_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_fastcluster_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting fastcluster
   Using cached fastcluster-1.2.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
 Collecting numpy&gt;=1.9 (from fastcluster)
@@ -3668,9 +3731,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 1.2.6</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_fastcluster_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_fastcluster_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_fastcluster_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_fastcluster_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting fastcluster
   Using cached fastcluster-1.2.6.tar.gz (173 kB)
   Installing build dependencies: started
@@ -3685,7 +3757,7 @@ Using cached numpy-2.2.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch6
 Building wheels for collected packages: fastcluster
   Building wheel for fastcluster (pyproject.toml): started
   Building wheel for fastcluster (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for fastcluster: filename=fastcluster-1.2.6-cp312-cp312-linux_aarch64.whl size=166842 sha256=3a842f3e514e2051f5c6b0543a85c31f0c311292257696da8f899753ebf774dd
+  Created wheel for fastcluster: filename=fastcluster-1.2.6-cp312-cp312-linux_aarch64.whl size=166839 sha256=2ca682fac1eb2dca2bee38dfc704733020e132955da705ea2267b5bb07dd1433
   Stored in directory: /root/.cache/pip/wheels/de/90/c4/cc6319fd0f00be054c8ec041b37fb5b10585a19e6855a82bbd
 Successfully built fastcluster
 Installing collected packages: numpy, fastcluster
@@ -4105,9 +4177,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 3.0.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_glcontext_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_glcontext_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_glcontext_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_glcontext_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting glcontext
   Using cached glcontext-3.0.0.tar.gz (16 kB)
   Installing build dependencies: started
@@ -4144,7 +4225,7 @@ Building wheels for collected packages: glcontext
   note: This error originates from a subprocess, and is likely not a problem with pip.
   ERROR: Failed building wheel for glcontext
 Failed to build glcontext
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (glcontext)
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (glcontext)
 </pre>
 </td>
 </tr>
@@ -4408,17 +4489,17 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 4.1.2</span>
+<span class="passed badge">installed version 4.2.0</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 4.1.2</span>
+<span class="passed badge">installed version 4.2.0</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 4.1.2</span>
+<span class="passed badge">installed version 4.2.0</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -4426,13 +4507,13 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 4.1.2</span>
+<span class="passed badge">installed version 4.2.0</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 4.1.2</span>
+<span class="passed badge">installed version 4.2.0</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -4459,9 +4540,9 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_h5py_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_h5py_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Amazon Linux 2023 repository                     26 kB/s | 3.6 kB     00:00    
+<input type="checkbox" id="output_2025-01-28 02:46:15_h5py_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_h5py_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Amazon Linux 2023 repository                     11 kB/s | 3.6 kB     00:00    
 No match for argument: python3-h5py
 Error: Unable to find a match: python3-h5py
 </pre>
@@ -4499,8 +4580,8 @@ Error: Unable to find a match: python3-h5py
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
@@ -4520,9 +4601,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
 Requirement already satisfied: setuptools&gt;=19.0 in /.test/lib/python3.8/site-packages (from hidapi) (56.0.0)
@@ -4539,9 +4629,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
 Requirement already satisfied: setuptools&gt;=19.0 in /.test/lib/python3.9/site-packages (from hidapi) (59.6.0)
@@ -4560,18 +4659,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
 Requirement already satisfied: setuptools&gt;=19.0 in /.test/lib/python3.8/site-packages (from hidapi) (44.0.0)
@@ -4592,18 +4691,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
 Requirement already satisfied: setuptools&gt;=19.0 in /.test/lib/python3.10/site-packages (from hidapi) (59.6.0)
@@ -4622,9 +4721,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.0.post4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_hidapi_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_hidapi_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_hidapi_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_hidapi_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting hidapi
   Using cached hidapi-0.14.0.post4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.6 kB)
 Collecting setuptools&gt;=19.0 (from hidapi)
@@ -4821,9 +4929,18 @@ ModuleNotFoundError: No module named &#x27;hidapi&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.27.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_iminuit_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_iminuit_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_iminuit_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_iminuit_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting iminuit
   Using cached iminuit-2.27.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
 Collecting numpy&gt;=1.21 (from iminuit)
@@ -4859,18 +4976,18 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.27.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_iminuit_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_iminuit_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_iminuit_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_iminuit_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting iminuit
   Using cached iminuit-2.27.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (11 kB)
 Collecting numpy&gt;=1.21 (from iminuit)
@@ -4961,8 +5078,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_jellyfish_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_jellyfish_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_jellyfish_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_jellyfish_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -5012,17 +5129,17 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.5.1</span>
+<span class="passed badge">installed version 1.5.2</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.5.1</span>
+<span class="passed badge">installed version 1.5.2</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.5.1</span>
+<span class="passed badge">installed version 1.5.2</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -5030,13 +5147,13 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.5.1</span>
+<span class="passed badge">installed version 1.5.2</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.5.1</span>
+<span class="passed badge">installed version 1.5.2</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -5171,8 +5288,8 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_landlab_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_landlab_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_landlab_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -5188,9 +5305,18 @@ ModuleNotFoundError: No module named &#x27;packaging&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.6.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_landlab_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_landlab_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_landlab_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_landlab_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting landlab
   Using cached landlab-2.6.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (12 kB)
 Collecting bmipy (from landlab)
@@ -5494,8 +5620,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version 4.1.3</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
@@ -5526,9 +5652,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
 Downloading line_profiler-4.0.0-py3-none-any.whl (16 kB)
@@ -5556,9 +5691,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
 Downloading line_profiler-4.0.0-py3-none-any.whl (16 kB)
@@ -5588,18 +5732,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
 Downloading line_profiler-4.0.0-py3-none-any.whl (16 kB)
@@ -5631,18 +5775,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
 Downloading line_profiler-4.0.0-py3-none-any.whl (16 kB)
@@ -5672,9 +5816,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="passed badge">installed version 4.0.0</span>
 <span class="warning badge">latest version None</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_line-profiler_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_line-profiler_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_line-profiler_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_line-profiler_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting line-profiler
   Downloading line_profiler-4.0.0-py3-none-any.whl.metadata (6.9 kB)
 Downloading line_profiler-4.0.0-py3-none-any.whl (16 kB)
@@ -5821,9 +5974,18 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.3.28</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_lukeparser_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_lukeparser_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_lukeparser_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_lukeparser_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -5887,13 +6049,15 @@ ImportError: The line_profiler._line_profiler c-extension is not importable. Has
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
 <span class="passed badge">installed version 4.3.3</span>
+<span class="warning badge">latest version 4.4.3</span>
 </td>
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_lz4_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_lz4_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_lz4_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_lz4_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Amazon Linux 2023 repository                     11 kB/s | 3.6 kB     00:00    
+Last metadata expiration check: 0:00:01 ago on Fri Jan 24 00:51:25 2025.
 No match for argument: python3-lz4
 Error: Unable to find a match: python3-lz4
 </pre>
@@ -5910,6 +6074,7 @@ Error: Unable to find a match: python3-lz4
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
 <span class="passed badge">installed version 4.3.3</span>
+<span class="warning badge">latest version 4.4.3</span>
 </td>
 <td class="test-column package-os">
 <span class="passed badge">passed</span>
@@ -5917,6 +6082,7 @@ Error: Unable to find a match: python3-lz4
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
 <span class="passed badge">installed version 4.3.3</span>
+<span class="warning badge">latest version 4.4.3</span>
 </td>
 </tr>
 <tr class="wheel-line even">
@@ -6097,8 +6263,8 @@ Error: Unable to find a match: python3-lz4
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_mceq_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_mceq_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_mceq_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_mceq_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting MCEq
   Using cached MCEq-1.2.6-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
@@ -6165,9 +6331,18 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.2.6</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_mceq_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_mceq_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_mceq_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_mceq_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting MCEq
   Using cached MCEq-1.2.6-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.0 kB)
 Collecting six (from MCEq)
@@ -6382,8 +6557,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_mocpy_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_mocpy_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_mocpy_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -6393,9 +6568,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.17.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_mocpy_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_mocpy_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_mocpy_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_mocpy_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-pip">
@@ -6407,18 +6591,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_mocpy_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_mocpy_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_mocpy_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_mocpy_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -6483,9 +6667,18 @@ Successfully installed pip-24.3.1
 <span class="passed badge">installed version 5.12.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_moderngl_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_moderngl_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_moderngl_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_moderngl_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting moderngl
   Using cached moderngl-5.12.0.tar.gz (193 kB)
   Installing build dependencies: started
@@ -6505,7 +6698,7 @@ Collecting glcontext&gt;=3.0.0 (from moderngl)
 Building wheels for collected packages: moderngl, glcontext
   Building wheel for moderngl (pyproject.toml): started
   Building wheel for moderngl (pyproject.toml): finished with status &#x27;done&#x27;
-  Created wheel for moderngl: filename=moderngl-5.12.0-cp312-cp312-linux_aarch64.whl size=264204 sha256=dc776fd8b81c39560ab3960789d06d846002795f5eee74e9c5f6dd47ee1c6110
+  Created wheel for moderngl: filename=moderngl-5.12.0-cp312-cp312-linux_aarch64.whl size=264203 sha256=0d2da06e88f7fabe64de1f80ba60b7820e1dc7dbcc3d2e431cc83376b82b6df2
   Stored in directory: /root/.cache/pip/wheels/74/83/f0/79d800488a1acaf1cbdd2b2db6fe7f3ebc37ea210b626fbdf2
   Building wheel for glcontext (pyproject.toml): started
   Building wheel for glcontext (pyproject.toml): finished with status &#x27;error&#x27;
@@ -6535,7 +6728,7 @@ Building wheels for collected packages: moderngl, glcontext
   ERROR: Failed building wheel for glcontext
 Successfully built moderngl
 Failed to build glcontext
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (glcontext)
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (glcontext)
 </pre>
 </td>
 </tr>
@@ -6596,8 +6789,8 @@ ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based p
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 10.0.47</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_Mosek_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_Mosek_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_Mosek_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting Mosek
   Using cached Mosek-10.0.47-cp37-cp37m-manylinux2014_aarch64.whl.metadata (626 bytes)
@@ -6618,9 +6811,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 10.0.47</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_Mosek_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_Mosek_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_Mosek_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_Mosek_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting Mosek
   Using cached Mosek-10.0.47-cp38-cp38-manylinux2014_aarch64.whl.metadata (626 bytes)
 Using cached Mosek-10.0.47-cp38-cp38-manylinux2014_aarch64.whl (8.4 MB)
@@ -6832,8 +7034,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_netcdf4_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_netcdf4_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_netcdf4_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_netcdf4_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -6924,8 +7126,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_neuron-nightly_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_neuron-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_neuron-nightly_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_neuron-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -7039,18 +7241,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_nmslib_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_nmslib_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_nmslib_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_nmslib_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting nmslib
   Using cached nmslib-2.1.1.tar.gz (188 kB)
   Installing build dependencies: started
@@ -7085,9 +7287,18 @@ Building wheels for collected packages: nmslib
 <span class="warning badge">slow install</span>
 <span class="failed badge">timed out</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_nmslib_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_nmslib_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_nmslib_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_nmslib_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting nmslib
   Using cached nmslib-2.1.1.tar.gz (188 kB)
   Installing build dependencies: started
@@ -7334,8 +7545,8 @@ Building wheels for collected packages: nmslib
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.16.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_open3d_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_open3d_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_open3d_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting open3d
   Using cached open3d-0.16.0-cp37-cp37m-manylinux2014_aarch64.whl.metadata (3.7 kB)
@@ -7462,9 +7673,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.16.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_open3d_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_open3d_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_open3d_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_open3d_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting open3d
   Using cached open3d-0.16.0-cp38-cp38-manylinux2014_aarch64.whl.metadata (3.7 kB)
 Collecting numpy&gt;=1.18.0 (from open3d)
@@ -7620,9 +7840,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.18.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_open3d_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_open3d_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_open3d_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_open3d_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -7712,8 +7941,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="wheel-name ">panda3d</td>
 <td class="">4645</td>
 <td class="">
-<span class="failed badge">no</span>
-<br /><span class="file-indicator">last passed on January 21, 2025</span>
+<span class="passed badge">yes</span>
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
@@ -7746,13 +7974,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
+<span class="passed badge">passed</span>
 <span class="passed badge">installed version 1.10.15</span>
-<br /><span class="file-indicator">last passed on January 21, 2025</span>
-<input type="checkbox" id="output_2025-01-26 02:42:47_panda3d_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_panda3d_noble" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
-</pre>
 </td>
 </tr>
 <tr class="wheel-line even">
@@ -8058,8 +8281,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="warning badge">slow install</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_psd-tools_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_psd-tools_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_psd-tools_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_psd-tools_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -8204,7 +8427,7 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 3.5.0</span>
+<span class="passed badge">installed version 3.6.0</span>
 </td>
 <td class="test-column package-os">
 </td>
@@ -8218,13 +8441,13 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 3.5.0</span>
+<span class="passed badge">installed version 3.6.0</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 3.5.0</span>
+<span class="passed badge">installed version 3.6.0</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -8244,9 +8467,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.13.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyagrum_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyagrum_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyagrum_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyagrum_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting pyagrum
   Using cached pyAgrum-1.13.2-cp38-cp38-manylinux2014_aarch64.whl.metadata (4.2 kB)
 Collecting numpy (from pyagrum)
@@ -8340,8 +8572,8 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyagrum-nightly_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyagrum-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyagrum-nightly_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyagrum-nightly_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -8351,9 +8583,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.13.2.9.dev202406101715182293</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyagrum-nightly_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyagrum-nightly_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyagrum-nightly_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyagrum-nightly_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting pyagrum-nightly
   Using cached pyAgrum_nightly-1.13.2.9.dev202406101715182293-cp38-cp38-manylinux2014_aarch64.whl.metadata (4.2 kB)
 Collecting numpy (from pyagrum-nightly)
@@ -8429,13 +8670,13 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.17.2.dev202501251731932516</span>
+<span class="passed badge">installed version 1.17.2.dev202501271731932516</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 1.17.2.dev202501251731932516</span>
+<span class="passed badge">installed version 1.17.2.dev202501271731932516</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -8790,9 +9031,18 @@ ImportError: /lib64/libm.so.6: version `GLIBC_2.27&#x27; not found (required by 
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pygeos_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pygeos_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pygeos_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pygeos_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting pygeos
   Downloading pygeos-0.13-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
 Collecting numpy&gt;=1.13 (from pygeos)
@@ -8840,18 +9090,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pygeos_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pygeos_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pygeos_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pygeos_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting pygeos
   Downloading pygeos-0.13-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
 Collecting numpy&gt;=1.13 (from pygeos)
@@ -8890,9 +9140,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="passed badge">installed version 0.13</span>
 <span class="warning badge">latest version 0.14</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pygeos_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pygeos_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pygeos_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pygeos_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -9125,9 +9384,18 @@ ImportError: numpy.core.multiarray failed to import
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pymars_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pymars_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pymars_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pymars_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting pymars
   Using cached pymars-0.10.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
 Collecting numpy&gt;=1.14.0 (from pymars)
@@ -9232,18 +9500,18 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pymars_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pymars_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pymars_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pymars_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting pymars
   Using cached pymars-0.10.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (18 kB)
 Collecting numpy&gt;=1.14.0 (from pymars)
@@ -9340,9 +9608,18 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.10.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pymars_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pymars_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pymars_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pymars_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -9481,8 +9758,8 @@ AttributeError: `np.unicode_` was removed in the NumPy 2.0 release. Use `np.str_
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.12.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyodps_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyodps_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyodps_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyodps_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting pyodps
   Using cached pyodps-0.12.2-cp37-cp37m-manylinux2014_aarch64.whl.metadata (7.8 kB)
@@ -9534,9 +9811,18 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.12.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyodps_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyodps_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyodps_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyodps_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting pyodps
   Using cached pyodps-0.12.2-cp38-cp38-manylinux2014_aarch64.whl.metadata (7.8 kB)
 Collecting requests&gt;=2.4.0 (from pyodps)
@@ -9647,9 +9933,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 1.37.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pyonmttok_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pyonmttok_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pyonmttok_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pyonmttok_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -9873,8 +10168,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pysam_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pysam_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pysam_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pysam_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -9882,10 +10177,20 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
+<span class="passed badge">installed version 0.22.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pysam_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pysam_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pysam_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pysam_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-pip">
@@ -10190,9 +10495,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pytokenizations_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pytokenizations_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pytokenizations_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pytokenizations_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -10207,20 +10521,19 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
-<span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pytokenizations_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pytokenizations_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pytokenizations_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pytokenizations_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -10229,9 +10542,18 @@ Successfully installed pip-24.3.1
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.8.4</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_pytokenizations_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_pytokenizations_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_pytokenizations_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_pytokenizations_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -10924,13 +11246,13 @@ Successfully installed pip-24.3.1
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 0.25.0</span>
+<span class="passed badge">installed version 0.25.1</span>
 </td>
 <td class="test-column package-os">
 </td>
 <td class="test-column package-pip">
 <span class="passed badge">passed</span>
-<span class="passed badge">installed version 0.25.0</span>
+<span class="passed badge">installed version 0.25.1</span>
 </td>
 </tr>
 <tr class="wheel-line odd">
@@ -11107,20 +11429,9 @@ Successfully installed pip-24.3.1
 <span class="passed badge">yes</span>
 </td>
 <td class="test-column package-pip">
-<span class="failed badge">failed</span>
-<br /><span class="file-indicator">last passed on January 21, 2025</span>
-<input type="checkbox" id="output_2025-01-26 02:42:47_selectolax_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_selectolax_amazon-linux2" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
-Collecting selectolax
-  Downloading selectolax-0.3.16-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (5.5 kB)
-Downloading selectolax-0.3.16-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (5.4 MB)
-ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you have updated the package versions, please update the hashes. Otherwise, examine the package contents carefully; someone may have tampered with them.
-    unknown package:
-        Expected sha256 970492b35efec63bd987aed8821aaa40ec9ecad779c77fa2d404b9c921ed5d85
-             Got        3ee45c3f239b4bdc091f206e5f02c46be592db514864e76e1e6d1d59bf2338dc
-
-</pre>
+<span class="passed badge">passed</span>
+<span class="passed badge">installed version 0.3.16</span>
+<span class="warning badge">latest version 0.3.27</span>
 </td>
 <td class="test-column package-conda">
 </td>
@@ -11260,9 +11571,9 @@ ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. If you
 <td class="test-column package-os">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_Shapely_amazon-linux2023-yum" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_Shapely_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
-<pre class="output-content">Amazon Linux 2023 repository                     11 kB/s | 3.6 kB     00:00    
+<input type="checkbox" id="output_2025-01-28 02:46:15_Shapely_amazon-linux2023-yum" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_Shapely_amazon-linux2023-yum" class="output-toggle">Toggle Output</label>
+<pre class="output-content">Amazon Linux 2023 repository                     27 kB/s | 3.6 kB     00:00    
 Last metadata expiration check: 0:00:01 ago on Fri Jan 24 00:51:25 2025.
 No match for argument: python3-shapely
 Error: Unable to find a match: python3-shapely
@@ -11596,9 +11907,18 @@ Error: Unable to find a match: python3-shapely
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 3.9.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tables_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tables_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tables_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tables_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting tables
   Using cached tables-3.9.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.3 kB)
 Collecting numpy&gt;=1.19.0 (from tables)
@@ -11665,8 +11985,8 @@ ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expec
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.11.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting tensorflow
   Using cached tensorflow-2.11.0-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.5 kB)
@@ -11846,9 +12166,18 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 2.13.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting tensorflow
   Using cached tensorflow-2.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.6 kB)
 Collecting tensorflow-cpu-aws==2.13.1 (from tensorflow)
@@ -12053,8 +12382,8 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -12063,17 +12392,35 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12081,18 +12428,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12102,18 +12449,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12121,9 +12468,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tensorflow-data-validation_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tensorflow-data-validation_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tensorflow-data-validation_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tensorflow-data-validation_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -12137,8 +12493,8 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -12147,17 +12503,35 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12165,18 +12539,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12186,18 +12560,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12205,9 +12579,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tfx-bsl_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tfx-bsl_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tfx-bsl_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tfx-bsl_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 </tr>
@@ -12268,8 +12651,8 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tokenizers_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tokenizers_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tokenizers_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tokenizers_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 </pre>
 </td>
@@ -12279,9 +12662,18 @@ Successfully installed pip-24.3.1
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.21.0</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tokenizers_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tokenizers_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tokenizers_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tokenizers_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-pip">
@@ -12293,18 +12685,18 @@ Successfully installed pip-24.3.1
 <td class="test-column package-pip">
 <span class="failed badge">failed</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_tokenizers_focal" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_tokenizers_focal" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_tokenizers_focal" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_tokenizers_focal" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 </pre>
 </td>
 <td class="test-column package-os">
@@ -12415,8 +12807,8 @@ Successfully installed pip-24.3.1
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_torchtext_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_torchtext_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_torchtext_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_torchtext_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting torchtext
   Using cached torchtext-0.14.1-cp37-cp37m-manylinux2014_aarch64.whl.metadata (6.9 kB)
@@ -12476,9 +12868,18 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.15.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_torchtext_amazon-linux2-py38" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_torchtext_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_torchtext_amazon-linux2-py38" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_torchtext_amazon-linux2-py38" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.8/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting torchtext
   Using cached torchtext-0.15.2-cp38-cp38-manylinux2014_aarch64.whl.metadata (7.4 kB)
 Collecting tqdm (from torchtext)
@@ -12560,9 +12961,18 @@ ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&#x
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.15.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_torchtext_amazon-linux2023" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_torchtext_amazon-linux2023" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_torchtext_amazon-linux2023" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_torchtext_amazon-linux2023" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.9/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting torchtext
   Using cached torchtext-0.15.2-cp39-cp39-manylinux2014_aarch64.whl.metadata (7.4 kB)
 Collecting tqdm (from torchtext)
@@ -12642,18 +13052,18 @@ ModuleNotFoundError: No module named &#x27;torchdata.datapipes&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.15.2</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_torchtext_jammy" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_torchtext_jammy" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_torchtext_jammy" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_torchtext_jammy" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.10/site-packages (24.2)
 Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
 Installing collected packages: pip
   Attempting uninstall: pip
     Found existing installation: pip 24.2
     Uninstalling pip-24.2:
       Successfully uninstalled pip-24.2
-Successfully installed pip-24.3.1
+Successfully installed pip-25.0
 Collecting torchtext
   Using cached torchtext-0.15.2-cp310-cp310-manylinux2014_aarch64.whl.metadata (7.4 kB)
 Collecting tqdm (from torchtext)
@@ -12736,8 +13146,8 @@ ModuleNotFoundError: No module named &#x27;torchdata.datapipes&#x27;
 <span class="failed badge">failed</span>
 <span class="passed badge">installed version 0.14.1</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_torchvision_amazon-linux2" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_torchvision_amazon-linux2" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_torchvision_amazon-linux2" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_torchvision_amazon-linux2" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.7/site-packages (24.0)
 Collecting torchvision
   Using cached torchvision-0.14.1-cp37-cp37m-manylinux2014_aarch64.whl.metadata (11 kB)
@@ -13153,9 +13563,18 @@ ImportError: urllib3 v2.0 only supports OpenSSL 1.1.1+, currently the &#x27;ssl&
 <span class="passed badge">installed version 9.10.0</span>
 <span class="warning badge">build required</span>
 
-<input type="checkbox" id="output_2025-01-26 02:42:47_vowpalwabbit_noble" class="output-toggle" />
-<label for="output_2025-01-26 02:42:47_vowpalwabbit_noble" class="output-toggle">Toggle Output</label>
+<input type="checkbox" id="output_2025-01-28 02:46:15_vowpalwabbit_noble" class="output-toggle" />
+<label for="output_2025-01-28 02:46:15_vowpalwabbit_noble" class="output-toggle">Toggle Output</label>
 <pre class="output-content">Requirement already satisfied: pip in /.test/lib/python3.12/site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0
 Collecting vowpalwabbit
   Using cached vowpalwabbit-9.10.0.tar.gz (33.3 MB)
   Installing build dependencies: started
@@ -13205,14 +13624,14 @@ Building wheels for collected packages: vowpalwabbit
       copying python/vowpalwabbit/conda_install.sh -&gt; build/lib.linux-aarch64-cpython-312/vowpalwabbit
       running build_ext
       creating build/temp.linux-aarch64-cpython-312
-      cmake -DCMAKE_BUILD_TYPE=Release -DPY_VERSION=3.12 -DBUILD_PYTHON=On -DBUILD_TESTING=Off -DWARNINGS=Off -DVW_FEAT_CB_GRAPH_FEEDBACK=On -DSTD_INV_SQRT=On -DVW_PYTHON_SHARED_LIB_SUFFIX=.cpython-312-aarch64-linux-gnu.so -DBoost_NO_BOOST_CMAKE=ON -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/tmp/pip-install-fqsxnsan/vowpalwabbit_ce29b642b9bc478aa85a5cdaefc37fce/build/lib.linux-aarch64-cpython-312 /tmp/pip-install-fqsxnsan/vowpalwabbit_ce29b642b9bc478aa85a5cdaefc37fce
+      cmake -DCMAKE_BUILD_TYPE=Release -DPY_VERSION=3.12 -DBUILD_PYTHON=On -DBUILD_TESTING=Off -DWARNINGS=Off -DVW_FEAT_CB_GRAPH_FEEDBACK=On -DSTD_INV_SQRT=On -DVW_PYTHON_SHARED_LIB_SUFFIX=.cpython-312-aarch64-linux-gnu.so -DBoost_NO_BOOST_CMAKE=ON -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/tmp/pip-install-h7s70vh7/vowpalwabbit_2dc01874258048db9d3c05cb735b67b5/build/lib.linux-aarch64-cpython-312 /tmp/pip-install-h7s70vh7/vowpalwabbit_2dc01874258048db9d3c05cb735b67b5
       error: command &#x27;cmake&#x27; failed: No such file or directory
       [end of output]
   
   note: This error originates from a subprocess, and is likely not a problem with pip.
   ERROR: Failed building wheel for vowpalwabbit
 Failed to build vowpalwabbit
-ERROR: ERROR: Failed to build installable wheels for some pyproject.toml based projects (vowpalwabbit)
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (vowpalwabbit)
 </pre>
 </td>
 </tr>
