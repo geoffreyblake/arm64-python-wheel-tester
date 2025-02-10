@@ -13,7 +13,7 @@ jobs:
     name: "Test Python Wheels"
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Clean up orphaned containers and images
         run: |
@@ -39,7 +39,7 @@ jobs:
                      --token ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Upload results file"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: results
           path: |
