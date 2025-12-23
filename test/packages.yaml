@@ -617,9 +617,9 @@ packages:
   - PKG_NAME: ezdxf
     PIP_NAME: ezdxf
     PKG_TEST: import ezdxf
-  - PKG_NAME: dwave-neal
-    PIP_NAME: dwave-neal
-    PKG_TEST: import neal
+  - PKG_NAME: dwave-samplers
+    PIP_NAME: dwave-samplers
+    PKG_TEST: from dwave.samplers import RandomSampler
   - PKG_NAME: minorminer
     PIP_NAME: minorminer
     PKG_TEST: import minorminer
