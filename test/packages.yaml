@@ -766,3 +766,6 @@ packages:
   - PKG_NAME: pycapnp
     PIP_NAME: pycapnp
     PKG_TEST: import capnp
+  - PKG_NAME: pydevd
+    PIP_NAME: pydevd
+    PKG_TEST: import pydevd
