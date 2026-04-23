@@ -8,10 +8,14 @@ This project could also be repurposed for other interpreted languages that conta
 
 # Using the CDK to generate self-hosted Graviton runners for testing Wheels!
 
-This projects uses the AWS CDK to stand up some infra-structure in AWS for testing
+This projects uses the AWS CDKv2 to stand up some infra-structure in AWS for testing
 python wheels built for Arm64 on Graviton processors.  The CDK scripts will allow one to
 stand up an m8g.2xlarge runner and attempts to install with the necessary dependencies for github runners.
 If the installation fails, just follow the steps from github to manually install the runners.
+
+Prerequisites:
+- Python 3.8+
+- [Node.js](https://nodejs.org/) (required for the AWS CDK CLI)
 
 To use:
 
@@ -23,8 +27,12 @@ $ pip install -r requirements.txt
 # Create a file with your AWS credentials and github tokens called .aws_creds
 $ source ./.aws_creds
 $ npm install -g aws-cdk
+
+# Bootstrap CDK in your account/region (only needed once per account/region)
+$ cdk bootstrap aws://<account-id>/us-east-1 --profile=<profile>
+
 $ cdk synth --profile=<profile>
-$ cdk deploy
+$ cdk deploy --profile=<profile>
 ```
 
 Then go to:

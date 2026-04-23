@@ -1,5 +1,5 @@
 -e .
 boto3
 requests
-aws_cdk.aws_ec2
-aws_cdk.aws_iam
+aws-cdk-lib>=2.0.0
+constructs>=10.0.0

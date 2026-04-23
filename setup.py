@@ -19,10 +19,11 @@ setuptools.setup(
     packages=setuptools.find_packages(where="arm64_wheel_tester_stack"),
 
     install_requires=[
-        "aws-cdk.core>=1.60.0",
+        "aws-cdk-lib>=2.0.0",
+        "constructs>=10.0.0",
     ],
 
-    python_requires=">=3.6",
+    python_requires=">=3.8",
 
     classifiers=[
         "Development Status :: 4 - Beta",

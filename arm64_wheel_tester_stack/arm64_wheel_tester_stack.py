@@ -1,8 +1,9 @@
 from aws_cdk import (
+    Stack,
     aws_ec2 as ec2,
     aws_iam as iam,
-    core
 )
+from constructs import Construct
 
 import boto3
 import dateutil.parser
@@ -28,13 +29,8 @@ AL2 = 'AL2'
 
 AMI_FILTERS = {
     'ubuntu': { 'Owner': '099720109477',
-                'name': 'ubuntu/images/hvm-ssd/ubuntu-focal*'
-              },
-    'centos': { 'Owner': '125523088429',
-                'name': 'CentOS 8*aarch64'
-              },
-    'AL2': { 'Owner': '137112412989',
-             'name': 'amzn2-ami-hvm*gp2'}
+                'name': 'ubuntu/images/hvm-ssd-gp3/ubuntu-noble*'
+              }
 }
 
 def getLatestAmi(arch: str, name_filter: str, owner: str):
@@ -61,21 +57,11 @@ def getLatestUbuntuAmi():
     return getLatestAmi('arm64', AMI_FILTERS[UBUNTU]['name'], AMI_FILTERS[UBUNTU]['Owner'])
 
 
-def getLatestAL2Ami():
-    return getLatestAmi('arm64', AMI_FILTERS[AL2]['name'], AMI_FILTERS[AL2]['Owner'])
+class Arm64WheelTesterStack(Stack):
 
-
-def getLatestCentosAmi():
-    return getLatestAmi('arm64', AMI_FILTERS[CENTOS]['name'], AMI_FILTERS[CENTOS]['Owner'])
-
-
-class Arm64WheelTesterStack(core.Stack):
-
-    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        # The code that defines your stack goes here
-        # Just do it ugly straight line for now
         vpc = ec2.Vpc(self, "Github-Selfhost-vpc",
                       nat_gateways = 0,
                       enable_dns_hostnames = True,
@@ -83,36 +69,32 @@ class Arm64WheelTesterStack(core.Stack):
                       subnet_configuration=[ec2.SubnetConfiguration(name="selfhost_public", subnet_type=ec2.SubnetType.PUBLIC)]
                       )
 
-        # AMI
-        # al2 = getLatestAL2Ami()
-        # centos = getLatestCentosAmi()
         ubuntu = getLatestUbuntuAmi()
 
         instances = []
 
-        # Instance creation.
-        # Stands up an instance, then installs the github runner on the first boot.
-        # This can be made into a loop. TODO
-        user_data_focal = ec2.UserData.for_linux()
-        user_data_focal.add_commands("apt-get update -y",
+        user_data = ec2.UserData.for_linux()
+        user_data.add_commands("apt-get update -y",
                                      "apt-get upgrade -y",
                                      "apt-get install -y curl software-properties-common",
                                      "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -",
                                      "add-apt-repository "
-                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable'",
+                                     "'deb [arch=arm64] https://download.docker.com/linux/ubuntu noble stable'",
                                      "apt-get update -y",
                                      "apt-get install -y docker-ce docker-ce-cli containerd.io",
                                      "systemctl start docker")
-        instance_focal1 = ec2.Instance(self, "focal1-tester",
+        instance_wheel_tester = ec2.Instance(self, "wheel-tester",
             instance_type=ec2.InstanceType("m8g.2xlarge"),
             machine_image=ubuntu,
             vpc=vpc,
             key_name=KEY_NAME,
-            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume(ec2.EbsDeviceProps(volume_size=128)))],
-            user_data=user_data_focal)
-        instances.append(instance_focal1)
+            block_devices=[ec2.BlockDevice(device_name='/dev/sda1', volume=ec2.BlockDeviceVolume.ebs(128))],
+            user_data=user_data)
+        instance_wheel_tester.role.add_managed_policy(
+            iam.ManagedPolicy.from_aws_managed_policy_name("AmazonSSMManagedInstanceCore")
+        )
+        instances.append(instance_wheel_tester)
 
-        # Allow inbound HTTPS connections
         for instance in instances:
             instance.connections.allow_from_any_ipv4(ec2.Port.tcp(443), 'Allow inbound HTTPS connections')
             if AWS_PREFIX_LIST:
