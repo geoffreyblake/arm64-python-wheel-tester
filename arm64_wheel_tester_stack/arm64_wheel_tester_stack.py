@@ -104,7 +104,7 @@ class Arm64WheelTesterStack(core.Stack):
                                      "apt-get install -y docker-ce docker-ce-cli containerd.io",
                                      "systemctl start docker")
         instance_focal1 = ec2.Instance(self, "focal1-tester",
-            instance_type=ec2.InstanceType("m6g.large"),
+            instance_type=ec2.InstanceType("m8g.2xlarge"),
             machine_image=ubuntu,
             vpc=vpc,
             key_name=KEY_NAME,

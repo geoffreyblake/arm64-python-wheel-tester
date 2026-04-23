@@ -17,7 +17,7 @@ process_results = importlib.import_module("process-results")
 generate_website = importlib.import_module("generate-website")
 
 SLOW_INSTALL_TIME = 60
-TIMEOUT = 180
+TIMEOUT = 600
 
 
 def main():

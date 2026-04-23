@@ -6,11 +6,11 @@ A report of the test status is generated daily and posted [here](https://geoffre
 
 This project could also be repurposed for other interpreted languages that contain native bindings, such as Ruby Gems.
 
-# Using the CDK to generate self-hosted Graviton2 runners for testing Wheels!
+# Using the CDK to generate self-hosted Graviton runners for testing Wheels!
 
 This projects uses the AWS CDK to stand up some infra-structure in AWS for testing
-python wheels built for Arm64 on Graviton2 processors.  The CDK scripts will allow one to
-stand up an m6g.large runner and attempts to install with the necessary dependencies for github runners.
+python wheels built for Arm64 on Graviton processors.  The CDK scripts will allow one to
+stand up an m8g.2xlarge runner and attempts to install with the necessary dependencies for github runners.
 If the installation fails, just follow the steps from github to manually install the runners.
 
 To use:
