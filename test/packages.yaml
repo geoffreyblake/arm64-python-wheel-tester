@@ -564,7 +564,7 @@ packages:
     PIP_NAME: pytokenizations
     PKG_TEST: import tokenizations
   - PKG_NAME: pyreadr
-    PIP_NAME: pyreadr
+    PIP_NAME: pyreadr pandas
     PKG_TEST: import pyreadr
   - PKG_NAME: fastnumbers
     PIP_NAME: fastnumbers
